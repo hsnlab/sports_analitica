@@ -43,7 +43,6 @@ def eval(event_df,tracking_df):
 distances=eval(event_df,df)
 event_df['distance']=distances
 
-
 #cdf and pdf plot of the errors (= distances)
 #       x axis is the distance
 #       right y axis is the number (index) of event
@@ -71,6 +70,35 @@ plt.grid(linestyle=':')
 plt.legend(loc='upper left')
 plt.show()
 
+#rolling mean plot by teams - axis' are the same as above
+#creating subdataframe
+contestants=pd.DataFrame(event_df[['contestantId','distance']].values,columns=['contestantId','distance'], index=pd.to_datetime(event_df['timestamp'],unit='ms'))
+#getting contestantId values
+keys = list(contestants.groupby(by='contestantId').groups.keys())
+#separate dataframes for the two teams
+home=contestants[contestants['contestantId']==keys[0]]['distance']
+away=contestants[contestants['contestantId']==keys[1]]['distance']
+#1 minute rolling means for each team
+rolling_mean_h=home.rolling(window='1T').mean()
+rolling_mean_a=away.rolling(window='1T').mean()
+
+#team #1
+plt.figure(figsize=(20, 10))
+plt.plot(rolling_mean_h, 'r-', label='1 minute running average, team #1')
+plt.ylabel('error')
+plt.xlabel('event number')
+plt.grid(linestyle=':')
+plt.legend(loc='upper left')
+plt.show()
+
+#team #2
+plt.figure(figsize=(20, 10))
+plt.plot(rolling_mean_a, 'b-', label='1 minute running average, team #2')
+plt.ylabel('error')
+plt.xlabel('event number')
+plt.grid(linestyle=':')
+plt.legend(loc='upper left')
+plt.show()
 
 #scatter plot    ---    x axis is the event typeId (what kind of event is it)
 #                       y axis is distance
