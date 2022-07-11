@@ -5,7 +5,8 @@ import numpy as np
 pd.set_option('display.max_columns', None)
 from flatten_json import flatten
 from dateutil import parser
-filename_event='events-ma13-7ky4x0axer75pyu4yskq0ynai.json'
+match_id='7ky4x0axer75pyu4yskq0ynai'
+filename_event=f'events-ma13-{match_id}.json'
 filename_metadata = '2021-08-19-jpl-season-2020-2021-squads.csv'
 path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\'
 
@@ -35,8 +36,7 @@ tracking_cols=['timestamp','time_of_current_half','half_indicator','match_not_in
                'to_del_1',
                'ball_x','ball_y','ball_z',
                'to_del_2']
-filename='tracking-data-7ky4x0axer75pyu4yskq0ynai-25fps.txt'
-#path = 'C:\\Users\\mibam\\egyetem\\sports_analytics\\'
+filename=f'tracking-data-{match_id}-25fps.txt'
 tracking = pd.read_csv(path+filename,sep=";|,|:",names=tracking_cols, header=None,engine='python')
 tracking=tracking.drop(labels=['to_del_1','to_del_2'], axis=1)
 
@@ -71,31 +71,36 @@ def get_tr_id(playerNames):
   return ids
 df1['playerTrackingId']=get_tr_id(df1['playerName'].values)
 
-temp = df1.iloc[0]['timeStamp'].replace('Z','-01')
-OFFSET = tracking.iloc[1]['timestamp']-parser.parse(temp).timestamp()*1000
+# Calculate remaining time from half
+# Need to group by period because extra time may differ
 
-def getmillisecs(timestamps):
+df1['to_sec'] = df1['timeMin'] * 60 + df1['timeSec']
+df1['sec_remaining'] = df1.groupby('periodId').to_sec.transform('max') - df1.to_sec
+
+temp = df1.iloc[0]['timeStamp'].replace('Z','-01')
+temp2 = df1[(df1['periodId']==2) & (df1['to_sec']==45*60)]['timeStamp'].values[0].replace('Z','-01')
+OFFSET_1 = tracking.iloc[0]['timestamp']-parser.parse(temp).timestamp()*1000
+OFFSET_2 = tracking[(tracking['half_indicator']==2) & (tracking['time_of_current_half']==0)]['timestamp'].values[0] - parser.parse(temp2).timestamp()*1000
+#syncs the tracking and event timestamps for better matching later
+def getmillisecs(timestamps,half):
   out=[]
   for timestamp in timestamps:
     timestamp=timestamp.replace('Z','-01')
-    yourdate = parser.parse(timestamp).timestamp()*1000+OFFSET
+    if half ==1:
+      yourdate = parser.parse(timestamp).timestamp()*1000+OFFSET_1
+    else:
+      yourdate = parser.parse(timestamp).timestamp()*1000+OFFSET_2
     out.append(yourdate)
   return out
 
-
-df1['timeMilliSec'] = getmillisecs(df1['timeStamp'].values.tolist())
-
-df1.to_csv(path+'events-ma13-7ky4x0axer75pyu4yskq0ynai.csv',index=False)
-
-
-
-
-
-tracking.to_csv(path+'flat-tracking-7ky4x0axer75pyu4yskq0ynai-25fps.csv',index=False)
-
+firsthalf=df1.loc[df1['periodId']==1]['timeStamp'].values.tolist()
+secondhalf=df1.loc[df1['periodId']==2]['timeStamp'].values.tolist()
+first=getmillisecs(firsthalf,1)
+second=getmillisecs(secondhalf,2)
+timestamps = first+second
+df1['timeStamp'] = timestamps
 
 matchinfo = jsonNormalize(d['matchInfo']['contestant']) # to be changed?
-
 
 half1_team1_attackdir = df2['qualifier_0_value'].iloc[0] # 'Right to Left'
 
@@ -107,6 +112,8 @@ if (half1_team1_attackdir == 'Right to Left'):
 elif (half1_team1_attackdir == 'Left to Right'):
     df1.loc[(df1['periodId'] == 1) & (df1['contestantId'] == df2['contestantId'].iloc[1]), ['x']] = 100 - df1['x']
     df1.loc[(df1['periodId'] == 2) & (df1['contestantId'] == df2['contestantId'].iloc[0]), ['x']] = 100 - df1['x']
+    df1.loc[(df1['periodId'] == 1) & (df1['contestantId'] == df2['contestantId'].iloc[1]), ['y']] = 100 - df1['y']
+    df1.loc[(df1['periodId'] == 2) & (df1['contestantId'] == df2['contestantId'].iloc[0]), ['y']] = 100 - df1['y']
 #df1.loc[(df1['periodId'] == 1) & (df1['contestantId'] == df1['contestantId'].iloc[0]), ['x']] = 100 - df1['x']
 #df1.loc[(df1['periodId'] == 2) & (df1['contestantId'] == df1['contestantId'].iloc[1]), ['x']] = 100 - df1['x']
 
@@ -131,11 +138,7 @@ df1['dist_to_opponent_goal'] = np.sqrt(diff_x ** 2 + diff_y ** 2)
 df1['angle_to_goal'] = np.divide(diff_x, diff_y, out=np.zeros_like(diff_x), where=(diff_y != 0)) #??
 
 
-# Calculate remaining time from half
-# Need to group by period because extra time may differ
 
-df1['to_sec'] = df1['timeMin'] * 60 + df1['timeSec']
-df1['sec_remaining'] = df1.groupby('periodId').to_sec.transform('max') - df1.to_sec
 
 
 # For goaldifference; (matchinfo is created to get contestant_id)
@@ -157,5 +160,6 @@ goaldiff_df['Goal_difference_away'] = goaldiff_df['Goal_difference_home'] * -1
 df1['Goal_difference_home'] = goaldiff_df['Goal_difference_home']
 df1['Goal_difference_away'] = df1['Goal_difference_home'] * -1
 
+tracking.to_csv(path+f'flat-tracking-{match_id}-25fps.csv',index=False)
 
-df1.to_csv(path+'events-ma13-with-features-7ky4x0axer75pyu4yskq0ynai.csv',index=False)
+df1.to_csv(path+f'events-ma13-with-features-{match_id}.csv',index=False)

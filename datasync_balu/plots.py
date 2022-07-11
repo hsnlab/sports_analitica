@@ -6,8 +6,9 @@ pd.set_option('display.max_columns', None)
 from math import sqrt
 import matplotlib.pyplot as plt
 
-
-df = pd.read_csv('C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\tracking_w_events_test6.csv')
+match_id='7ky4x0axer75pyu4yskq0ynai'
+path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\'
+df = pd.read_csv(path+f'tracking_w_events_{match_id}.csv')
 
 #df of just events (from synced data, so has tracking and event data, and event data is never null)
 event_df = df[pd.notna(df['eventId'])]
@@ -30,18 +31,26 @@ def get_player_pos(playerId,frame):
 
 def eval(event_df,tracking_df):
     distances=[]
+    distances_x=[]
+    distances_y=[]
     for ev_i,event in event_df.iterrows():
         frame = tracking_df.iloc[event['frame_id']]
         #print(frame)
         player_x, player_y = get_player_pos(event['playerTrackingId'],frame)
         distance = distance_pos(event['x'],event['y'],player_x,player_y)
+        distances_x.append(abs(event['x']-player_x))
+        distances_y.append(abs(event['y']-player_y))
         #distance = distance_pos(event['x'],event['y'],frame['ball_x'],frame['ball_y'])
         #print(distance)
         distances.append(distance)
-    return distances
+    return distances,distances_x,distances_y
 
-distances=eval(event_df,df)
+distances,dist_x,dist_y=eval(event_df,df)
 event_df['distance']=distances
+max_dist=event_df['distance'].max()
+print(event_df[event_df['distance']==max_dist])
+event_df['distance_x']=dist_x
+event_df['distance_y']=dist_y
 
 #cdf and pdf plot of the errors (= distances)
 #       x axis is the distance
@@ -56,6 +65,7 @@ n, bins, patches = ax2.hist(
 
 #helper df for the rolling mean plots, with datetime index
 temp_df = pd.DataFrame(event_df['distance'].values,columns=['0'], index=pd.to_datetime(event_df['timestamp'],unit='ms'))
+print(temp_df['0'].max())
 #rolling mean calculation
 rolling_mean=temp_df.rolling(window='1T').mean()
 
@@ -72,28 +82,41 @@ plt.show()
 
 #rolling mean plot by teams - axis' are the same as above
 #creating subdataframe
-contestants=pd.DataFrame(event_df[['contestantId','distance']].values,columns=['contestantId','distance'], index=pd.to_datetime(event_df['timestamp'],unit='ms'))
+contestants=pd.DataFrame(event_df[['contestantId','distance','distance_x','distance_y']].values,columns=['contestantId','distance','distance_x','distance_y'], index=pd.to_datetime(event_df['timestamp'],unit='ms'))
 #getting contestantId values
 keys = list(contestants.groupby(by='contestantId').groups.keys())
 #separate dataframes for the two teams
-home=contestants[contestants['contestantId']==keys[0]]['distance']
-away=contestants[contestants['contestantId']==keys[1]]['distance']
+home_d=contestants[contestants['contestantId']==keys[0]]['distance']
+away_d=contestants[contestants['contestantId']==keys[1]]['distance']
+home_d_x=contestants[contestants['contestantId']==keys[0]]['distance_x']
+away_d_x=contestants[contestants['contestantId']==keys[1]]['distance_x']
+home_d_y=contestants[contestants['contestantId']==keys[0]]['distance_y']
+away_d_y=contestants[contestants['contestantId']==keys[1]]['distance_y']
 #1 minute rolling means for each team
-rolling_mean_h=home.rolling(window='1T').mean()
-rolling_mean_a=away.rolling(window='1T').mean()
+rolling_mean_h_d=home_d.rolling(window='1T').mean()
+rolling_mean_a_d=away_d.rolling(window='1T').mean()
+rolling_mean_h_d_x=home_d_x.rolling(window='1T').mean()
+rolling_mean_a_d_x=away_d_x.rolling(window='1T').mean()
+rolling_mean_h_d_y=home_d_y.rolling(window='1T').mean()
+rolling_mean_a_d_y=away_d_y.rolling(window='1T').mean()
 
 #team #1
 plt.figure(figsize=(20, 10))
-plt.plot(rolling_mean_h, 'r-', label='1 minute running average, team #1')
+plt.plot(rolling_mean_h_d, 'r-', label=f'1 minute running average, {keys[0]}')
+plt.plot(rolling_mean_h_d_x, 'b-', label=f'1 minute running average, {keys[0]} x')
+plt.plot(rolling_mean_h_d_y, 'g-', label=f'1 minute running average, {keys[0]} y')
 plt.ylabel('error')
 plt.xlabel('event number')
 plt.grid(linestyle=':')
 plt.legend(loc='upper left')
 plt.show()
 
+
 #team #2
 plt.figure(figsize=(20, 10))
-plt.plot(rolling_mean_a, 'b-', label='1 minute running average, team #2')
+plt.plot(rolling_mean_a_d, 'r-', label=f'1 minute running average, {keys[1]}')
+plt.plot(rolling_mean_a_d_x, 'b-', label=f'1 minute running average, {keys[1]} x')
+plt.plot(rolling_mean_a_d_y, 'g-', label=f'1 minute running average, {keys[1]} y')
 plt.ylabel('error')
 plt.xlabel('event number')
 plt.grid(linestyle=':')

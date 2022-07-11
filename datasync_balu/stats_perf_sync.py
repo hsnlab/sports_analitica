@@ -25,13 +25,12 @@ import numpy as np
 pd.set_option('display.max_columns', None)
 
 #opening files
+match_id='7ky4x0axer75pyu4yskq0ynai'
 path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\'
-tracking_fn='flat-tracking-7ky4x0axer75pyu4yskq0ynai-25fps.csv'
-event_fn='events-ma13-with-features-7ky4x0axer75pyu4yskq0ynai.csv'
+tracking_fn=f'flat-tracking-{match_id}-25fps.csv'
+event_fn=f'events-ma13-with-features-{match_id}.csv'
 tracking_df = pd.read_csv(path+tracking_fn)
 event_df = pd.read_csv(path+event_fn)
-#print(tracking_df.head(1))
-#print(event_df.sample(1))
 
 #helper functions for calculating disance between timestamps
 def distance_time(time_from, time_to):
@@ -49,25 +48,19 @@ def get_player_pos(playerId,frame):
     x=0
     y=0
     values =frame.values.tolist()
-    #print(values)
     for elem in values:
         i=values.index(elem)
-        #print(f"Index : {i}, Value : {elem}")
         if elem == playerId:
             x=frame[i+2]
             y=frame[i+3]
-    #print(playerId)
-    #print('({};{})'.format(x,y))
     return x,y
 
 #calculate distance metric for an event and trackinf frame pair
 def calc_distance(event,frame,justTime):
     if not justTime:
         #calc time distance
-        ev_time = event['timeMilliSec']
+        ev_time = event['timeStamp']
         fr_time = frame['timestamp']
-        #ev_time = conv_min_sec_to_sec(event['timeMin'],event['timeSec'])
-        #fr_time = conv_milisec_to_sec(frame['time_of_current_half'])
         time_dist = distance_time(ev_time,fr_time)
         #calc positional distance
         #   -ball
@@ -80,30 +73,32 @@ def calc_distance(event,frame,justTime):
         dist=time_dist*0.33+pos_distance_ball*0.33+pos_distance_player*0.33
     else:
         #calc time distance
-        ev_time = event['timeMilliSec']
+        ev_time = event['timeStamp']
         fr_time = frame['timestamp']
         dist = distance_time(ev_time,fr_time)
-    #print(dist)
     return (dist)
 
 #evaluates the syncing - with the difference between tracking player position and event position
 def eval(event_df,tracking_df):
     distances=[]
+    distances_ball=[]
+    distances_x=[]
+    distances_y=[]
     for ev_i,event in event_df.iterrows():
         frame = tracking_df.iloc[event['frame_id']]
-        #print(frame)
         player_x, player_y = get_player_pos(event['playerTrackingId'],frame)
         distance = distance_pos(event['x'],event['y'],player_x,player_y)
-        #distance = distance_pos(event['x'],event['y'],frame['ball_x'],frame['ball_y'])
-        #print(distance)
+        distances_ball.append(distance_pos(event['x'],event['y'],frame['ball_x'],frame['ball_y']))
+        distances_x.append(abs(event['x']-player_x))
+        distances_y.append(abs(event['y']-player_y))
         distances.append(distance)
-    return mean(distances)
+    return mean(distances),mean(distances_ball),mean(distances_x),mean(distances_y)
 
+#match events until distance gets lower, stop when it doesn't
 def match_events(event_df,tracking_df,justTime):
     frame_ids=[]
     distances=[]
     tr_i=0
-    #ev_i=0
     for ev_i, ev_elem in event_df.iterrows():
         min_dist=calc_distance(ev_elem,tracking_df.iloc[tr_i],justTime)
         dist = calc_distance(ev_elem,tracking_df.iloc[tr_i+1],justTime)
@@ -115,26 +110,37 @@ def match_events(event_df,tracking_df,justTime):
         distances.append(min_dist)
     return frame_ids,distances
 
+#look at the next 1500 tracking records and choose the one with the smallest distance
 def match_events_2(event_df,tracking_df,justTime):
     frame_ids=[]
     distances=[]
     tr_i=0
-    #ev_i=0
     for ev_i, ev_elem in event_df.iterrows():
         fr_dist=[]
         end_i = min(len(tracking_df.index),tr_i+1500)
         for i in range(tr_i,end_i):
             fr_dist.append(calc_distance(ev_elem,tracking_df.iloc[i],justTime))    
-            #print(f"Index: {i}")   
         min_dist=min(fr_dist)
         tr_i=tr_i+fr_dist.index(min_dist)
         frame_ids.append(tr_i)
         distances.append(min_dist)
     return frame_ids,distances
 
+def match_events_3(event_df,tracking_df):
+    frame_ids=[]
+    for ev_i, event in event_df.iterrows():
+        rounded_time = int(40* round(float(event['timeMilliSec'])/40))
+        fr_id_l = tracking_df.index[tracking_df['timeMilliSec']==rounded_time].tolist()
+        if fr_id_l:
+            frame_ids.append(fr_id_l[0])
+        else:
+            print("error")
+    return frame_ids
+
+
 #frame_ids,distances=match_events(event_df,tracking_df,True)
-frame_ids2,distances2=match_events_2(event_df,tracking_df,True)
-#frame_ids3,distances3=match_events(event_df,tracking_df,False)
+frame_ids2,distances2=match_events_2(event_df,tracking_df,False)
+#frame_ids3=match_events_3(event_df,tracking_df)
 #frame_ids4,distances4=match_events_2(event_df,tracking_df,False)
 
 
@@ -148,14 +154,17 @@ event_df2=event_df.copy()
 event_df2['frame_id']=frame_ids2
 event_df2['distance']=distances2
 #event_df3['frame_id']=frame_ids3
-#event_df3['distance']=distances3
 #event_df4['frame_id']=frame_ids4
 #event_df4['distance']=distances4
 
 
+#dist,dist_b,dist_x,dist_y=eval(event_df,tracking_df)
+dist2,dist_b2,dist_x2,dist_y2=eval(event_df2,tracking_df)
+#dist3,dist_b3,dist_x3,dist_y3=eval(event_df3,tracking_df)
+#print(f"Player distance : {dist}, ball distance: {dist_b}, x distance: {dist_x}, y distance: {dist_y}")
+print(f"Player distance : {dist2}, ball distance: {dist_b2}, x distance: {dist_x2}, y distance: {dist_y2}")
+#print(f"Player distance : {dist3}, ball distance: {dist_b3}, x distance: {dist_x3}, y distance: {dist_y3}")
 
-#print(eval(event_df,tracking_df))
-print(eval(event_df2,tracking_df))
 #print(eval(event_df3,tracking_df))
 #print(eval(event_df4,tracking_df))
 
@@ -164,6 +173,6 @@ print(eval(event_df2,tracking_df))
 tracking_df['frame_id'] = tracking_df.index
 
 tracking_w_events =pd.merge(tracking_df,event_df2,how='outer',on=['frame_id'],suffixes=('_tracking','_event'))
-tracking_w_events.to_csv(path+'tracking_w_events_test6.csv')
+tracking_w_events.to_csv(path+f'tracking_w_events_{match_id}.csv')
 #print(tracking_w_events.distance.mean())
 #print(mean(distances2))
