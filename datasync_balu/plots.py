@@ -13,44 +13,10 @@ df = pd.read_csv(path+f'tracking_w_events_{match_id}.csv')
 #df of just events (from synced data, so has tracking and event data, and event data is never null)
 event_df = df[pd.notna(df['eventId'])]
 
-#helper functions for calculating distance  --- distance is:    difference between the recorded coordinates of the event 
-#                                                               and the tracking position of the player who committed the event
-#                                                               (data only has events, where playerId is not null, so there's always a player committing the event)
-def distance_pos(x_1,y_1,x_2,y_2):
-    return sqrt((x_2-x_1)**2+(y_2-y_1)**2)
-def get_player_pos(playerId,frame):
-    x=0
-    y=0
-    values =frame.values.tolist()
-    for elem in values:
-        i=values.index(elem)
-        if elem == playerId:
-            x=frame[i+2]
-            y=frame[i+3]
-    return x,y
-
-def eval(event_df,tracking_df):
-    distances=[]
-    distances_x=[]
-    distances_y=[]
-    for ev_i,event in event_df.iterrows():
-        frame = tracking_df.iloc[event['frame_id']]
-        #print(frame)
-        player_x, player_y = get_player_pos(event['playerTrackingId'],frame)
-        distance = distance_pos(event['x'],event['y'],player_x,player_y)
-        distances_x.append(abs(event['x']-player_x))
-        distances_y.append(abs(event['y']-player_y))
-        #distance = distance_pos(event['x'],event['y'],frame['ball_x'],frame['ball_y'])
-        #print(distance)
-        distances.append(distance)
-    return distances,distances_x,distances_y
-
-distances,dist_x,dist_y=eval(event_df,df)
-event_df['distance']=distances
 max_dist=event_df['distance'].max()
 print(event_df[event_df['distance']==max_dist])
-event_df['distance_x']=dist_x
-event_df['distance_y']=dist_y
+#event_df['distance_x']=dist_x
+#event_df['distance_y']=dist_y
 
 #cdf and pdf plot of the errors (= distances)
 #       x axis is the distance

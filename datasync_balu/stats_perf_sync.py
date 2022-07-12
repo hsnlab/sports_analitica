@@ -92,7 +92,7 @@ def eval(event_df,tracking_df):
         distances_x.append(abs(event['x']-player_x))
         distances_y.append(abs(event['y']-player_y))
         distances.append(distance)
-    return mean(distances),mean(distances_ball),mean(distances_x),mean(distances_y)
+    return distances,distances_ball,distances_x,distances_y
 
 #match events until distance gets lower, stop when it doesn't
 def match_events(event_df,tracking_df,justTime):
@@ -129,8 +129,8 @@ def match_events_2(event_df,tracking_df,justTime):
 def match_events_3(event_df,tracking_df):
     frame_ids=[]
     for ev_i, event in event_df.iterrows():
-        rounded_time = int(40* round(float(event['timeMilliSec'])/40))
-        fr_id_l = tracking_df.index[tracking_df['timeMilliSec']==rounded_time].tolist()
+        rounded_time = int(40* round(float(event['timeStamp'])/40))
+        fr_id_l = tracking_df.index[tracking_df['timestamp']==rounded_time].tolist()
         if fr_id_l:
             frame_ids.append(fr_id_l[0])
         else:
@@ -139,31 +139,38 @@ def match_events_3(event_df,tracking_df):
 
 
 #frame_ids,distances=match_events(event_df,tracking_df,True)
-frame_ids2,distances2=match_events_2(event_df,tracking_df,False)
-#frame_ids3=match_events_3(event_df,tracking_df)
+#frame_ids2,distances2=match_events(event_df,tracking_df,False)
+frame_ids3=match_events_3(event_df,tracking_df)
 #frame_ids4,distances4=match_events_2(event_df,tracking_df,False)
 
 
-event_df2=event_df.copy()
-#event_df3=event_df.copy()
+#event_df2=event_df.copy()
+event_df3=event_df.copy()
 #event_df4=event_df.copy()
 
 
 #event_df['frame_id']=frame_ids
 #event_df['distance']=distances
-event_df2['frame_id']=frame_ids2
-event_df2['distance']=distances2
-#event_df3['frame_id']=frame_ids3
+#event_df2['frame_id']=frame_ids2
+#event_df2['distance']=distances2
+event_df3['frame_id']=frame_ids3
 #event_df4['frame_id']=frame_ids4
 #event_df4['distance']=distances4
 
 
 #dist,dist_b,dist_x,dist_y=eval(event_df,tracking_df)
-dist2,dist_b2,dist_x2,dist_y2=eval(event_df2,tracking_df)
-#dist3,dist_b3,dist_x3,dist_y3=eval(event_df3,tracking_df)
+#dist2,dist_b2,dist_x2,dist_y2=eval(event_df2,tracking_df)
+dist3,dist_b3,dist_x3,dist_y3=eval(event_df3,tracking_df)
+event_df3['distance']=dist3
+event_df3['distance_x']=dist_x3
+event_df3['distance_y']=dist_y3
+print(event_df3['distance'].max())
+event_df3 = event_df3[event_df3['distance']<15]
+print(event_df3['distance'].max())
+
 #print(f"Player distance : {dist}, ball distance: {dist_b}, x distance: {dist_x}, y distance: {dist_y}")
-print(f"Player distance : {dist2}, ball distance: {dist_b2}, x distance: {dist_x2}, y distance: {dist_y2}")
-#print(f"Player distance : {dist3}, ball distance: {dist_b3}, x distance: {dist_x3}, y distance: {dist_y3}")
+#print(f"Player distance : {dist2}, ball distance: {dist_b2}, x distance: {dist_x2}, y distance: {dist_y2}")
+print(f"Player distance : {mean(dist3)}, ball distance: {mean(dist_b3)}, x distance: {mean(dist_x3)}, y distance: {mean(dist_y3)}")
 
 #print(eval(event_df3,tracking_df))
 #print(eval(event_df4,tracking_df))
@@ -172,7 +179,7 @@ print(f"Player distance : {dist2}, ball distance: {dist_b2}, x distance: {dist_x
 #print(tracking_df.iloc[event_df.head(1)['frame_id']])
 tracking_df['frame_id'] = tracking_df.index
 
-tracking_w_events =pd.merge(tracking_df,event_df2,how='outer',on=['frame_id'],suffixes=('_tracking','_event'))
-tracking_w_events.to_csv(path+f'tracking_w_events_{match_id}.csv')
+tracking_w_events =pd.merge(tracking_df,event_df3,how='outer',on=['frame_id'],suffixes=('_tracking','_event'))
+tracking_w_events.to_csv(path+f'tracking_w_events_{match_id}.csv',index=False)
 #print(tracking_w_events.distance.mean())
 #print(mean(distances2))
