@@ -25,14 +25,14 @@ import numpy as np
 pd.set_option('display.max_columns', None)
 
 #opening files
-match_id='8pm2qt7pp2m2qgnzwrrg8no8a'
+match_id='7ky4x0axer75pyu4yskq0ynai'
 path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
 tracking_fn=f'flat-tracking-{match_id}-25fps.csv'
 event_fn=f'events-ma13-with-features-{match_id}.csv'
 tracking_df = pd.read_csv(path+tracking_fn)
 event_df = pd.read_csv(path+event_fn)
 
-half1_team1_attackdir=event_df.loc[0,'half1_team1_attackdir']
+home_attack_dir=event_df.loc[0,'home_attack_dir']
 
 #helper functions for calculating disance between timestamps
 def distance_time(time_from, time_to):
@@ -233,7 +233,7 @@ for ev_idx, event in synced_events.iterrows():
 # ball and player distance- and angle to goal 
 second_half_idx = synced_events.half_indicator.idxmax()
 
-if half1_team1_attackdir == 'Left to Right':
+if home_attack_dir == 'Left to Right':
      # away_players - calc_angle_and_distance_to_goal(away player X, away player Y, False)
     for num in range(11,21):
         a_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']
@@ -295,7 +295,7 @@ if half1_team1_attackdir == 'Left to Right':
             synced_events.loc[second_half_idx:,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,False)
         #calc_angle_and_distance_to_goal(ball X, ball Y, False)
     
-elif half1_team1_attackdir == 'Right to Left':
+elif home_attack_dir == 'Right to Left':
      # away_players - calc_angle_and_distance_to_goal(away player X, away player Y, False)
     for num in range(11,21):
         a_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']

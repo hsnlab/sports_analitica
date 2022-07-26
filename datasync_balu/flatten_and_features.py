@@ -114,13 +114,22 @@ df1['timeStamp'] = timestamps
 
 matchinfo = jsonNormalize(d['matchInfo']['contestant'])
 
-df1['event_team']=np.nan
-df1.loc[df1.contestantId == matchinfo.loc[0,'id'],'event_team'] = 0
-df1.loc[df1.contestantId == matchinfo.loc[1,'id'],'event_team'] = 1
+home_team_id = ''
+
+if matchinfo.loc[0,'position'] == 'home':
+    df1.loc[df1.contestantId == matchinfo.loc[0,'id'],'event_team'] = 0
+    home_team_id = matchinfo.loc[0,'id']
+    df1.loc[df1.contestantId == matchinfo.loc[1,'id'],'event_team'] = 1
+else:
+    df1.loc[df1.contestantId == matchinfo.loc[0,'id'],'event_team'] = 1
+    df1.loc[df1.contestantId == matchinfo.loc[1,'id'],'event_team'] = 0
+    home_team_id = matchinfo.loc[1,'id']
+    
+df1['home_attack_dir'] = df2.loc[df2.contestantId == home_team_id,'qualifier_0_value'].values[0]
 
 
 half1_team1_attackdir = df2['qualifier_0_value'].iloc[0]  # 'Right to Left' or 'Left to Right'
-df1['half1_team1_attackdir'] = half1_team1_attackdir
+
 df1['Pass_end_x'] = np.nan
 df1['Pass_end_y'] = np.nan
 q_ids=[]
