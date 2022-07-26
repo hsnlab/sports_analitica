@@ -6,8 +6,9 @@ import numpy as np
 #pd.set_option('display.max_columns', None)
 from flatten_json import flatten
 from dateutil import parser
+from math import sqrt,pow
 
-match_id = '7m12dhyzuxih5h6fexypbwodm'
+match_id = '7ky4x0axer75pyu4yskq0ynai'
 filename_event = f'events-ma13-{match_id}.json'
 filename_metadata = '2021-08-19-jpl-season-2020-2021-squads.csv'
 path = 'C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
@@ -45,6 +46,7 @@ tracking = tracking.drop(labels=['to_del_1', 'to_del_2'], axis=1)
 temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
 tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
 
+
 with open(path + filename_event) as f:
     d = json.load(f)
 
@@ -57,7 +59,7 @@ def jsonNormalize(data):
 
 df1 = jsonNormalize(d['liveData']['event'])
 interesting_periods = [1, 2, 3, 4, 5]
-interesting_event_ids = [1, 2, 3, 7, 8, 10, 11, 12, 13, 14, 15, 16, 41, 50, 52, 58, 61, 74]
+interesting_event_ids = [1, 2, 3, 7, 8, 10, 11, 13, 14, 15, 16, 74]
 df2 = df1[df1['typeId'].apply(lambda x: x == 32)]
 df1 = df1[df1['periodId'].apply(lambda x: x in interesting_periods)]
 df1 = df1[df1['typeId'].apply(lambda x: x in interesting_event_ids)]
@@ -70,7 +72,7 @@ id_mapping.columns = ['playerName', 'playerTrackingId']
 def get_tr_id(playerNames):
     ids = []
     for playerName in playerNames:
-        id = id_mapping[id_mapping['playerName'] == playerName]['playerTrackingId'].values[0]
+        id = int(id_mapping[id_mapping['playerName'] == playerName]['playerTrackingId'].values[0])
         ids.append(id)
     return ids
 
@@ -112,7 +114,13 @@ df1['timeStamp'] = timestamps
 
 matchinfo = jsonNormalize(d['matchInfo']['contestant'])
 
+df1['event_team']=np.nan
+df1.loc[df1.contestantId == matchinfo.loc[0,'id'],'event_team'] = 0
+df1.loc[df1.contestantId == matchinfo.loc[1,'id'],'event_team'] = 1
+
+
 half1_team1_attackdir = df2['qualifier_0_value'].iloc[0]  # 'Right to Left' or 'Left to Right'
+df1['half1_team1_attackdir'] = half1_team1_attackdir
 df1['Pass_end_x'] = np.nan
 df1['Pass_end_y'] = np.nan
 q_ids=[]
@@ -237,17 +245,52 @@ tracking['ball_y'] = 68 - tracking['ball_y']
 for num in range(1, 23):
     tracking[f'player_{num}_y'] = 68 - tracking[f'player_{num}_y']
 
+# calculating velocity (speed and direction) - for players
+dT = tracking.loc[1,'timestamp']-tracking.loc[0,'timestamp']
+MAXSPEED = 12
+MOVING_WINDOW =7
+#ma_window = np.ones( MOVING_WINDOW ) / MOVING_WINDOW 
+
+for p_num in range(1,23):
+    # directions
+    Vx = tracking[f'player_{p_num}_x'].diff() / dT
+    Vy = tracking[f'player_{p_num}_y'].diff() / dT
+
+    # get rid of outliers
+    if MAXSPEED > 0:
+        raw_speed = np.sqrt((Vx**2)+(Vy**2))
+        Vx[ raw_speed>MAXSPEED ] = np.nan
+        Vy[ raw_speed>MAXSPEED ] = np.nan
+
+    # smoothing
+    # calculate first half velocity
+    #Vx = np.convolve( Vx , ma_window, mode='same' ) 
+    #Vy = np.convolve( Vy , ma_window, mode='same' )      
+    Vx = Vx.rolling(MOVING_WINDOW,min_periods = 0,center=False).mean()
+    Vy = Vy.rolling(MOVING_WINDOW,min_periods = 0,center=False).mean()
+
+    # apply speed and direction values
+    tracking[f'player_{p_num}_direction_x'] = Vx
+    tracking[f'player_{p_num}_direction_y'] = Vy
+    tracking[f'player_{p_num}_speed'] = np.sqrt((Vx**2)+(Vy**2))
+    tracking.loc[:,[f'player_{p_num}_direction_x',f'player_{p_num}_direction_y',f'player_{p_num}_speed']] =\
+         tracking.loc[:,[f'player_{p_num}_direction_x',f'player_{p_num}_direction_y',f'player_{p_num}_speed']].fillna(0)
+
+# calculating velocity (speed and direction) - for ball
+Vbx = tracking['ball_x'].diff() / dT
+Vby = tracking['ball_y'].diff() / dT
+if MAXSPEED > 0:
+    raw_speed = np.sqrt(Vbx**2+Vby**2)
+    Vbx[ raw_speed>MAXSPEED ] = np.nan
+    Vby[ raw_speed>MAXSPEED ] = np.nan
+Vbx = Vbx.rolling(MOVING_WINDOW,min_periods = 0, center= False).mean()
+Vby = Vby.rolling(MOVING_WINDOW,min_periods = 0, center= False).mean()
+tracking['ball_direction_x'] = Vx
+tracking['ball_direction_y'] = Vy
+tracking['ball_speed'] = np.sqrt((Vx**2)+(Vy**2))
+
+tracking.loc[:,['ball_direction_x','ball_direction_y','ball_speed']] = tracking.loc[:,['ball_direction_x','ball_direction_y','ball_speed']].fillna(0)
 # Features for events
-
-PITCH_LENGTH = 105
-PITCH_WIDTH = 68
-GOAL_X = PITCH_LENGTH
-GOAL_Y = PITCH_WIDTH / 2
-
-diff_x = GOAL_X - df1['x']
-diff_y = abs(GOAL_Y - df1['y'])
-df1['dist_to_opponent_goal'] = np.sqrt(diff_x ** 2 + diff_y ** 2)
-df1['angle_to_goal'] = np.divide(diff_x, diff_y, out=np.zeros_like(diff_x), where=(diff_y != 0))  # ??
 
 # For goaldifference; (matchinfo is created to get contestant_id)
 homeId = matchinfo['id'].iloc[0]

@@ -25,12 +25,14 @@ import numpy as np
 pd.set_option('display.max_columns', None)
 
 #opening files
-match_id='7ky4x0axer75pyu4yskq0ynai'
-path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\'
+match_id='8pm2qt7pp2m2qgnzwrrg8no8a'
+path='C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
 tracking_fn=f'flat-tracking-{match_id}-25fps.csv'
 event_fn=f'events-ma13-with-features-{match_id}.csv'
 tracking_df = pd.read_csv(path+tracking_fn)
 event_df = pd.read_csv(path+event_fn)
+
+half1_team1_attackdir=event_df.loc[0,'half1_team1_attackdir']
 
 #helper functions for calculating disance between timestamps
 def distance_time(time_from, time_to):
@@ -162,8 +164,6 @@ event_df3['frame_id']=frame_ids3
 #dist2,dist_b2,dist_x2,dist_y2=eval(event_df2,tracking_df)
 dist3,dist_b3,dist_x3,dist_y3=eval(event_df3,tracking_df)
 event_df3['distance']=dist3
-event_df3['distance_x']=dist_x3
-event_df3['distance_y']=dist_y3
 print(event_df3['distance'].max())
 event_df3 = event_df3[event_df3['distance']<15]
 print(event_df3['distance'].max())
@@ -180,6 +180,183 @@ print(f"Player distance : {mean(dist3)}, ball distance: {mean(dist_b3)}, x dista
 tracking_df['frame_id'] = tracking_df.index
 
 tracking_w_events =pd.merge(tracking_df,event_df3,how='outer',on=['frame_id'],suffixes=('_tracking','_event'))
+
+
+
 tracking_w_events.to_csv(path+f'tracking_w_events_{match_id}.csv',index=False)
+synced_events = tracking_w_events[pd.notna(tracking_w_events['eventId'])].copy()
+
+GOAL_X = 100
+GOAL_Y = 50
+GOALPOST_1Y = 55.3           #was 53.66
+GOALPOST_2Y = 44.7           #was 46.34
+DIST_GOALPOSTS = 10.6        #a;  was 7.22
+
+def calc_angle_and_distance_to_goal(X,Y, needs_flipping):
+    if needs_flipping:
+        X = 105-X
+    
+    diff_X = abs(GOAL_X - X)
+    diff_Y = abs(GOAL_Y - Y) 
+    dist_to_goal = np.sqrt(diff_X ** 2 + diff_Y ** 2)
+    
+    diff_gp1y = abs(GOALPOST_1Y - Y)
+    diff_gp2y = abs(GOALPOST_2Y - Y)
+    dist_gp1y = np.sqrt(diff_X ** 2 + diff_gp1y ** 2) #b
+    dist_gp2y = np.sqrt(diff_X ** 2 + diff_gp2y ** 2) #c
+    ang_to_goal = np.arccos((dist_gp1y**2 + dist_gp2y**2 - DIST_GOALPOSTS**2)/(2*dist_gp1y*dist_gp2y))
+    
+    return dist_to_goal, ang_to_goal
+
+
+for ev_idx, event in synced_events.iterrows():
+    ball_carrier = event['playerTrackingId']
+    bc_x,bc_y = get_player_pos(ball_carrier,event)
+    
+    for num in range(1,23):
+        p_x,p_y = event[f'player_{num}_x'],event[f'player_{num}_y']
+        dist = distance_pos(bc_x,bc_y,p_x,p_y)
+        if dist != 0:
+            synced_events.loc[ev_idx,f'player_{num}_dist_to_bc'] = dist
+            synced_events.loc[ev_idx,f'player_{num}_is_bc'] = 0
+        else:
+            synced_events.loc[ev_idx,f'player_{num}_dist_to_bc'] = dist
+            synced_events.loc[ev_idx,f'player_{num}_is_bc'] = 1
+            synced_events.loc[ev_idx,'event_team'] = event[f'player_{num}_teamId']
+    
+    # ball
+    ball_x, ball_y = event['ball_x'],event['ball_y']
+    dist_b = distance_pos(bc_x,bc_y,ball_x,ball_y)
+    synced_events.loc[ev_idx,'ball_dist_to_bc'] = dist_b
+    synced_events.loc[ev_idx,'ball_is_bc'] = 0
+    
+# ball and player distance- and angle to goal 
+second_half_idx = synced_events.half_indicator.idxmax()
+
+if half1_team1_attackdir == 'Left to Right':
+     # away_players - calc_angle_and_distance_to_goal(away player X, away player Y, False)
+    for num in range(11,21):
+        a_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']
+        a_p_Y_fh = synced_events.loc[:second_half_idx,f'player_{num}_y']
+        a_p_X_sh = synced_events.loc[second_half_idx:,f'player_{num}_x']
+        a_p_Y_sh = synced_events.loc[second_half_idx:,f'player_{num}_y']
+
+        synced_events.loc[:second_half_idx,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(a_p_X_fh,a_p_Y_fh,True)
+        synced_events.loc[second_half_idx:,f'player_{num}_dist_to_goal'],\
+                synced_events.loc[second_half_idx:,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(a_p_X_sh,a_p_Y_sh,False)
+    # away goalkeeper
+    a_gk_X_fh = synced_events.loc[:second_half_idx,'player_22_x']
+    a_gk_Y_fh = synced_events.loc[:second_half_idx,'player_22_y']
+    a_gk_X_sh = synced_events.loc[second_half_idx:,'player_22_x']
+    a_gk_Y_sh = synced_events.loc[second_half_idx:,'player_22_y']
+    synced_events.loc[:second_half_idx,'player_22_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'player_22_angel_to_goal']=calc_angle_and_distance_to_goal(a_gk_X_fh,a_gk_Y_fh,True)
+    synced_events.loc[second_half_idx:,'player_22_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'player_22_angel_to_goal']=calc_angle_and_distance_to_goal(a_gk_X_sh,a_gk_Y_sh,False)
+    # home players
+    for num in range(1,11):
+        h_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']
+        h_p_Y_fh = synced_events.loc[:second_half_idx,f'player_{num}_y']
+        h_p_X_sh = synced_events.loc[second_half_idx:,f'player_{num}_x']
+        h_p_Y_sh = synced_events.loc[second_half_idx:,f'player_{num}_y']
+
+        synced_events.loc[:second_half_idx,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(h_p_X_fh,h_p_Y_fh,False)
+        synced_events.loc[second_half_idx:,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(h_p_X_sh,h_p_Y_sh,True)
+    #hom
+    #home goalkeeper - calc_angle_and_distance_to_goal(home player X, home player Y, True)
+    h_gk_X_fh = synced_events.loc[:second_half_idx,'player_21_x']
+    h_gk_Y_fh = synced_events.loc[:second_half_idx,'player_21_y']
+    h_gk_X_sh = synced_events.loc[second_half_idx:,'player_21_x']
+    h_gk_Y_sh = synced_events.loc[second_half_idx:,'player_21_y']
+    synced_events.loc[:second_half_idx,'player_21_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'player_21_angel_to_goal']=calc_angle_and_distance_to_goal(h_gk_X_fh,h_gk_Y_fh,False)
+    synced_events.loc[second_half_idx:,'player_21_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'player_21_angel_to_goal']=calc_angle_and_distance_to_goal(h_gk_X_sh,h_gk_Y_sh,True)
+
+    # ball
+    b_X_fh = synced_events.loc[:second_half_idx,'ball_x']
+    b_Y_fh = synced_events.loc[:second_half_idx,'ball_y']
+    b_X_sh = synced_events.loc[second_half_idx:,'ball_x']
+    b_Y_sh = synced_events.loc[second_half_idx:,'ball_y']
+
+    if event['event_team'] == 0:
+        synced_events.loc[:second_half_idx,'ball_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_fh,b_Y_fh,False)
+        synced_events.loc[second_half_idx:,'ball_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,True)
+        #calc_angle_and_distance_to_goal(ball X, ball Y, True)
+    else:
+        synced_events.loc[:second_half_idx,'ball_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_fh,b_Y_fh,True)
+        synced_events.loc[second_half_idx:,'ball_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,False)
+        #calc_angle_and_distance_to_goal(ball X, ball Y, False)
+    
+elif half1_team1_attackdir == 'Right to Left':
+     # away_players - calc_angle_and_distance_to_goal(away player X, away player Y, False)
+    for num in range(11,21):
+        a_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']
+        a_p_Y_fh = synced_events.loc[:second_half_idx,f'player_{num}_y']
+        a_p_X_sh = synced_events.loc[second_half_idx:,f'player_{num}_x']
+        a_p_Y_sh = synced_events.loc[second_half_idx:,f'player_{num}_y']
+
+        synced_events.loc[:second_half_idx,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(a_p_X_fh,a_p_Y_fh,False)
+        synced_events.loc[second_half_idx:,f'player_{num}_dist_to_goal'],\
+                synced_events.loc[second_half_idx:,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(a_p_X_sh,a_p_Y_sh,True)
+    # away goalkeeper
+    a_gk_X_fh = synced_events.loc[:second_half_idx,'player_22_x']
+    a_gk_Y_fh = synced_events.loc[:second_half_idx,'player_22_y']
+    a_gk_X_sh = synced_events.loc[second_half_idx:,'player_22_x']
+    a_gk_Y_sh = synced_events.loc[second_half_idx:,'player_22_y']
+    synced_events.loc[:second_half_idx,'player_22_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'player_22_angel_to_goal']=calc_angle_and_distance_to_goal(a_gk_X_fh,a_gk_Y_fh,False)
+    synced_events.loc[second_half_idx:,'player_22_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'player_22_angel_to_goal']=calc_angle_and_distance_to_goal(a_gk_X_sh,a_gk_Y_sh,True)
+    # home players
+    for num in range(1,11):
+        h_p_X_fh = synced_events.loc[:second_half_idx,f'player_{num}_x']
+        h_p_Y_fh = synced_events.loc[:second_half_idx,f'player_{num}_y']
+        h_p_X_sh = synced_events.loc[second_half_idx:,f'player_{num}_x']
+        h_p_Y_sh = synced_events.loc[second_half_idx:,f'player_{num}_y']
+
+        synced_events.loc[:second_half_idx,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(h_p_X_fh,h_p_Y_fh,True)
+        synced_events.loc[second_half_idx:,f'player_{num}_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,f'player_{num}_angel_to_goal']=calc_angle_and_distance_to_goal(h_p_X_sh,h_p_Y_sh,False)
+    #home goalkeeper - calc_angle_and_distance_to_goal(home player X, home player Y, True)
+    h_gk_X_fh = synced_events.loc[:second_half_idx,'player_21_x']
+    h_gk_Y_fh = synced_events.loc[:second_half_idx,'player_21_y']
+    h_gk_X_sh = synced_events.loc[second_half_idx:,'player_21_x']
+    h_gk_Y_sh = synced_events.loc[second_half_idx:,'player_21_y']
+    synced_events.loc[:second_half_idx,'player_21_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'player_21_angel_to_goal']=calc_angle_and_distance_to_goal(h_gk_X_fh,h_gk_Y_fh,True)
+    synced_events.loc[second_half_idx:,'player_21_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'player_21_angel_to_goal']=calc_angle_and_distance_to_goal(h_gk_X_sh,h_gk_Y_sh,False)
+
+    # ball
+    b_X_fh = synced_events.loc[:second_half_idx,'ball_x']
+    b_Y_fh = synced_events.loc[:second_half_idx,'ball_y']
+    b_X_sh = synced_events.loc[second_half_idx:,'ball_x']
+    b_Y_sh = synced_events.loc[second_half_idx:,'ball_y']
+
+    if event['event_team'] == 0:
+        synced_events.loc[:second_half_idx,'ball_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_fh,b_Y_fh,True)
+        synced_events.loc[second_half_idx:,'ball_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,False)
+        #calc_angle_and_distance_to_goal(ball X, ball Y, True)
+    else:
+        synced_events.loc[:second_half_idx,'ball_dist_to_goal'],\
+            synced_events.loc[:second_half_idx,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_fh,b_Y_fh,False)
+        synced_events.loc[second_half_idx:,'ball_dist_to_goal'],\
+            synced_events.loc[second_half_idx:,'ball_angel_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,True)
+        #calc_angle_and_distance_to_goal(ball X, ball Y, False)
+    
+synced_events.to_csv(path+f'events_w_tracking_{match_id}.csv',index=False)
+
 #print(tracking_w_events.distance.mean())
 #print(mean(distances2))
