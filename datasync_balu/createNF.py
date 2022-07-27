@@ -404,7 +404,8 @@ DIST_GOALPOSTS = 10.6        #a;  was 7.22
 def calc_angle_and_distance_to_goal(X,Y, needs_flipping):
     if needs_flipping:
         X = 105-X
-    
+    X = X/1.05
+    Y = Y/0.68
     diff_X = abs(GOAL_X - X)
     diff_Y = abs(GOAL_Y - Y) 
     dist_to_goal = np.sqrt(diff_X ** 2 + diff_Y ** 2)
@@ -417,7 +418,7 @@ def calc_angle_and_distance_to_goal(X,Y, needs_flipping):
     
     return dist_to_goal, ang_to_goal
 
-def sync(tracking_df, event_df,is25fps=True):
+def sync_and_features(tracking_df, event_df,is25fps=True):
     home_attack_dir=event_df['home_attack_dir'].values[0]
     if is25fps:
         frame_ids=match_events_25fps(event_df,tracking_df)
@@ -619,7 +620,9 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         if tracking.loc[1,'timestamp'] - tracking.loc[0,'timestamp'] == 100:
             is25fps = False
             print('switched to 10 fps.')
-        synced_events = sync(tracking,event,is25fps)
+        synced_events = sync_and_features(tracking,event,is25fps)
+        synced_events.to_csv(path+f'events_w_tracking_{match_id}.csv',index=False)
+
         synced_events = create_structure(synced_events)
         if  synced_events.empty :
             print('problem: could not sync tracking and event data')

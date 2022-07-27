@@ -195,7 +195,8 @@ DIST_GOALPOSTS = 10.6        #a;  was 7.22
 def calc_angle_and_distance_to_goal(X,Y, needs_flipping):
     if needs_flipping:
         X = 105-X
-    
+    X = X/1.05
+    Y = Y/0.68
     diff_X = abs(GOAL_X - X)
     diff_Y = abs(GOAL_Y - Y) 
     dist_to_goal = np.sqrt(diff_X ** 2 + diff_Y ** 2)
