@@ -8,6 +8,7 @@ from math import sqrt
 from statistics import mean
 from timeit import default_timer as timer
 import os
+import csv
 
 def jsonNormalize(data):
     dic_flattened = (flatten(dd) for dd in data)
@@ -230,7 +231,9 @@ def flatten_and_features(path,match_id,metadata_fn):
                     ['Pass_end_y']] = (df1[f'qualifier_{colnum}_value'])
 
     df1['Pass_end_x'] = pd.to_numeric(df1.Pass_end_x, errors='coerce')
+    df1['Pass_end_x'] = df1['Pass_end_x'].fillna(0)
     df1['Pass_end_y'] = pd.to_numeric(df1.Pass_end_y, errors='coerce')
+    df1['Pass_end_y'] = df1['Pass_end_y'].fillna(0)
     # Now scale from 100x100 to 105x68
 
 
@@ -588,19 +591,95 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
         
     return synced_events
 
+def create_edge_features(synced_event_df):
+    interactions = []
+    teammates = []
+    #closest_player = ['tbd'] * len(synced_event_df.index)
+    rec_tracking_ids = []
+    rec_send_dists = []
+    for ev_idx, event in synced_event_df.iterrows():
+        
+        if((event['typeId'] == 1) | (event['typeId'] == 2)):
+            interactions.append('pass')
+            teammates.append(1)
+        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 16)):
+            interactions.append('shot')
+            teammates.append(0)    
+        elif(event['typeId'] == 3):
+            interactions.append('dribble')    
+            teammates.append(0)    
+        elif(event['typeId'] == 8):
+            interactions.append('interception')
+            teammates.append(0)    
+        elif((event['typeId'] == 7) | (event['typeId'] == 74)):
+            interactions.append('tackle')
+            teammates.append(0)    
+        elif((event['typeId'] == 10) | (event['typeId'] == 11) | (event['typeId'] == 15)):
+            interactions.append('save')
+            teammates.append(0)  
+        
+        
+        pX, pY = event['Pass_end_x'],event['Pass_end_y']
+        min_dist = 10000
+        #closest_player = 0
+        rec_tr_id = 0
+        rec_send_dist = 0
+        for num in range(1,23):
+            if event['event_team'] == event[f'player_{num}_teamId']:
+                plX, plY = event[f'player_{num}_x'],event[f'player_{num}_y']
+                dist = distance_pos(pX,pY,plX,plY)
+                if dist < min_dist:
+                    min_dist = dist
+                    #closest_player = num
+                    rec_tr_id = int(event[f'player_{num}_objectId'])
+                    rec_send_dist = dist
+        rec_tracking_ids.append(rec_tr_id)
+        rec_send_dists.append(rec_send_dist)
+
+    return interactions,teammates,rec_tracking_ids,rec_send_dists  
+
+
 def create_structure(synced_event_df):
     structured_data = []
     for ev_idx, event in synced_event_df.iterrows():
         structured_event=[]
+        # player1 
+        p_tr_id = int(event['playerTrackingId'])
+        structured_event.append(p_tr_id)
+        # player2
+        r_tr_id = int(event['recipientId'])
+        structured_event.append(r_tr_id)
+        # timestamp
+        timestamp = event['timestamp']
+        structured_event.append(timestamp)
+        # action
+        action = event['typeId']
+        structured_event.append(action)
+        # edge features
+        structured_event.append(event['teammates'])
+        structured_event.append(event['playerDistance'])
+        # node features
         for num in range(1,23):
-            structured_p_data =[event[f'player_{num}_x'],event[f'player_{num}_y'],event[f'player_{num}_speed'],\
-                    event[f'player_{num}_direction_x'],event[f'player_{num}_direction_y'],event[f'player_{num}_angle_to_goal'],\
-                        event[f'player_{num}_dist_to_goal'],event[f'player_{num}_is_bc'],event[f'player_{num}_dist_to_bc']]
-            structured_event.append(structured_p_data)
-        structured_b_data=[event['ball_x'],event['ball_y'],event['ball_speed'],\
-                    event['ball_direction_x'],event['ball_direction_y'],event['ball_angle_to_goal'],\
-                        event['ball_dist_to_goal'],event['ball_is_bc'],event['ball_dist_to_bc']]
-        structured_event.append(structured_b_data)
+            # player features
+            structured_event.append(event[f'player_{num}_x'])
+            structured_event.append(event[f'player_{num}_y'])
+            structured_event.append(event[f'player_{num}_speed'])
+            structured_event.append(event[f'player_{num}_direction_x'])
+            structured_event.append(event[f'player_{num}_direction_y'])
+            structured_event.append(event[f'player_{num}_angle_to_goal'])
+            structured_event.append(event[f'player_{num}_dist_to_goal'])
+            structured_event.append(event[f'player_{num}_is_bc'])
+            structured_event.append(event[f'player_{num}_dist_to_bc'])
+        # ball features
+        structured_event.append(event['ball_x'])
+        structured_event.append(event['ball_y'])
+        structured_event.append(event['ball_speed'])
+        structured_event.append(event['ball_direction_x'])
+        structured_event.append(event['ball_direction_y'])
+        structured_event.append(event['ball_angle_to_goal'])
+        structured_event.append(event['ball_dist_to_goal'])
+        structured_event.append(event['ball_is_bc'])
+        structured_event.append(event['ball_dist_to_bc'])
         structured_data.append(structured_event)
     return pd.DataFrame(structured_data)
 
@@ -620,8 +699,17 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         if tracking.loc[1,'timestamp'] - tracking.loc[0,'timestamp'] == 100:
             is25fps = False
             print('switched to 10 fps.')
+        # finalizing node features
         synced_events = sync_and_features(tracking,event,is25fps)
-        synced_events.to_csv(path+f'events_w_tracking_{match_id}.csv',index=False)
+        
+        # calulating edge features
+        interactions,teammates,rec_tracking_ids,rec_send_dists = create_edge_features(synced_events)
+        synced_events['typeId'] = interactions
+        synced_events['teammates'] = teammates
+        synced_events['recipientId'] = rec_tracking_ids
+        synced_events['playerDistance'] = rec_send_dists
+        
+        synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0
 
         synced_events = create_structure(synced_events)
         if  synced_events.empty :
@@ -631,7 +719,10 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
             data.append(elem)
         #data.append(synced_events.values.tolist())
         print("with GPU:", timer() - start)
-    np.save(path+ds_fn,data)
+    #np.save(path+ds_fn,data)
+    with open(path+ds_fn, 'w', newline="") as f:
+        writer = csv.writer(f)
+        writer.writerows(data)
     print('saved ',ds_fn)
 
 path = 'C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
@@ -654,10 +745,10 @@ available_matches = get_available_matches(path) #match_ovw[(match_ovw['ma13']==T
 metadataFileName = '2021-08-19-jpl-season-2020-2021-squads.csv'
 
 print(len(available_matches))
-#create_dataset(path, metadataFileName,0,len(available_matches),'test_1.npy')
-create_dataset(path, metadataFileName,0,49,'data_1.npy')
-create_dataset(path, metadataFileName,50,99,'data_2.npy')
-create_dataset(path, metadataFileName,100,149,'data_3.npy')
-create_dataset(path, metadataFileName,150,199,'data_4.npy')
-create_dataset(path, metadataFileName,200,249,'data_5.npy')
-create_dataset(path, metadataFileName,250,'last','data_6.npy')
+create_dataset(path, metadataFileName,0,'last','test_1.csv')
+#create_dataset(path, metadataFileName,0,49,'data_1.csv')
+#create_dataset(path, metadataFileName,50,99,'data_2.csv')
+#create_dataset(path, metadataFileName,100,149,'data_3.csv')
+#create_dataset(path, metadataFileName,150,199,'data_4.csv')
+#create_dataset(path, metadataFileName,200,249,'data_5.csv')
+#create_dataset(path, metadataFileName,250,'last','data_6.csv')
