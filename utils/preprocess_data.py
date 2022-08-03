@@ -37,15 +37,20 @@ def preprocess(data_name):
             ts = float(e[2])
             label = str(e[3])
             e_feat = np.array([float(x) for x in e[4:6]])
-            n_feat = np.array([float(x) for x in e[6:]])
-
+            a_n_feat = []
+            n_start_id = 6
+            n_node_features = 9
+            for i in range(1,24):
+                n_feat = np.array([float(x) for x in e[n_start_id:n_start_id+n_node_features]])
+                n_start_id += n_node_features
+                a_n_feat.append(n_feat)
             p1_list.append(p1)
             p2_list.append(p2)
             ts_list.append(ts)
             label_list.append(label)
             idx_list.append(idx)
             e_feat_l.append(e_feat)
-            n_feat_l.append(n_feat)
+            n_feat_l.append(a_n_feat)
         
     return pd.DataFrame({'u': p1_list,
                          'i': p2_list,
@@ -111,6 +116,17 @@ def reindex(df, bipartite=True):
     
     return new_df
 
+def reindex_nodes(df):
+    nodes_set = set(df.u.to_list())
+    nodes_set.update(set(df.i.to_list()))
+    nodes_list = list(nodes_set)
+
+    new_df = df.copy()
+    new_df.u = new_df.apply(lambda x: nodes_list.index(x.u), axis=1)
+    new_df.u = new_df.apply(lambda x: nodes_list.index(x.u), axis=1)
+
+    return new_df
+
 def run(data_name, bipartite=True):
   Path("data/").mkdir(parents=True, exist_ok=True)
   PATH = './data/{}.csv'.format(data_name)
@@ -119,7 +135,7 @@ def run(data_name, bipartite=True):
   OUT_NODE_FEAT = './data/ml_{}_node.npy'.format(data_name)
 
   df, e_feat, n_feat = preprocess(PATH)  # get the interaction feature vectors and a dataframe which contains index, u, i, ts, label
-  #new_df = reindex(df, bipartite)  # get bipartite version of df
+  new_df = reindex_nodes(df)
   
   '''empty = np.zeros(feat.shape[1])[np.newaxis, :]  # with shape [1, feat_dim]
   feat = np.vstack([empty, feat])  # with shape [interactions, feat_dim]
@@ -127,7 +143,7 @@ def run(data_name, bipartite=True):
   max_idx = max(new_df.u.max(), new_df.i.max())  # number of nodes
   rand_feat = np.zeros((max_idx + 1, 172))  # initialize node features with fixed 172 dimension size for datasets without dynamic node features'''
 
-  df.to_csv(OUT_DF)  # temporal bipartite interaction graph
+  new_df.to_csv(OUT_DF)  # temporal bipartite interaction graph
   np.save(OUT_FEAT, e_feat)  # interaction (i.e. Temporal edge) features
   np.save(OUT_NODE_FEAT, n_feat)  # initial node features
 
