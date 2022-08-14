@@ -1,0 +1,60 @@
+2022-08-08 11:24:23,009 - root - INFO - Namespace(data='test_1', different_new_nodes=False, prefix='', batch=200, n_epoch=50, lr=0.0001, drop_out=0.1, n_runs=1, backprop_every=1, gpu=0, patience=5, use_memory=False, memory_update_at_end=False, node_dim=100, time_dim=100, message_dim=100, memory_dim=172, neighbors=10, uniform=False, embedding_module='graph_attention', message_function='identity', aggregator='last', memory_updater='gru', n_layer=1, n_head=2, use_source_embedding_in_message=False, use_destination_embedding_in_message=False)
+2022-08-08 11:24:23,049 - root - INFO - num of training instances: 2133
+2022-08-08 11:24:23,054 - root - INFO - num of batches per epoch: 11
+2022-08-08 11:24:23,054 - root - INFO - start 0 epoch
+2022-08-08 11:24:26,638 - root - INFO - epoch: 0 took 3.58s
+2022-08-08 11:24:26,638 - root - INFO - Epoch mean loss: 9.679473096674139
+2022-08-08 11:24:26,638 - root - INFO - transductive val auc: 0.5778947467095195, inductive val auc: 0.48002329122995613
+2022-08-08 11:24:26,638 - root - INFO - transductive val ap: 0.5563494060880122, inductive val ap: 0.4640540071114797
+2022-08-08 11:24:26,658 - root - INFO - start 1 epoch
+2022-08-08 11:24:29,651 - root - INFO - epoch: 1 took 2.99s
+2022-08-08 11:24:29,651 - root - INFO - Epoch mean loss: 3.1167700507424096
+2022-08-08 11:24:29,651 - root - INFO - transductive val auc: 0.5638147765534129, inductive val auc: 0.5055839230792201
+2022-08-08 11:24:29,651 - root - INFO - transductive val ap: 0.5265813176213213, inductive val ap: 0.5080863535798212
+2022-08-08 11:24:29,655 - root - INFO - start 2 epoch
+2022-08-08 11:24:32,386 - root - INFO - epoch: 2 took 2.73s
+2022-08-08 11:24:32,386 - root - INFO - Epoch mean loss: 2.0182253989306362
+2022-08-08 11:24:32,386 - root - INFO - transductive val auc: 0.5712686447811448, inductive val auc: 0.552703872913494
+2022-08-08 11:24:32,386 - root - INFO - transductive val ap: 0.5432795140825676, inductive val ap: 0.5208151808630733
+2022-08-08 11:24:32,400 - root - INFO - start 3 epoch
+2022-08-08 11:24:35,171 - root - INFO - epoch: 3 took 2.77s
+2022-08-08 11:24:35,171 - root - INFO - Epoch mean loss: 2.8232083212245596
+2022-08-08 11:24:35,172 - root - INFO - transductive val auc: 0.5820509603611876, inductive val auc: 0.505046433157156
+2022-08-08 11:24:35,172 - root - INFO - transductive val ap: 0.5586725780525256, inductive val ap: 0.4929856891638803
+2022-08-08 11:24:35,176 - root - INFO - start 4 epoch
+2022-08-08 11:24:37,804 - root - INFO - epoch: 4 took 2.63s
+2022-08-08 11:24:37,804 - root - INFO - Epoch mean loss: 6.77272553877397
+2022-08-08 11:24:37,804 - root - INFO - transductive val auc: 0.660848748852158, inductive val auc: 0.5050165726059304
+2022-08-08 11:24:37,804 - root - INFO - transductive val ap: 0.5973711487264132, inductive val ap: 0.4862647999039008
+2022-08-08 11:24:37,807 - root - INFO - start 5 epoch
+2022-08-08 11:24:40,248 - root - INFO - epoch: 5 took 2.44s
+2022-08-08 11:24:40,249 - root - INFO - Epoch mean loss: 5.679791017012163
+2022-08-08 11:24:40,249 - root - INFO - transductive val auc: 0.5721729797979798, inductive val auc: 0.5201110812505598
+2022-08-08 11:24:40,249 - root - INFO - transductive val ap: 0.5415380339560659, inductive val ap: 0.5179327338252904
+2022-08-08 11:24:40,253 - root - INFO - start 6 epoch
+2022-08-08 11:24:42,718 - root - INFO - epoch: 6 took 2.47s
+2022-08-08 11:24:42,718 - root - INFO - Epoch mean loss: 2.3490691726857964
+2022-08-08 11:24:42,718 - root - INFO - transductive val auc: 0.5865836202938475, inductive val auc: 0.515572277464242
+2022-08-08 11:24:42,718 - root - INFO - transductive val ap: 0.5435783605539061, inductive val ap: 0.509765355321578
+2022-08-08 11:24:42,723 - root - INFO - start 7 epoch
+2022-08-08 11:24:45,293 - root - INFO - epoch: 7 took 2.57s
+2022-08-08 11:24:45,293 - root - INFO - Epoch mean loss: 1.6680491295727817
+2022-08-08 11:24:45,293 - root - INFO - transductive val auc: 0.6071571357514539, inductive val auc: 0.5600346382394219
+2022-08-08 11:24:45,293 - root - INFO - transductive val ap: 0.5568178835392111, inductive val ap: 0.5317620890665546
+2022-08-08 11:24:45,298 - root - INFO - start 8 epoch
+2022-08-08 11:24:47,733 - root - INFO - epoch: 8 took 2.44s
+2022-08-08 11:24:47,733 - root - INFO - Epoch mean loss: 1.2521611560474744
+2022-08-08 11:24:47,733 - root - INFO - transductive val auc: 0.6219411883991429, inductive val auc: 0.5607363611932277
+2022-08-08 11:24:47,733 - root - INFO - transductive val ap: 0.5682495005311388, inductive val ap: 0.5274678509027102
+2022-08-08 11:24:47,738 - root - INFO - start 9 epoch
+2022-08-08 11:24:50,192 - root - INFO - epoch: 9 took 2.45s
+2022-08-08 11:24:50,192 - root - INFO - Epoch mean loss: 1.100871909748424
+2022-08-08 11:24:50,192 - root - INFO - transductive val auc: 0.6008636095806551, inductive val auc: 0.5359819642270597
+2022-08-08 11:24:50,192 - root - INFO - transductive val ap: 0.5655609337921045, inductive val ap: 0.5107667865506859
+2022-08-08 11:24:50,192 - root - INFO - No improvement over 5 epochs, stop training
+2022-08-08 11:24:50,192 - root - INFO - Loading the best model at epoch 4
+2022-08-08 11:24:50,214 - root - INFO - Loaded the best model at epoch 4 for inference
+2022-08-08 11:24:50,419 - root - INFO - Test statistics: Transductive -- auc: 0.6664525673400673, ap: 0.6176501924724698
+2022-08-08 11:24:50,419 - root - INFO - Test statistics: Inductive -- auc: 0.6058590620713307, ap: 0.6144219870560237
+2022-08-08 11:24:50,420 - root - INFO - Saving TGN model
+2022-08-08 11:24:50,426 - root - INFO - TGN model saved

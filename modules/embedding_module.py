@@ -129,7 +129,7 @@ class GraphEmbedding(EmbeddingModule):
       self.use_memory = use_memory
       self.device = device
 
-  def compute_embedding(self, memory, source_nodes, timestamps, n_layers, n_neighbors=20, time_diffs=None,
+  def compute_embedding(self, memory, source_nodes,node_idx, timestamps, n_layers, n_neighbors=20, time_diffs=None,
                         use_time_proj=True):
     """
     Recursive implementation of n_layers temporal graph embedding calculation.
@@ -145,11 +145,16 @@ class GraphEmbedding(EmbeddingModule):
     """
 
     assert (n_layers >= 0)  # layers can't be negative
-
+    node_idx_torch = torch.from_numpy(node_idx).long().to(self.device)
     source_nodes_torch = torch.from_numpy(source_nodes).long().to(self.device)  # source node ids
     timestamps_torch = torch.unsqueeze(torch.from_numpy(timestamps).float().to(self.device), dim=1)  # timestamps of interactions for those nodes
     source_nodes_time_embedding = self.time_encoder(torch.zeros_like(timestamps_torch))  # Phi(0)
-    source_node_features = self.node_features[source_nodes_torch, :]  # source node features of shape [source_nodes, node_feat_dim]
+    source_nodes_stacked = torch.column_stack([source_nodes_torch*9, source_nodes_torch*9+1, \
+                                               source_nodes_torch*9+2, source_nodes_torch*9+3, \
+                                               source_nodes_torch*9+4, source_nodes_torch*9+5,\
+                                               source_nodes_torch*9+6, source_nodes_torch*9+7, source_nodes_torch*9+8])
+    source_node_features = torch.gather(self.node_features[node_idx_torch],1,source_nodes_stacked)  # source node features of shape [interactions,source_nodes * node_feat_dim]
+                                                                      # we need shape [1,source_nodes*node_feature_dim]
 
     # h^0 (t) = S(t) + V(t)
     if self.use_memory:
@@ -167,6 +172,7 @@ class GraphEmbedding(EmbeddingModule):
 
       # neighbors_torch, edge_idxs, edge_deltas_torch are what we need
       neighbors_torch = torch.from_numpy(neighbors).long().to(self.device)
+      node_idxs = edge_idxs #np.concatenate([edge_idxs,edge_idxs,edge_idxs])
       edge_idxs = torch.from_numpy(edge_idxs).long().to(self.device)
       edge_deltas = timestamps[:, np.newaxis] - edge_times  # This is t - t_N in the paper of shape [source_nodes, num_temp_neighbors]
       edge_deltas_torch = torch.from_numpy(edge_deltas).float().to(self.device)
@@ -176,6 +182,7 @@ class GraphEmbedding(EmbeddingModule):
       # neighbor_embeddings of shape [len(neighbors), emb_dim]
       neighbor_embeddings = self.compute_embedding(memory,
                                                    neighbors,
+                                                   node_idxs,
                                                    np.repeat(timestamps, n_neighbors),
                                                    n_layers=n_layers - 1,
                                                    n_neighbors=n_neighbors)

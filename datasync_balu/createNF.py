@@ -457,7 +457,7 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
                 synced_events.loc[ev_idx,f'player_{num}_dist_to_bc'] = dist
                 synced_events.loc[ev_idx,f'player_{num}_is_bc'] = 1
                 synced_events.loc[ev_idx,'event_team'] = event[f'player_{num}_teamId']
-        
+
         # ball
         ball_x, ball_y = event['ball_x'],event['ball_y']
         dist_b = distance_pos(bc_x,bc_y,ball_x,ball_y)
@@ -588,7 +588,13 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
             synced_events.loc[second_half_idx:,'ball_dist_to_goal'],\
                 synced_events.loc[second_half_idx:,'ball_angle_to_goal']=calc_angle_and_distance_to_goal(b_X_sh,b_Y_sh,True)
             #calc_angle_and_distance_to_goal(ball X, ball Y, False)
-        
+
+    newids = []
+    for ev_idx, event in synced_events.iterrows():
+        for num in range(1, 23):
+            if event[f'player_{num}_objectId'] == event['playerTrackingId']:
+                newids.append(num)
+    synced_events['p1_id'] = newids
     return synced_events
 
 def create_edge_features(synced_event_df):
@@ -602,7 +608,7 @@ def create_edge_features(synced_event_df):
         if((event['typeId'] == 1) | (event['typeId'] == 2)):
             interactions.append('pass')
             teammates.append(1)
-        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 16)):
+        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15) | (event['typeId'] == 16)):
             interactions.append('shot')
             teammates.append(0)    
         elif(event['typeId'] == 3):
@@ -614,11 +620,10 @@ def create_edge_features(synced_event_df):
         elif((event['typeId'] == 7) | (event['typeId'] == 74)):
             interactions.append('tackle')
             teammates.append(0)    
-        elif((event['typeId'] == 10) | (event['typeId'] == 11) | (event['typeId'] == 15)):
+        elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
             interactions.append('save')
             teammates.append(0)  
-        
-        
+
         pX, pY = event['Pass_end_x'],event['Pass_end_y']
         min_dist = 10000
         #closest_player = 0
@@ -631,7 +636,7 @@ def create_edge_features(synced_event_df):
                 if dist < min_dist:
                     min_dist = dist
                     #closest_player = num
-                    rec_tr_id = int(event[f'player_{num}_objectId'])
+                    rec_tr_id = num #int(event[f'player_{num}_objectId'])
                     rec_send_dist = dist
         rec_tracking_ids.append(rec_tr_id)
         rec_send_dists.append(rec_send_dist)
@@ -644,7 +649,7 @@ def create_structure(synced_event_df):
     for ev_idx, event in synced_event_df.iterrows():
         structured_event=[]
         # player1 
-        p_tr_id = int(event['playerTrackingId'])
+        p_tr_id = int(event['p1_id'])
         structured_event.append(p_tr_id)
         # player2
         r_tr_id = int(event['recipientId'])
@@ -709,7 +714,7 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         synced_events['recipientId'] = rec_tracking_ids
         synced_events['playerDistance'] = rec_send_dists
         
-        synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0
+        #synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0
 
         synced_events = create_structure(synced_events)
         if  synced_events.empty :

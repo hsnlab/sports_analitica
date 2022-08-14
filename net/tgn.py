@@ -116,6 +116,7 @@ class TGN(torch.nn.Module):
     nodes = np.concatenate([source_nodes, destination_nodes, negative_nodes])
     positives = np.concatenate([source_nodes, destination_nodes])
     timestamps = np.concatenate([edge_times, edge_times, edge_times])
+    node_idxs = np.concatenate([edge_idxs,edge_idxs,edge_idxs])
 
     memory = None
     time_diffs = None
@@ -146,6 +147,7 @@ class TGN(torch.nn.Module):
     # Compute the embeddings using the embedding module
     node_embedding = self.embedding_module.compute_embedding(memory=memory,
                                                              source_nodes=nodes,
+                                                             node_idx=node_idxs,
                                                              timestamps=timestamps,
                                                              n_layers=self.n_layers,
                                                              n_neighbors=n_neighbors,
