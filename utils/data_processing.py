@@ -46,7 +46,8 @@ def get_data(dataset_name, different_new_nodes_between_val_and_test=False):
     graph_df = pd.read_csv('./data/ml_{}.csv'.format(dataset_name))
     edge_features = np.load('./data/ml_{}.npy'.format(dataset_name))
     node_features = np.load('./data/ml_{}_node.npy'.format(dataset_name))
-    
+    node_features_dynamic = np.load('./data/ml_{}_node_dynamic.npy'.format(dataset_name))
+
     # val and test splite timestamp: 70%-15%-15%
     val_time, test_time = list(np.quantile(graph_df.ts, [0.70, 0.85]))  # return two float numbers
     
@@ -139,7 +140,7 @@ def get_data(dataset_name, different_new_nodes_between_val_and_test=False):
     print("The inductive test dataset has {} interactions, involving {} different unique nodes".format(new_node_test_data.n_interactions, new_node_test_data.n_unique_nodes))
     print("{} nodes were used for the inductive testing, i.e. are never seen during training".format(len(new_test_node_set)))
     
-    return node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, new_node_test_data
+    return node_features,node_features_dynamic, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, new_node_test_data
 
 
 def compute_time_statistics(sources, destinations, timestamps):

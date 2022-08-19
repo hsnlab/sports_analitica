@@ -13,8 +13,8 @@ from modules.time_encoding import TimeEncode
 
 
 class TGN(torch.nn.Module):
-  def __init__(self, neighbor_finder, node_features, edge_features, device, n_layers=2,
-               n_heads=2, dropout=0.1, use_memory=False,
+  def __init__(self, neighbor_finder, node_features, node_features_dynamic, edge_features, device,
+               n_layers=2, n_heads=2, dropout=0.1, use_memory=False,
                memory_update_at_start=True, message_dimension=100,
                memory_dimension=500, embedding_module_type="graph_attention",
                message_function="mlp",
@@ -32,6 +32,7 @@ class TGN(torch.nn.Module):
     self.logger = logging.getLogger(__name__)
 
     self.node_raw_features = torch.from_numpy(node_features.astype(np.float32)).to(device)
+    self.node_raw_features_dynamic = torch.from_numpy(node_features_dynamic.astype(np.float32)).to(device)
     self.edge_raw_features = torch.from_numpy(edge_features.astype(np.float32)).to(device)
 
     self.n_node_features = self.node_raw_features.shape[1]
@@ -62,7 +63,7 @@ class TGN(torch.nn.Module):
       self.memory = Memory(n_nodes=self.n_nodes,
                            memory_dimension=self.memory_dimension,
                            input_dimension=message_dimension,
-                           message_dimension=message_dimension,
+                           #message_dimension=message_dimension,
                            device=device)
       self.message_aggregator = get_message_aggregator(aggregator_type=aggregator_type,
                                                        device=device)
@@ -179,12 +180,31 @@ class TGN(torch.nn.Module):
                                                                               source_nodes,
                                                                               source_node_embedding,
                                                                               edge_times, edge_idxs)
+      #call new function here?
+      unique_source_nodes,source_node_id_to_messages = self.get_raw_node_event_messges(source_nodes,
+                                                                                       source_node_embedding,
+                                                                                       edge_times,
+                                                                                       edge_times,edge_idxs)
+      unique_destination_nodes, destination_node_id_to_messages = self.get_raw_node_event_messges(
+                                                                                        destination_nodes,
+                                                                                        destination_node_embedding,
+                                                                                        edge_times,
+                                                                                        edge_times, edge_idxs)
+
+      unique_sources = np.concatenate([unique_sources,unique_source_nodes]) #probably not needed?
+      source_id_to_messages = self.mergeDictionary(source_id_to_messages, source_node_id_to_messages)
+      unique_destinations = np.concatenate([unique_destinations,unique_destination_nodes])
+      destination_id_to_messages = self.mergeDictionary(destination_id_to_messages,destination_node_id_to_messages)
+      # need to merge the source_id_to_messagees parts, because they contain the messages themselfs!!
+
       if self.memory_update_at_start:
         self.memory.store_raw_messages(unique_sources, source_id_to_messages)
         self.memory.store_raw_messages(unique_destinations, destination_id_to_messages)
+        #self.memory.store_raw_messages(unique_source_nodes, source_node_id_to_messages)
       else:
         self.update_memory(unique_sources, source_id_to_messages)
         self.update_memory(unique_destinations, destination_id_to_messages)
+        #self.update_memory(unique_source_nodes,source_node_id_to_messages)
 
       if self.dyrep:
         source_node_embedding = memory[source_nodes]
@@ -218,6 +238,7 @@ class TGN(torch.nn.Module):
     neg_score = score[n_samples:]
 
     return pos_score.sigmoid(), neg_score.sigmoid()
+
 
   def update_memory(self, nodes, messages):
     # Aggregate messages for the same nodes
@@ -272,6 +293,50 @@ class TGN(torch.nn.Module):
 
     return unique_sources, messages
 
+  def get_raw_node_event_messges(self, source_nodes, source_node_embedding,
+                                 timestamps, node_times, node_idxs ):
+      node_times = torch.from_numpy(node_times).float().to(self.device)
+      source_nodes_torch = torch.from_numpy(source_nodes).long().to(self.device)  # source node ids
+      node_idx_torch = torch.from_numpy(node_idxs).long().to(self.device)
+      timestamps = torch.from_numpy(timestamps).float().to(self.device)
+
+      source_nodes_stacked = torch.column_stack([source_nodes_torch * 9, source_nodes_torch * 9 + 1, \
+                                                 source_nodes_torch * 9 + 2, source_nodes_torch * 9 + 3, \
+                                                 source_nodes_torch * 9 + 4, source_nodes_torch * 9 + 5, \
+                                                 source_nodes_torch * 9 + 6, source_nodes_torch * 9 + 7,
+                                                 source_nodes_torch * 9 + 8])
+      source_node_features = torch.gather(self.node_raw_features_dynamic[node_idx_torch], 1, source_nodes_stacked)
+      #node_features = self.node_raw_features[node_idxs]      # get dynamic features here?
+
+
+      source_memory = self.memory.get_memory(source_nodes) if not self.use_source_embedding_in_message else source_node_embedding
+
+      time_encoding = self.time_encoder(timestamps.unsqueeze(dim=1)).view(len(source_nodes),-1)
+      zeros = torch.zeros(len(source_nodes),2)
+      nodes_messages = torch.cat([source_memory,#destination_memory,
+                                  source_node_features,zeros,time_encoding],
+                                 dim = 1)
+
+      messages = defaultdict(list)
+      unique_nodes = np.unique(source_nodes)
+
+      for i in range(len(source_nodes)):
+          messages[source_nodes[i]].append((nodes_messages[i],node_times[i]))
+
+      return unique_nodes,messages
+
   def set_neighbor_finder(self, neighbor_finder):
     self.neighbor_finder = neighbor_finder
     self.embedding_module.neighbor_finder = neighbor_finder
+
+  def mergeDictionary(self, dict_1, dict_2):
+      '''dict_3 = {**dict_1, **dict_2}
+      for key, value in dict_3.items():
+          if key in dict_1 and key in dict_2:
+              dict_3[key] = [value , dict_1[key]]
+      return dict_3'''
+      for k,v in dict_1.items():
+          if k in dict_2.keys():
+            for item in dict_2[k]:
+                v.append(item)
+      return dict_1

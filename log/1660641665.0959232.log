@@ -1,0 +1,4 @@
+2022-08-16 11:21:05,096 - root - INFO - Namespace(data='test_1', different_new_nodes=False, prefix='', batch=200, n_epoch=50, lr=0.0001, drop_out=0.1, n_runs=1, backprop_every=1, gpu=0, patience=5, use_memory=True, memory_update_at_end=False, node_dim=100, time_dim=100, message_dim=100, memory_dim=9, neighbors=10, uniform=False, embedding_module='graph_attention', message_function='identity', aggregator='last', memory_updater='gru', n_layer=1, n_head=2, use_source_embedding_in_message=False, use_destination_embedding_in_message=False)
+2022-08-16 11:21:05,142 - root - INFO - num of training instances: 1838
+2022-08-16 11:21:05,143 - root - INFO - num of batches per epoch: 10
+2022-08-16 11:21:05,143 - root - INFO - start 0 epoch

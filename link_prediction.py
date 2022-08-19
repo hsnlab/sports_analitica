@@ -101,7 +101,7 @@ logger.addHandler(ch)
 logger.info(args)
 
 ### Extract data for training, validation and testing
-node_features, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, \
+node_features,node_features_dynamic, edge_features, full_data, train_data, val_data, test_data, new_node_val_data, \
 new_node_test_data = get_data(DATA, different_new_nodes_between_val_and_test=args.different_new_nodes)
 
 # Initialize training neighbor finder to retrieve temporal graph
@@ -134,7 +134,7 @@ for i in range(args.n_runs):
     Path("results/").mkdir(parents=True, exist_ok=True)
 
     # Initialize Model
-    tgn = TGN(neighbor_finder=train_ngh_finder, node_features=node_features,
+    tgn = TGN(neighbor_finder=train_ngh_finder, node_features=node_features, node_features_dynamic=node_features_dynamic,
               edge_features=edge_features, device=device,
               n_layers=NUM_LAYER,
               n_heads=NUM_HEADS, dropout=DROP_OUT, use_memory=USE_MEMORY,

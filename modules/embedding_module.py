@@ -145,7 +145,7 @@ class GraphEmbedding(EmbeddingModule):
     """
 
     assert (n_layers >= 0)  # layers can't be negative
-    node_idx_torch = torch.from_numpy(node_idx).long().to(self.device)
+    '''node_idx_torch = torch.from_numpy(node_idx).long().to(self.device)
     source_nodes_torch = torch.from_numpy(source_nodes).long().to(self.device)  # source node ids
     timestamps_torch = torch.unsqueeze(torch.from_numpy(timestamps).float().to(self.device), dim=1)  # timestamps of interactions for those nodes
     source_nodes_time_embedding = self.time_encoder(torch.zeros_like(timestamps_torch))  # Phi(0)
@@ -153,9 +153,14 @@ class GraphEmbedding(EmbeddingModule):
                                                source_nodes_torch*9+2, source_nodes_torch*9+3, \
                                                source_nodes_torch*9+4, source_nodes_torch*9+5,\
                                                source_nodes_torch*9+6, source_nodes_torch*9+7, source_nodes_torch*9+8])
-    source_node_features = torch.gather(self.node_features[node_idx_torch],1,source_nodes_stacked)  # source node features of shape [interactions,source_nodes * node_feat_dim]
-                                                                      # we need shape [1,source_nodes*node_feature_dim]
+    #source_node_features = torch.gather(self.node_features[node_idx_torch],1,source_nodes_stacked)  # source node features of shape [interactions,source_nodes * node_feat_dim]
+    source_node_features = self.node_features[node_idx_torch,:]                 # we need shape [1,source_nodes*node_feature_dim]
+    '''
 
+    source_nodes_torch = torch.from_numpy(source_nodes).long().to(self.device)  # source node ids
+    timestamps_torch = torch.unsqueeze(torch.from_numpy(timestamps).float().to(self.device), dim=1)  # timestamps of interactions for those nodes
+    source_nodes_time_embedding = self.time_encoder(torch.zeros_like(timestamps_torch))  # Phi(0)
+    source_node_features = self.node_features[source_nodes_torch, :]  # source node features of shape [source_nodes, node_feat_dim]
     # h^0 (t) = S(t) + V(t)
     if self.use_memory:
       source_node_features = memory[source_nodes, :] + source_node_features  # node_dim = 172 = mem_dim for wiki and reddit
@@ -179,6 +184,7 @@ class GraphEmbedding(EmbeddingModule):
 
       # Recrsively calculate L-hops neighbors' embeddings of source_nodes
       neighbors = neighbors.flatten()  # [source_nodes * num_temp_neighbors]
+      node_idxs = node_idxs.flatten()
       # neighbor_embeddings of shape [len(neighbors), emb_dim]
       neighbor_embeddings = self.compute_embedding(memory,
                                                    neighbors,
