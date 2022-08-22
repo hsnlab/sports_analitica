@@ -717,6 +717,9 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         #synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0
 
         synced_events = create_structure(synced_events)
+        # filling in nan values
+        synced_events = synced_events.fillna(method = 'ffill')
+        synced_events = synced_events.fillna(0)
         if  synced_events.empty :
             print('problem: could not sync tracking and event data')
             continue
