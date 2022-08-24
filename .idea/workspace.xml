@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sports_analitica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sports_analitica.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasync_balu/createNF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/-test_1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/-test_1.pth" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659534983094</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="small typo correction">
+      <created>1661341043263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661341043263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -188,7 +186,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/datasync_balu/createNF.py</url>
-          <line>672</line>
+          <line>708</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>

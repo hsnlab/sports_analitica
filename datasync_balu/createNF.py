@@ -638,50 +638,50 @@ def create_edge_features(synced_event_df):
         p1_num = event['p1_id']
         p2_id = 0
         p2_dist = 0
-        if((event['typeId'] == 1) | (event['typeId'] == 2)):
-            interactions.append('pass')
+        if((event['typeId'] == 1) | (event['typeId'] == 2)): # pass
+            interactions.append('0')
             p2_id,p2_dist = get_pass_reciever(event)
             labelCol1.append('OP')
             labelCol2.append('OP')
-        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15)):
-            interactions.append('shot')
+        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15)): # shot
+            interactions.append('3')
             p2_id = 25
             p2_dist = event[f'player_{p1_num}_dist_to_goal']
             labelCol1.append('OP')
             labelCol2.append('G')
-        elif(event['typeId'] == 3):
-            interactions.append('dribble')    
+        elif(event['typeId'] == 3): # dribble
+            interactions.append('2')
             p2_id = 23
             p2_dist = 0
             labelCol1.append('OP')
             labelCol2.append('B')
-        elif(event['typeId'] == 8):
-            interactions.append('interception')
+        elif(event['typeId'] == 8): # interception
+            interactions.append('4')
             p2_id = 23
             p2_dist = 0
             labelCol1.append('DP')
             labelCol2.append('B')
-        elif((event['typeId'] == 7) | (event['typeId'] == 74)):
-            interactions.append('tackle')
+        elif((event['typeId'] == 7) | (event['typeId'] == 74)): # tackle
+            interactions.append('1')
             p2_id,p2_dist = get_closest_op(p1_num,event)
             labelCol1.append('OP')
             labelCol2.append('DP')
-        elif(event['typeId'] == 12):
-            interactions.append('clearence')
+        elif(event['typeId'] == 12): # clearance
+            interactions.append('5')
             p2_id = 24
             p2_dist = distance_pos(event[f'player_{p1_num}_x'],event[f'player_{p1_num}_y'],\
                                    event['Pass_end_x'],event['Pass_end_y'])
             labelCol1.append('T')
             labelCol2.append('DP')
-        elif(event['typeId'] == 5):
-            interactions.append('ball out')
+        elif(event['typeId'] == 5): # ball out
+            interactions.append('6')
             p2_id = 24
             player_x, player_y = get_player_pos(event['playerTrackingId'],event)
             p2_dist = distance_pos(player_x,player_y,event['x'],event['y'])
             labelCol1.append('T')
             labelCol2.append('B')
-        elif(event['typeId'] == 16):
-            interactions.append('goal')
+        elif(event['typeId'] == 16): # goal
+            interactions.append('7')
             p2_id = 25
             p2_dist = event[f'player_{p1_num}_dist_to_goal']
             labelCol1.append('G')
