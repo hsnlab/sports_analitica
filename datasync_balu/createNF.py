@@ -600,29 +600,58 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
 def create_edge_features(synced_event_df):
     interactions = []
     teammates = []
+    labelCol1 = []
+    labelCol2 = []
     #closest_player = ['tbd'] * len(synced_event_df.index)
     rec_tracking_ids = []
     rec_send_dists = []
+
+    # ide minden elágazásnál felvenni a 2 megfelelő (op/dp/b/t/g) oszlopot
     for ev_idx, event in synced_event_df.iterrows():
         
         if((event['typeId'] == 1) | (event['typeId'] == 2)):
             interactions.append('pass')
             teammates.append(1)
-        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15) | (event['typeId'] == 16)):
+            labelCol1.append('OP')
+            labelCol2.append('OP')
+        elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15)):
             interactions.append('shot')
-            teammates.append(0)    
+            teammates.append(0)
+            labelCol1.append('OP')
+            labelCol2.append('G')
         elif(event['typeId'] == 3):
             interactions.append('dribble')    
-            teammates.append(0)    
+            teammates.append(0)
+            labelCol1.append('OP')
+            labelCol2.append('B')
         elif(event['typeId'] == 8):
             interactions.append('interception')
-            teammates.append(0)    
+            teammates.append(0)
+            labelCol1.append('DP')
+            labelCol2.append('B')
         elif((event['typeId'] == 7) | (event['typeId'] == 74)):
             interactions.append('tackle')
-            teammates.append(0)    
-        elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
+            teammates.append(0)
+            labelCol1.append('OP')
+            labelCol2.append('DP')
+        elif(event['typeId'] == 12):
+            interactions.append('clearence')
+            teammates.append(0)
+            labelCol1.append('T')
+            labelCol2.append('DP')
+        elif(event['typeId'] == 5):
+            interactions.append('ball out')
+            teammates.append(0)
+            labelCol1.append('T')
+            labelCol2.append('B')
+        elif(event['typeId'] == 16):
+            interactions.append('goal')
+            teammates.append(0)
+            labelCol1.append('G')
+            labelCol2.append('B')
+        '''elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
             interactions.append('save')
-            teammates.append(0)  
+            teammates.append(0)'''
 
         pX, pY = event['Pass_end_x'],event['Pass_end_y']
         min_dist = 10000
@@ -641,7 +670,7 @@ def create_edge_features(synced_event_df):
         rec_tracking_ids.append(rec_tr_id)
         rec_send_dists.append(rec_send_dist)
 
-    return interactions,teammates,rec_tracking_ids,rec_send_dists  
+    return interactions,teammates,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2
 
 
 def create_structure(synced_event_df):
@@ -708,12 +737,15 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         synced_events = sync_and_features(tracking,event,is25fps)
         
         # calulating edge features
-        interactions,teammates,rec_tracking_ids,rec_send_dists = create_edge_features(synced_events)
+        interactions,teammates,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2 = create_edge_features(synced_events)
         synced_events['typeId'] = interactions
         synced_events['teammates'] = teammates
         synced_events['recipientId'] = rec_tracking_ids
         synced_events['playerDistance'] = rec_send_dists
-        
+        synced_events['labelCol1'] = labelCol1
+        synced_events['labelCol2'] = labelCol2
+
+
         #synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0
 
         synced_events = create_structure(synced_events)
@@ -733,7 +765,7 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         writer.writerows(data)
     print('saved ',ds_fn)
 
-path = 'C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
+path = 'C:\\Users\\fanni\\Documents\\Egyetem\\SzakmaiGyakorlat\\StartUp\\TGN\\'
 
 def get_available_matches(path):
     has_tracking=[]
