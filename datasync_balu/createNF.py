@@ -597,9 +597,36 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
     synced_events['p1_id'] = newids
     return synced_events
 
+def get_closest_op(p1_num,frame):
+    p1_x,p1_y = frame[f'player_{p1_num}_x'],frame[f'player_{p1_num}_y']
+    min_dist=1000
+    cl_p = 0
+    for num in range(1,23):
+        if frame[f'player_{p1_num}_teamId'] != frame[f'player_{num}_teamId']:
+            plX, plY = frame[f'player_{num}_x'], frame[f'player_{num}_y']
+            dist = distance_pos(p1_x, p1_y, plX, plY)
+            if dist < min_dist:
+                min_dist = dist
+                cl_p = num
+
+    return cl_p,min_dist
+
+def get_pass_reciever(frame):
+    pX, pY = frame['Pass_end_x'], frame['Pass_end_y']
+    min_dist = 10000
+    rec_tr_id = 0
+    rec_send_dist = 0
+    for num in range(1, 23):
+        if frame['event_team'] == frame[f'player_{num}_teamId']:
+            plX, plY = frame[f'player_{num}_x'], frame[f'player_{num}_y']
+            dist = distance_pos(pX, pY, plX, plY)
+            if dist < min_dist:
+                min_dist = dist
+                rec_tr_id = num  # int(event[f'player_{num}_objectId'])
+                rec_send_dist = dist
+    return rec_tr_id,rec_send_dist
 def create_edge_features(synced_event_df):
     interactions = []
-    teammates = []
     labelCol1 = []
     labelCol2 = []
     #closest_player = ['tbd'] * len(synced_event_df.index)
@@ -608,56 +635,65 @@ def create_edge_features(synced_event_df):
 
     # ide minden elágazásnál felvenni a 2 megfelelő (op/dp/b/t/g) oszlopot
     for ev_idx, event in synced_event_df.iterrows():
-        
+        p1_num = event['p1_id']
+        p2_id = 0
+        p2_dist = 0
         if((event['typeId'] == 1) | (event['typeId'] == 2)):
             interactions.append('pass')
-            teammates.append(1)
+            p2_id,p2_dist = get_pass_reciever(event)
             labelCol1.append('OP')
             labelCol2.append('OP')
         elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15)):
             interactions.append('shot')
-            teammates.append(0)
+            p2_id = 25
+            p2_dist = event[f'player_{p1_num}_dist_to_goal']
             labelCol1.append('OP')
             labelCol2.append('G')
         elif(event['typeId'] == 3):
             interactions.append('dribble')    
-            teammates.append(0)
+            p2_id = 23
+            p2_dist = 0
             labelCol1.append('OP')
             labelCol2.append('B')
         elif(event['typeId'] == 8):
             interactions.append('interception')
-            teammates.append(0)
+            p2_id = 23
+            p2_dist = 0
             labelCol1.append('DP')
             labelCol2.append('B')
         elif((event['typeId'] == 7) | (event['typeId'] == 74)):
             interactions.append('tackle')
-            teammates.append(0)
+            p2_id,p2_dist = get_closest_op(p1_num,event)
             labelCol1.append('OP')
             labelCol2.append('DP')
         elif(event['typeId'] == 12):
             interactions.append('clearence')
-            teammates.append(0)
+            p2_id = 24
+            p2_dist = distance_pos(event[f'player_{p1_num}_x'],event[f'player_{p1_num}_y'],\
+                                   event['Pass_end_x'],event['Pass_end_y'])
             labelCol1.append('T')
             labelCol2.append('DP')
         elif(event['typeId'] == 5):
             interactions.append('ball out')
-            teammates.append(0)
+            p2_id = 24
+            player_x, player_y = get_player_pos(event['playerTrackingId'],event)
+            p2_dist = distance_pos(player_x,player_y,event['x'],event['y'])
             labelCol1.append('T')
             labelCol2.append('B')
         elif(event['typeId'] == 16):
             interactions.append('goal')
-            teammates.append(0)
+            p2_id = 25
+            p2_dist = event[f'player_{p1_num}_dist_to_goal']
             labelCol1.append('G')
             labelCol2.append('B')
         '''elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
             interactions.append('save')
             teammates.append(0)'''
-
+        '''
         pX, pY = event['Pass_end_x'],event['Pass_end_y']
         min_dist = 10000
         #closest_player = 0
-        rec_tr_id = 0
-        rec_send_dist = 0
+        
         for num in range(1,23):
             if event['event_team'] == event[f'player_{num}_teamId']:
                 plX, plY = event[f'player_{num}_x'],event[f'player_{num}_y']
@@ -666,9 +702,9 @@ def create_edge_features(synced_event_df):
                     min_dist = dist
                     #closest_player = num
                     rec_tr_id = num #int(event[f'player_{num}_objectId'])
-                    rec_send_dist = dist
-        rec_tracking_ids.append(rec_tr_id)
-        rec_send_dists.append(rec_send_dist)
+                    rec_send_dist = dist'''
+        rec_tracking_ids.append(p2_id)
+        rec_send_dists.append(p2_dist)
 
     return interactions,teammates,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2
 
