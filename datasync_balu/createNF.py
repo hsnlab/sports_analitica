@@ -77,7 +77,7 @@ def flatten_and_features(path,match_id,metadata_fn):
 
     df1 = jsonNormalize(d['liveData']['event'])
     interesting_periods = [1, 2, 3, 4, 5]
-    interesting_event_ids = [1, 2, 3, 7, 8, 10, 11, 13, 14, 15, 16, 74]
+    interesting_event_ids = [1, 2, 3, 5, 7, 8, 12, 13, 14, 15, 16, 74]
     df2 = df1[df1['typeId'].apply(lambda x: x == 32)]
     df1 = df1[df1['periodId'].apply(lambda x: x in interesting_periods)]
     df1 = df1[df1['typeId'].apply(lambda x: x in interesting_event_ids)]
@@ -630,8 +630,9 @@ def create_edge_features(synced_event_df):
     labelCol1 = []
     labelCol2 = []
     #closest_player = ['tbd'] * len(synced_event_df.index)
-    rec_tracking_ids = []
-    rec_send_dists = []
+    p1_ids = []
+    p2_ids = []
+    p2_dists = []
 
     # ide minden elágazásnál felvenni a 2 megfelelő (op/dp/b/t/g) oszlopot
     for ev_idx, event in synced_event_df.iterrows():
@@ -678,12 +679,14 @@ def create_edge_features(synced_event_df):
             p2_id = 24
             player_x, player_y = get_player_pos(event['playerTrackingId'],event)
             p2_dist = distance_pos(player_x,player_y,event['x'],event['y'])
+            p1_num = 23
             labelCol1.append('T')
             labelCol2.append('B')
         elif(event['typeId'] == 16):
             interactions.append('goal')
             p2_id = 25
             p2_dist = event[f'player_{p1_num}_dist_to_goal']
+            p1_num = 23
             labelCol1.append('G')
             labelCol2.append('B')
         '''elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
@@ -703,10 +706,11 @@ def create_edge_features(synced_event_df):
                     #closest_player = num
                     rec_tr_id = num #int(event[f'player_{num}_objectId'])
                     rec_send_dist = dist'''
-        rec_tracking_ids.append(p2_id)
-        rec_send_dists.append(p2_dist)
+        p2_ids.append(p2_id)
+        p2_dists.append(p2_dist)
+        p1_ids.append(p1_num)
 
-    return interactions,teammates,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2
+    return interactions,p1_ids,p2_ids,p2_dists, labelCol1, labelCol2
 
 
 def create_structure(synced_event_df):
@@ -773,9 +777,9 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         synced_events = sync_and_features(tracking,event,is25fps)
         
         # calulating edge features
-        interactions,teammates,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2 = create_edge_features(synced_events)
+        interactions,p1_ids,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2 = create_edge_features(synced_events)
         synced_events['typeId'] = interactions
-        synced_events['teammates'] = teammates
+        synced_events['p1_id'] = p1_ids
         synced_events['recipientId'] = rec_tracking_ids
         synced_events['playerDistance'] = rec_send_dists
         synced_events['labelCol1'] = labelCol1
