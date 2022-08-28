@@ -730,7 +730,9 @@ def create_structure(synced_event_df):
         action = event['typeId']
         structured_event.append(action)
         # edge features
-        structured_event.append(event['teammates'])
+        #structured_event.append(event['teammates'])
+        structured_event.append(event['labelCol1'])
+        structured_event.append(event['labelCol2'])
         structured_event.append(event['playerDistance'])
         # node features
         for num in range(1,23):
@@ -805,7 +807,7 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         writer.writerows(data)
     print('saved ',ds_fn)
 
-path = 'C:\\Users\\fanni\\Documents\\Egyetem\\SzakmaiGyakorlat\\StartUp\\TGN\\'
+path = 'C:\\Users\\mibam\\egyetem\\sports_analytics\\BEL_data\\test\\'
 
 def get_available_matches(path):
     has_tracking=[]

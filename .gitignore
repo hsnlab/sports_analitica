@@ -5,3 +5,4 @@
 *.xml
 .idea/misc.xml
 *.iml
+.idea/workspace.xml
