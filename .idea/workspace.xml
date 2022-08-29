@@ -3,7 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml_test_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml_test_1.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml_test_1_node.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1_node.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasync_balu/createNF.py" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-5.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-5.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saved_models/-test_1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/-test_1.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +47,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.createNF">
+  <component name="RunManager" selected="Python.link_prediction">
     <configuration name="createNF" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="sports_analitica" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -175,19 +193,16 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/link_prediction.py</url>
-          <line>221</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/preprocess_data.py</url>
           <line>147</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/datasync_balu/createNF.py</url>
-          <line>708</line>
-          <option name="timeStamp" value="26" />
+
+          <url>file://$PROJECT_DIR$/net/tgn.py</url>
+          <line>307</line>
+          <option name="timeStamp" value="27" />
+
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

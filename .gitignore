@@ -2,3 +2,11 @@
 .idea/workspace.xml
 .idea/sports_analitica.iml
 .idea/misc.xml
+*.xml
+.idea/misc.xml
+*.iml
+.idea/workspace.xml
+*.xml
+*.log
+*.pyc
+*.pyc
