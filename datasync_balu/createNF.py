@@ -733,8 +733,8 @@ def create_edge_features(synced_event_df):
         p1_num = event['p1_id']
         p2_id = 0
         p2_dist = 0
-        if((event['typeId'] == 1) | (event['typeId'] == 2)):
-            interactions.append('pass')
+        if((event['typeId'] == 1) | (event['typeId'] == 2)): # pass
+            interactions.append('0')
             p2_id,p2_dist = get_pass_reciever(event)
             labelCol1.append('OP_OP')
             OP_OP.append(1)

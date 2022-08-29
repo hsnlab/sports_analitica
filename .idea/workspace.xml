@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/test_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_1.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasync_balu/createNF.py" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/results/.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" afterDir="false" />
@@ -20,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saved_models/-test_1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/-test_1.pth" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659534983094</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="small typo correction">
+      <created>1661341043263</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661341043263</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -189,9 +198,11 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+
           <url>file://$PROJECT_DIR$/net/tgn.py</url>
           <line>307</line>
           <option name="timeStamp" value="27" />
+
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
