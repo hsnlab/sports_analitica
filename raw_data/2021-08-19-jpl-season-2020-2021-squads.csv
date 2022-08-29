@@ -1,0 +1,704 @@
+firstName,lastName,matchName,nationality,nationalityId,position,type,dateOfBirth,countryOfBirth,countryOfBirthId,shirtNumber,status,active,statsperform_id,opta_id,stats_id,placeOfBirth,height,foot,weight
+Arne,Cassaert,A. Cassaert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/20/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,32,active,yes,11lkzth28raolomw3l3rlvsdm,498384,1205370,,,,
+Dimitar,Valentinov Velkovski,D. Velkovski,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,Defender,player,1/22/1995,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,19,active,yes,1e7u0otkuyc81nhumjkcrvmd,210711,996924,Vratsa,185,left,
+Ahoueke Steeve Kévin,Denkey,K. Denkey,Togo,3jiuckrqd0zejkm452st5dyq7,Attacker,player,11/30/2000,France,7gww28djs405rfga69smki84o,12,active,yes,1gzgkjei16r4lt2fvcedy1jvt,245918,969614,Lomé,181,right,81
+Andi,Koshi,A. Koshi,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/17/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,44,active,yes,1ng8mptm1t32jirhkhfq2wyui,466510,1128809,,175,,66
+Victor Alexander,da Silva,Vitinho,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Defender,player,7/23/1999,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,2,active,yes,1qk1rbq1vcld8ejr5zjwjjxbe,441455,1093547,Belo Horizonte,175,right,72
+Warleson,Stellion Lisboa Oliveira,Warleson,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Goalkeeper,player,8/31/1996,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,21,active,yes,21ipfd9gxws9vqpw9002o8ve1,227802,964145,Cuiabá,191,right,90
+Leonardo Adelino,da Silva Lopes,Leonardo Lopes,Portugal,1nbm5i9a0403zzvltn17lxinc,Midfielder,player,11/30/1998,Portugal,1nbm5i9a0403zzvltn17lxinc,42,active,yes,2jhi0lbbo65dsfv4ho9pmlgix,201094,869941,Lisboa,168,right,61
+Dino,Hotič,D. Hotič,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,Attacker,player,7/26/1995,Slovenia,63vptz9g2ckqnnlxhd1oqn4xq,10,active,yes,2xba9p5cocj599cltnabjes45,120071,708833,Ljubljana,168,left,69
+Alexander Jacques,Corryn,A. Corryn,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/3/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,25,active,yes,3vvr419ewr112xr5weted4tsl,116107,655417,Gent,177,left,70
+Miguel,Van Damme,M. Van Damme,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,9/25/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,4l0l5gapagdmvfycduukjjbo5,166064,741119,,182,,80
+Kylian,Hazard,K. Hazard,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,8/5/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,7,active,yes,523y6elubi2i0racrmh8ry11x,191768,831353,La Louvière,171,right,71
+Jérémy,Taravel,J. Taravel,France,7gww28djs405rfga69smki84o,Defender,player,4/17/1987,France,7gww28djs405rfga69smki84o,4,active,no,53xkvkf3xky3gqz5ywedm9mmt,42792,395465,Vincennes,191,left,85
+Serge-Philippe,Raux-Yao,S. Raux-Yao,France,7gww28djs405rfga69smki84o,Defender,player,5/30/1999,France,7gww28djs405rfga69smki84o,17,active,yes,5kkvxgrt5y92hjj8hw28b7l9m,488437,1180032,Pontoise,197,left,86
+Olivier,Deman,O. Deman,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/6/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,23,active,yes,5wn1xudozb4s78x0m8ch7vn8q,468523,1146480,Antwerpen,181,,
+Anthony,Musaba,A. Musaba,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Attacker,player,12/6/2000,Netherlands,6hzi5pltnz67q4la8yli9qfv6,11,active,no,6oynq4ickyxictf2e0ilemqne,480364,1162381,Nijmegen,182,,
+Hannes,Van der Bruggen,H. Van der Bruggen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/1/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,no,7weuixp1j81ga9pjhouf2h2hh,90961,556331,Aalst,181,right,73
+Strahinja,Pavlović,S. Pavlović,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Defender,player,5/24/2001,Yugoslavia,4tbxaicghm9l9p07quja51vfu,15,active,no,7wjdqyl3bkhsfca5cu4riwley,487606,1189588,Šabac,194,left,
+Figo,Suffys,F. Suffys,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/13/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,80rbhp347unh2x9pagvgagzmy,509257,1227898,,,,
+Jean,Harisson Marcelin,J. Marcelin,France,7gww28djs405rfga69smki84o,Defender,player,2/12/2000,France,7gww28djs405rfga69smki84o,24,active,no,8am2h5qc7296fima2r4wam63u,442261,1094145,,197,right,82
+Charles,Vanhoutte,C. Vanhoutte,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/16/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,yes,8jc7tw0nw37trgyli0oyz1soa,453106,1127554,,182,,74
+Aldom Jean,Deuro,A. Deuro,Mali,d0v29nncgikdswlxpdq553zz,Midfielder,player,12/20/2000,Mali,d0v29nncgikdswlxpdq553zz,6,active,no,8kmyky7acdowzceybm3ahrskq,477194,1157941,,178,,
+Thomas,Didillon,T. Didillon,France,7gww28djs405rfga69smki84o,Goalkeeper,player,11/28/1995,France,7gww28djs405rfga69smki84o,16,active,no,8xitc97j4scfajm8ucq7e5l91,165457,795102,Seclin,193,left,84
+Ike Dominique,Ugbo,I. Ugbo,England,1fk5l4hkqk12i7zske6mcqju6,Attacker,player,9/21/1998,England,1fk5l4hkqk12i7zske6mcqju6,9,active,no,900q6uo21i95co96snohqofyt,181913,897426,London,186,right,73
+Sébastien,Bruzzese,S. Bruzzese,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/1/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,89,active,yes,9hnyebqut9tmn4q0m0y9n3kd1,43026,396681,Liège,185,right,82
+Johanna,Ochieng Omolo,J. Omolo,Kenya,7bj2q2zb0n47lb9g55dnvfr2s,Midfielder,player,7/31/1989,Kenya,7bj2q2zb0n47lb9g55dnvfr2s,15,active,no,9tknuwf5fed1b0x0qqsfbe7kl,70875,605555,Nairobi,179,right,73
+Merveille,Goblet,M. Goblet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/20/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,9w8hmfevhhzd2phnkmq6zryz9,151604,614189,,180,right,78
+Thibo,Somers,T. Somers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/16/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,34,active,yes,a0ecz4nlxrr62dcwixtmjiwyy,496256,1197996,,173,,
+Aboubakary,Kanté,A. Kanté,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,Attacker,player,8/11/1994,France,7gww28djs405rfga69smki84o,11,active,no,ap21n3rt03nx7r2lk1dfry1ud,213579,881884,Pontoise,184,left,80
+David Robert,Bates,D. Bates,Scotland,1xf68d0a8lnnq30hnnn8kr6ut,Defender,player,10/5/1996,Scotland,1xf68d0a8lnnq30hnnn8kr6ut,3,active,no,btz2lf5s3h6svre1o5jgmvf85,165439,789589,Kirkcaldy,190,right,83
+Naomichi,Ueda,N. Ueda,Japan,lxyibh89lpdc0bfian1nx0xq,Defender,player,10/24/1994,Japan,lxyibh89lpdc0bfian1nx0xq,5,active,no,cqjhp31uh46s2jfedo48h86ol,158234,726175,Kumamoto,186,right,77
+Alimami,Gory,A. Gory,France,7gww28djs405rfga69smki84o,Attacker,player,8/30/1996,France,7gww28djs405rfga69smki84o,28,active,no,df5no35i3gkh7mfv2x4j96eol,229225,922880,,182,right,72
+Kévin,Hoggas,K. Hoggas,France,7gww28djs405rfga69smki84o,Midfielder,player,11/16/1991,France,7gww28djs405rfga69smki84o,20,active,no,dk8akbsh3cqe0qlyjcqv3om39,212754,880455,Besançon,183,right,77
+Olivier,Scholaert,O. Scholaert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/25/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,eblinxj3j9o6j2zmvcqauvuju,509260,1227797,,,,
+Guy Carel,Mbenza Kamboleke,G. Kamboleke,Congo,1s2y6o0lwj69dj5ib5pid8f6r,Attacker,player,4/1/2000,Congo,1s2y6o0lwj69dj5ib5pid8f6r,9,active,no,egk2nnpvvup731trr0x2kj696,476252,1114450,Brazzaville,182,right,81
+Robbe,Decostere,R. Decostere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/8/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,yes,enyx6hc9mfglu3w2robv9hd9m,459053,1127547,,180,right,68
+Calvin,Dekuyper,C. Dekuyper,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/24/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,no,erhdb2ljxzone1j8i0cznqlii,496255,1197998,Oostende,190,,
+Giulian,Biancone,G. Biancone,France,7gww28djs405rfga69smki84o,Defender,player,3/31/2000,France,7gww28djs405rfga69smki84o,41,active,no,esb4b21x729db8od4c4xt8ciy,437753,1069013,,187,right,
+Elimane Frank,Kanoute,F. Kanoute,Senegal,6hhqyhr5cwq2pfprlazyposyk,Midfielder,player,12/13/1998,Senegal,6hhqyhr5cwq2pfprlazyposyk,98,active,yes,sqef6515cb5pj5n59xu3in6x,434678,1075596,,186,right,
+Mats,Rits,M. Rits,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/18/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,yes,13d7ao0j091449ia61cuut87p,66770,507927,Antwerpen,179,both,70
+Siebe,Schrijvers,S. Schrijvers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,7/18/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,1fdi6uzonmsod2drzro8bj3rp,120939,691875,Lommel,178,right,74
+David Chidozie,Okereke,D. Okereke,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,8/29/1997,Nigeria,63pvdwrsiq5b07mzi8igqei9p,21,active,no,1gnc1tbpmomiqt1sty2lktt5,221781,910317,Lagos,182,right,75
+Eduard,Sobol,E. Sobol,Ukraine,315w6fk6umfzf4qvba3t55u61,Defender,player,4/20/1995,Ukraine,315w6fk6umfzf4qvba3t55u61,2,active,no,1hlvnmu8we38d44sdexhhxcyd,119674,727500,Vilnyansk,181,left,73
+Matej,Mitrović,M. Mitrović,Croatia,37hlakrwxyuzovaeoo4sezusp,Defender,player,11/10/1993,Croatia,37hlakrwxyuzovaeoo4sezusp,15,active,yes,2at3mypppzmggglstgu2waoyd,170950,738873,Požega,187,right,85
+Nathan,Fuakala,N. Fuakala,France,7gww28djs405rfga69smki84o,Defender,player,3/13/2001,France,7gww28djs405rfga69smki84o,,active,no,2f9jff7wy4ve7qh6iz73c2ove,465741,1156345,Roubaix,184,right,74
+Bas,Leon Dost,B. Dost,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Attacker,player,5/31/1989,Netherlands,6hzi5pltnz67q4la8yli9qfv6,29,active,yes,395y7yj6o1xwr6uaxs4sjnjdh,52893,443164,Deventer,196,right,89
+Senne,Lammens,S. Lammens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/7/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,91,active,yes,398isvyux7zpjiwa2hzsxyc16,465247,1156364,Zottegem,193,right,92
+Ignace,Van der Brempt,I. Van der Brempt,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/1/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,3pba28sk4auqjp27jfssfvvxm,248882,1184613,Antwerpen,187,right,74
+Éder Fabián,Álvarez Balanta,É. Balanta,Colombia,6kby8rq1p01fg5ds38ckkrcs5,Midfielder,player,2/28/1993,Colombia,6kby8rq1p01fg5ds38ckkrcs5,3,active,yes,3qbl0ps3ms998s0apmpkre3md,155552,727328,Bogotá,181,left,84
+Emmanuel Bonaventure,Dennis,E. Dennis,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,11/15/1997,Nigeria,63pvdwrsiq5b07mzi8igqei9p,42,active,no,3ztcz2dgfniqv141w7xsky7zd,230251,953857,Abuja,174,right,67
+Ethan Shea,Horvath,E. Horvath,USA,7hr2f89v44y65dyu9k92vprwn,Goalkeeper,player,6/9/1995,USA,7hr2f89v44y65dyu9k92vprwn,22,active,no,4d3qpu9pxlwuw813mqrh2q2fp,168547,870467,Highlands Ranch,193,right,84
+Federico,Ricca Rostagnol,F. Ricca,Uruguay,286fwlvd6dzntv6ewv3cyvb0p,Defender,player,12/1/1994,Uruguay,286fwlvd6dzntv6ewv3cyvb0p,18,active,yes,4juerzftkeiuzctoiei6dmtp1,169323,836800,Tarariras,178,left,73
+Nabil,Dirar,N. Dirar,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Midfielder,player,2/25/1986,Morocco,2xdcc39z1k79pnjbtn9x31wdh,8,active,no,5luvojyc3zk1h4pm0rfefuml1,54930,347176,Casablanca,187,right,82
+Mathis,Servais,M. Servais,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,11/23/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,5vnahevg5ni0uopeyk1c9u0b8,513532,1238230,,,,
+Samuel,Asoma,S. Asoma,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/15/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,5xjqstjus3hjtdq00jh4bbmne,248872,1156354,,173,,65
+Michael,Krmenčík,M. Krmenčík,Czech Republic,5md5tpwr2nmqao528prx43jr7,Attacker,player,3/15/1993,Czech Republic,5md5tpwr2nmqao528prx43jr7,9,active,no,5yxmjnv5xa4evkrmh8nleebpx,95695,594883,Kraslice,191,right,84
+Ahmed,Touba,A. Touba,Algeria,1ayprcriqhb8iv10ch70clppu,Defender,player,3/13/1998,France,7gww28djs405rfga69smki84o,,active,no,65nkv8grj2jhs2hlja63bp90p,240864,952409,Roubaix,184,left,81
+Clinton Mukoni,Mata Pedro Lourenço,Clinton Mata,Angola,3k53bkrjx5zsxchc6e3mcd834,Defender,player,11/7/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,77,active,yes,6tvnsmtj9mma96e8famksevv9,189781,825935,Verviers,180,right,72
+Thibault,Vlietinck,T. Vlietinck,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,8/19/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,11,active,yes,73pmo92alzawlt2yo2bfartn9,178975,885076,Knokke,178,right,62
+Noa,Noëll Lang,N. Lang,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Attacker,player,6/17/1999,Netherlands,6hzi5pltnz67q4la8yli9qfv6,10,active,no,7ew7g18qo649t8ld44omgib55,421002,977282,Capelle aan den IJssel,179,right,68
+Charles,De Ketelaere,C. De Ketelaere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/10/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,90,active,yes,7ox43isyywsnrfcd56nm65be,465716,1156357,Brugge,185,left,74
+Ibrahima,Breze Fofana,I. Breze,Guinea,4i9sg55wigitrfx7290f59ceo,Midfielder,player,8/15/2002,Guinea,4i9sg55wigitrfx7290f59ceo,14,active,no,8fle9xgnd83jth2i2d6vh0k16,482192,1251049,Conakry,,right,
+Erhan,Mašović,E. Mašović,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Midfielder,player,11/22/1998,Serbia,5w4ve503bjdsshwx9ho6jxzx0,,active,no,8ksi5s9he1uxai3lfcq46grf9,228461,975940,Novi Pazar,189,right,82
+Nick,Shinton,N. Shinton,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,5/10/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,yes,96yp38h6rm09nluuvlyy18and,449868,1116390,Aalst,194,left,88
+Cisse,Sandra,C. Sandra,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,12/16/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,98,active,yes,9rsuz6bumw4jyw25gpingu25m,497093,1189447,,186,left,74
+Cyril,Ngonge,C. Ngonge,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/26/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,a9z0jsjwfteq974bxwucvc4ix,465199,1153403,,179,left,73
+Tahith,Chong,T. Chong,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Midfielder,player,12/4/1999,Curaçao,5im58ram567ao2fbnz39sm8vk,7,active,no,apzgvyoya5b4yd6vpev9o7krt,222677,1051895,Willemstad,185,left,75
+Thibo,Baeten,T. Baeten,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,6/4/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,b157xbo2jovsxkgr3wie3rip6,248885,1156363,Aalst,182,left,79
+Arne,Engels,A. Engels,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/8/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,b6woton2db3w4rm67vu69buy2,493167,1233516,,184,,71
+Ruud Willem,Vormer,R. Vormer,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Midfielder,player,5/11/1988,Netherlands,6hzi5pltnz67q4la8yli9qfv6,25,active,yes,bhn5mxfek9byb7m8sovpizzkl,39188,351443,Hoorn,178,right,80
+Maxim,De Cuyper,M. De Cuyper,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,12/22/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,55,active,no,bjhjz96omjukrg6tj3mny39t6,465730,1156356,,186,left,66
+Daniel Alejandro,Pérez Córdova,D. Pérez,Venezuela,1er0616j12s9yghuzvsx76d5v,Attacker,player,1/17/2002,Venezuela,1er0616j12s9yghuzvsx76d5v,30,active,yes,bwk0ralfmstrrsy3lsatedfmy,479807,1253535,Caracas,189,right,77
+Simon Luc Hildebert,Mignolet,S. Mignolet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/6/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,88,active,yes,byfrgpc6tgz8lto1gor03y5sl,66797,347350,Sint-Truiden,193,right,87
+Youssouph Mamadou,Badji,Y. Badji,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,12/20/2001,Senegal,6hhqyhr5cwq2pfprlazyposyk,27,active,yes,bz77hr28a1yskifpuvzu8smsq,476414,1167629,,192,right,80
+Odilon,Kossounou,O. Kossounou,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,1/4/2001,Côte d'Ivoire,tin6kf561ywonqan0mettr98,5,active,no,cis0z72hgahfnfjduk7hdnz3e,208540,1160334,Abidjan,188,right,72
+Thomas,Van den Keybus,T. Van den Keybus,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/25/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,97,active,no,dd711ekg0nlaosmsy2lz13syy,465756,1189202,Brugge,181,left,71
+Amadou,Sagna,A. Sagna,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,6/10/1999,Senegal,6hhqyhr5cwq2pfprlazyposyk,,active,no,dt97y5xnm45fh9wf0w9h4sxuy,476403,1167619,Dakar,174,right,71
+Stefano,Denswil,S. Denswil,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Defender,player,5/7/1993,Netherlands,6hzi5pltnz67q4la8yli9qfv6,24,active,no,e85uwmwpyp8reafm1pp6zldxx,111729,614859,Zaandam,188,left,81
+Simon Désiré Sylvanus,Deli,S. Deli,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,10/27/1991,Côte d'Ivoire,tin6kf561ywonqan0mettr98,17,active,no,ef90s58yxd1nml76sq18ff4r9,215437,857207,Abidjan,192,right,84
+Krépin,Diatta,K. Diatta,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,2/25/1999,Senegal,6hhqyhr5cwq2pfprlazyposyk,11,active,no,f5j3vhj805xtkos7l538u0d7t,249956,977567,Dakar,173,right,68
+Noah,Mbamba-Muanda,N. Mbamba-Muanda,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/5/2005,Belgium,4wbzjcclyefma1ourvjsu4q2j,72,active,yes,jw8lb54ua2iufebwnu8k68t0,530081,1268980,,,,
+Brandon,Mechele,B. Mechele,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/28/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,44,active,yes,l6y4o9t2b0jxaxo85oztok45,161049,706464,Bredene,188,right,81
+Hans,Vanaken,H. Vanaken,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,8/24/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,20,active,yes,x3g0yyxs0j4o8fxphxtf0st1,167763,601769,Neerpelt,194,both,77
+Sven,Kums,S. Kums,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/26/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,yes,18pgjfpl9s8qy32mblzygsyc5,53720,376690,Asse,176,right,63
+Chinonso,Emeka,C. Emeka,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,8/30/2001,Nigeria,63pvdwrsiq5b07mzi8igqei9p,16,active,yes,1dluk435oh06er5avj9ilstpm,484675,1167874,,189,,
+Adewale,Oladoye,A. Oladoye,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Midfielder,player,8/25/2001,Nigeria,63pvdwrsiq5b07mzi8igqei9p,17,active,yes,1vpff34fz64qczi6jq049qrdg,538773,1284946,,,,
+Sulayman,Marreh,S. Marreh,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,Midfielder,player,1/15/1996,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,22,active,yes,2cc5y9hjnc8nqrh58ojz6ajth,181407,805130,Banjul,184,right,78
+Ahmed Mostafa,Taher,Ahmed Mostafa,Egypt,42vt7mha0thcwd0ihw3p29x5i,Midfielder,player,10/21/1997,Egypt,42vt7mha0thcwd0ihw3p29x5i,,active,no,2cjamd2xasvgw1f53iephrdka,455977,535290,,,right,
+Roman,Yaremchuk,R. Yaremchuk,Ukraine,315w6fk6umfzf4qvba3t55u61,Attacker,player,11/27/1995,Ukraine,315w6fk6umfzf4qvba3t55u61,7,active,no,32eyq4xvy8s1ng11jnavvh32t,184855,870908,Lviv,191,both,78
+Owen,Jochmans,O. Jochmans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/28/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,3rr29v80s3fpvbquspzrrnofe,518317,1250810,Leuven,185,right,
+Dogbole Franck Anderson,Niangbo,A. Niangbo,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Attacker,player,10/6/1999,Côte d'Ivoire,tin6kf561ywonqan0mettr98,11,active,no,4ck2o7iiqc8vhbbpynf19td5h,173251,794952,,173,right,65
+Alexandre,De Bruyn,A. De Bruyn,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/4/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,yes,4ku7qityj6ozes655l78qyqj9,454488,982640,,177,right,69
+Colin,Coosemans,C. Coosemans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,8/3/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,no,4x6oiw1rueiv2jzjs9k76h1p1,85666,514997,Gent,185,right,80
+Niklas Bernd,Dorsch,N. Dorsch,Germany,36min0qztu8eydwvpv8t1is0m,Midfielder,player,1/15/1998,Germany,36min0qztu8eydwvpv8t1is0m,30,active,no,5q3ft0wiy6lsy937j7nw6msq1,204587,892081,Lichtenfels,178,right,76
+Dylan,Mbayo,D. Mbayo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/11/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,6eg8vaxpqsd6cyh736h7bq4x6,470845,1157939,,175,left,65
+Igor,Plastun,I. Plastun,Ukraine,315w6fk6umfzf4qvba3t55u61,Defender,player,8/20/1990,Ukraine,315w6fk6umfzf4qvba3t55u61,32,active,no,6gs4lheg1iy38w6ltyvmgzjdh,68019,946050,Kiev,193,right,70
+Sinan,Bolat,S. Bolat,Turkey,6kd6webenogylfgwt2aa9l6vx,Goalkeeper,player,9/3/1988,Turkey,6kd6webenogylfgwt2aa9l6vx,1,active,yes,6qlfe04qjldj3rkeeme6gdi39,54814,347143,Kayseri,186,right,83
+Alessio,Castro-Montes,A. Castro-Montes,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/17/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,yes,7dayrhr0c60zbc1b6lig8pm8l,226858,915206,Sint-Truiden,174,right,67
+Matisse,Samoise,M. Samoise,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,11/21/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,yes,7s4ws0u4erq1jfobqpsj0aoes,516217,1244729,,,right,
+Tarik,Tissoudali,T. Tissoudali,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Attacker,player,4/2/1993,Netherlands,6hzi5pltnz67q4la8yli9qfv6,34,active,no,87ccrt89k5abyjisix22g08ut,193570,831622,Amsterdam,175,right,70
+Osman,Bukari,O. Bukari,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,12/13/1998,Ghana,2q2sw72utw5gu9t5y4knckwba,20,active,no,8h9sizm6iwpsyvg6w81fvbsyy,457887,1136572,Accra,170,both,68
+Vadis,Odjidja-Ofoe,V. Odjidja-Ofoe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/21/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,yes,9hiut57u02lly1nfdixef8bth,49433,347133,Gent,185,right,79
+Carl Mikael,Lustig,M. Lustig,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Defender,player,12/13/1986,Sweden,1z6l2c33w2kyz9rdefs1d68nb,23,active,no,a1zsn9f50nmrmfktfxhr80ct1,52223,451443,Umeå,189,right,78
+Thomas,Kaminski,T. Kaminski,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,10/23/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,no,ag4dpuocam5wfpvpyxtxhpa6t,54738,459368,Dendermonde,190,both,78
+Tim,Kleindienst,T. Kleindienst,Germany,36min0qztu8eydwvpv8t1is0m,Attacker,player,8/31/1995,Germany,36min0qztu8eydwvpv8t1is0m,34,active,no,aopmwx748flafzpj58w2afwlx,160201,732829,Jüterbog,194,right,85
+Jonathan Christian,David,J. David,Canada,1iaoypzp6syf32cz9l15pzp7e,Attacker,player,1/14/2000,USA,7hr2f89v44y65dyu9k92vprwn,16,active,no,b8dd5q3n5irlkcv0ekzqhzc2x,421821,999457,New York,177,right,
+Laurent,Depoitre,L. Depoitre,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,12/7/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,yes,b9wew8z92aj36vvxfj3q7kxcl,147303,602150,Tournai,191,right,91
+Jordan Rolly,Botaka,J. Botaka,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Midfielder,player,6/24/1993,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,7,active,no,bbwqcce4tjw5dceh5vtgfrljp,131907,706466,Kinshasa,183,right,73
+Cederick,Van Daele,C. Van Daele,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/25/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,13,active,yes,bdtl2zd3xpjuf2qlooenvj76c,519356,1252792,,177,,63
+Davy,Roef,D. Roef,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,2/6/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,yes,be0ws51ws5cm9wzmcp3ozmklx,120108,565463,Rumst,187,right,84
+Roman,Bezus,R. Bezus,Ukraine,315w6fk6umfzf4qvba3t55u61,Midfielder,player,9/26/1990,Ukraine,315w6fk6umfzf4qvba3t55u61,9,active,yes,bwaexnb1k2irr7rezdcll4jit,68078,615040,Kremenchuk,185,right,78
+Núrio Domingos,Matias Fortuna,Núrio Fortuna,Angola,3k53bkrjx5zsxchc6e3mcd834,Defender,player,3/24/1995,Angola,3k53bkrjx5zsxchc6e3mcd834,25,active,yes,c517lc5fmsd9ugk638s2o9iad,179318,819087,Luanda,177,left,76
+Franko,Andrijašević,F. Andrijašević,Croatia,37hlakrwxyuzovaeoo4sezusp,Midfielder,player,6/22/1991,Croatia,37hlakrwxyuzovaeoo4sezusp,,active,no,cex8imc02f1r89im80a1hnsgl,88177,566513,Split,188,right,81
+Dino,Arslanagić,D. Arslanagić,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/24/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,36,active,no,ck62q6vzj7as4wf06lyh9z2l1,108097,620058,Nivelles,190,right,86
+Mathéo,Parmentier,M. Parmentier,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/31/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,no,cla170jpyxdrigqaa86vsuiqy,509247,1227837,Anderlecht,186,right,73
+Milad,Mohammadi Keshmarzi,M. Mohammadi,Iran,e53g9hr2d3kasm34uumbg8r4,Defender,player,9/29/1993,Iran,e53g9hr2d3kasm34uumbg8r4,15,active,yes,cz3jt5t4fy7zj3xsz239wtxw5,224086,872895,Tehran,178,left,79
+Giorgi,Chakvetadze,G. Chakvetadze,Georgia,55mqz7j6585f2jhgfhn62lomr,Midfielder,player,8/29/1999,Georgia,55mqz7j6585f2jhgfhn62lomr,10,active,yes,dkb6yz2ffzt2z1b1l0i605889,240990,1058446,Tbilisi,183,right,78
+Wouter,George,W. George,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/3/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,dkr81i8fhdw195l8xyexge1d6,465246,1207745,Leuven,172,right,65
+Andreas,Hanche-Olsen,A. Hanche-Olsen,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Defender,player,1/17/1997,Norway,7f16iy4w8u8ogyn6pfooqwv5z,21,active,yes,dnt7ahwfj8endqngxwfll1tjp,209020,960192,,185,right,82
+Elisha,Owusu,E. Owusu,France,7gww28djs405rfga69smki84o,Midfielder,player,11/7/1997,France,7gww28djs405rfga69smki84o,6,active,yes,ebx4h86svfnvegspalqgxqfah,247389,952426,Montreuil,182,right,62
+René,Vanden Borre,R. Vanden Borre,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/19/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,egk6jzgyggkh62b5fokw7534k,518318,1250811,,,,
+Brecht,Dejaegere,B. Dejaegere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/29/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,no,eswivc2a0iwwdly6ft8eh0ogl,86383,556813,Handzame,174,right,
+Michael,Ngadeu-Ngadjui,M. Ngadeu-Ngadjui,Cameroon,4eb9feio6u267dd1jcwaf38mt,Defender,player,11/23/1990,Cameroon,4eb9feio6u267dd1jcwaf38mt,5,active,yes,etos5xv3v2ptiktdk5yuhrjkl,192470,924246,Maroua,190,right,87
+Yonas,Malede,Y. Malede,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,Attacker,player,11/14/1999,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,23,active,yes,evktllmp3l6mfb6o4im0ag0ve,446792,1144681,Kiryat Bialik,,right,
+Bruno,Godeau,B. Godeau,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/10/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,31,active,yes,eyvf8uu7jltbzalaov3qt1w5,120107,679779,Brussel,190,left,85
+Giorgi,Kvilitaia,G. Kvilitaia,Georgia,55mqz7j6585f2jhgfhn62lomr,Attacker,player,10/1/1993,Georgia,55mqz7j6585f2jhgfhn62lomr,13,active,no,f5bvp357xwfostjz7kkqvzt1x,175794,916098,Abasha,193,right,
+Marciano,Aziz,M. Aziz,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/13/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,20,active,no,166xiuq5kyfcrloue88mirm22,501639,1168060,Eupen,172,,
+Mamadou,Koné,M. Koné,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Attacker,player,12/25/1991,Côte d'Ivoire,tin6kf561ywonqan0mettr98,77,active,yes,16qat5vtngnl21zg5q7i4ij9,107604,623384,Bingerville,176,right,69
+Isaac,Nuhu,I. Nuhu,Ghana,2q2sw72utw5gu9t5y4knckwba,Midfielder,player,9/30/2001,Ghana,2q2sw72utw5gu9t5y4knckwba,29,active,yes,1ekfu3u2d9vh73lw2dzdcr1wq,501642,1097445,,171,,
+Tyreek,Magee,T. Magee,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,Midfielder,player,10/27/1999,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,,active,yes,1s48glvpagsxfh15j8ilh0fai,485709,1169646,Kingston,,both,
+Tom,Roufosse,T. Roufosse,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/28/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,20oiek3wd33mihfp13csvq6i2,450420,1115909,,,,
+Emmanuel,Agbadou,E. Agbadou,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,6/17/1997,Côte d'Ivoire,tin6kf561ywonqan0mettr98,22,active,yes,36h87ecgmpjdltk1epsbvmiju,516939,1193493,,192,right,
+Benoît Guy Jean,Poulain,B. Poulain,France,7gww28djs405rfga69smki84o,Defender,player,7/27/1987,France,7gww28djs405rfga69smki84o,6,active,yes,3bxsfsnskvwqho1hfmlfwd4np,51489,459425,Nimes,189,right,80
+Julien,Fontaine Ngoy Bin Cibambi,J. Ngoy,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,11/2/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,7,active,yes,3nr55odndzunwlb658bsnlwx5,200455,949567,Antwerpen,185,right,64
+Carlos,Apna Embalo,Carlos Embalo,Guinea-Bissau,5ikz7810612v7a6l5u6gxa6vm,Attacker,player,11/25/1994,Guinea-Bissau,5ikz7810612v7a6l5u6gxa6vm,17,active,no,3yi3owk5b20ekp5p7ihd34dlh,168622,754364,Bissau,175,left,72
+Ortwin,De Wolf,O. De Wolf,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,4/23/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,97,active,no,4114auk4o8n6higc918qymc4p,247210,975799,,190,left,73
+Jordi,Amat Maas,Jordi Amat,Spain,49ih1pwv3ahshdf8uzrimi54c,Defender,player,3/21/1992,Spain,49ih1pwv3ahshdf8uzrimi54c,5,active,yes,46uy8hbh7rnez3d06piutuzmd,80789,537672,Barcelona,184,right,78
+Amara,Baby,A. Baby,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,2/23/1989,France,7gww28djs405rfga69smki84o,11,active,no,4r94evpiyxyv3dkh6bk0of651,60736,533051,Le Blanc-Mesnil,183,left,68
+Abdul Manaf,Nurudeen,A. Nurudeen,Ghana,2q2sw72utw5gu9t5y4knckwba,Goalkeeper,player,2/8/1999,Ghana,2q2sw72utw5gu9t5y4knckwba,33,active,yes,50iwwx11r99cvce6x8cp52c16,431252,1059002,Accra,190,right,
+Adriano,Correia Claro,Adriano,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Defender,player,10/26/1984,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,21,active,no,5j201oq8wdm5sbjg7jff66rx1,19773,348698,Curitiba,172,both,75
+Jonathan Steve,Heris,J. Heris,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,9/3/1990,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,5kk7seazzmcwvbs7w2gg3tuxh,204228,601798,Brussel,188,right,80
+Silas,Gnaka,S. Gnaka,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,12/18/1998,Côte d'Ivoire,tin6kf561ywonqan0mettr98,24,active,yes,5kqc27jv2rs1mfa7zp4b90oh5,245784,969211,,179,left,
+Théo,Defourny,T. Defourny,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,4/25/1992,France,7gww28djs405rfga69smki84o,31,active,no,64b5bv8hzn77wat33vo143hsl,151305,750226,Bourg-Saint-Maurice,194,right,85
+Víctor,Vázquez Solsona,Víctor Vázquez,Spain,49ih1pwv3ahshdf8uzrimi54c,Midfielder,player,1/20/1987,Spain,49ih1pwv3ahshdf8uzrimi54c,4,active,no,80fgto4ghk3gxvb4mz9hdretx,49841,442148,Barcelona,180,right,78
+Sibiry,Keita,S. Keita,Mali,d0v29nncgikdswlxpdq553zz,Midfielder,player,1/30/2001,Mali,d0v29nncgikdswlxpdq553zz,13,active,yes,8nsdqb2qsmvxog6qeioaoe5be,477239,1165119,,173,left,
+Konan Ignace,Jocelyn N’Dri,K. N’Dri,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Attacker,player,10/27/2000,Côte d'Ivoire,tin6kf561ywonqan0mettr98,34,active,yes,8xjlysmwl5vnhcnvsynftjd62,477240,1161173,,174,,
+Robin,Himmelmann,R. Himmelmann,Germany,36min0qztu8eydwvpv8t1is0m,Goalkeeper,player,2/5/1989,Germany,36min0qztu8eydwvpv8t1is0m,30,active,yes,97vse7wzd4p4mx9hlfcod87h1,54007,654763,Moers,187,right,80
+Aleksandar,Boljević,A. Boljević,Montenegro,1411jebgwo2ja1erogsq81lg9,Attacker,player,12/12/1995,Montenegro,1411jebgwo2ja1erogsq81lg9,18,active,no,a1ibpks3t6lelvch5kn6u6nyt,114414,705019,Podgorica,186,right,75
+Senna Malik,Miangué,S. Miangué,Congo,1s2y6o0lwj69dj5ib5pid8f6r,Defender,player,2/5/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,23,active,no,a5ls0i1ztco0zee3la61zv4rt,225776,914225,Antwerpen,192,left,81
+Menno,Koch,M. Koch,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Defender,player,7/2/1994,Netherlands,6hzi5pltnz67q4la8yli9qfv6,3,active,no,b4nxbfm6audv844unlocgbsgl,120266,614190,Heeze,195,right,78
+Emmanuel,Sowah Adjei,E. Sowah Adjei,Ghana,2q2sw72utw5gu9t5y4knckwba,Defender,player,1/16/1998,Ghana,2q2sw72utw5gu9t5y4knckwba,25,active,yes,bsgf4tgsjmu862rewpcx62hux,228530,921020,,182,right,76
+Nils,Schouterden,N. Schouterden,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,12/14/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,bwudgkxxpp8tlz3xlw1rfv1lh,77389,520995,Bonheiden,176,left,66
+Boris,Lambert,B. Lambert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/10/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,35,active,yes,c1grrjf29wtfgbni2qkydf9ey,451290,1178421,,187,right,
+Smail,Prevljak,S. Prevljak,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,Attacker,player,5/10/1995,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,9,active,yes,codwa9jioox7i007f4iazwst1,192496,836014,Konjic,187,right,80
+Andreas,Beck,A. Beck,Germany,36min0qztu8eydwvpv8t1is0m,Defender,player,3/13/1987,Russia,7kfg68kh6n16fs4ap3xjiudr,32,active,yes,cudqt7l0i042h1j9wj3qknhlh,31865,345724,Kemerovo,180,right,74
+Rocky,Bushiri Kisonga,R. Bushiri,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/30/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,6,active,no,cx021j1n37kzienjdgd9qndka,430856,1061311,,186,right,
+Edo,Kayembe,E. Kayembe,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Midfielder,player,6/3/1998,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,39,active,no,dgrk1cgbyk03p3e32nj4yugru,442335,1094703,Kananga,183,left,77
+Gary,Magnée,G. Magnée,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/12/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,15,active,yes,ditnpqgspoih5ich7c5vn44fe,488393,1168053,,173,right,
+Jens,Cools,J. Cools,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/16/1990,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,yes,dwlqvy84dpajycrtmywyuf3dh,85695,556911,Westerlo,189,right,71
+Stef,Peeters,S. Peeters,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/9/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,yes,eiqmp3nbc50r40bl86u2sj55h,108994,605190,Bree,188,left,84
+Knowledge,Musona,K. Musona,Zimbabwe,6pqqn8s3pvbryohnkxd4ch4kn,Midfielder,player,6/21/1990,Zimbabwe,6pqqn8s3pvbryohnkxd4ch4kn,10,active,no,f0fot1juj3i62tt8i2vybnjdh,72955,601891,Norton,177,both,68
+Pierre Rames,Akono,P. Akono,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,6/29/2000,Cameroon,4eb9feio6u267dd1jcwaf38mt,,active,yes,lyvfue51hiv98mkjnj22e6i2,467346,1147297,,182,,
+Joseph Martin,Paintsil,J. Paintsil,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,2/1/1998,Ghana,2q2sw72utw5gu9t5y4knckwba,11,active,no,1b6ab1mqzvhk547p0bdzbccfd,424163,973315,Accra,169,right,65
+Jhon Janer,Lucumí Bonilla,J. Lucumí,Colombia,6kby8rq1p01fg5ds38ckkrcs5,Defender,player,6/26/1998,Colombia,6kby8rq1p01fg5ds38ckkrcs5,33,active,yes,3l0mj1zzhytxvm9tryvqv8kix,217532,895588,Cali,187,left,84
+Daniel,Muñoz Mejía,D. Muñoz,Colombia,6kby8rq1p01fg5ds38ckkrcs5,Defender,player,5/26/1996,Colombia,6kby8rq1p01fg5ds38ckkrcs5,23,active,yes,3yb66hal4fvr04bawz0y3efhl,247348,971264,Amalfi,183,right,70
+Matisse,Didden,M. Didden,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/8/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,3ypxn1nvgv8e321sq5394w3my,492979,1191917,,195,right,
+Edon Lulzim,Zhegrova,E. Zhegrova,Kosovo,86u6edbqifdjsn49mbp2anw7p,Midfielder,player,3/31/1999,Germany,36min0qztu8eydwvpv8t1is0m,,active,no,4st4hurqbtyzw1tbkzuuk78fe,431128,1064233,Herford,181,left,66
+András,Németh,A. Németh,Hungary,1vy5vlux7mj2r7r9ktd71hhpo,Midfielder,player,11/9/2002,Hungary,1vy5vlux7mj2r7r9ktd71hhpo,,active,yes,561pn6ha3pwbofjt8gbqhj0iy,488050,1196023,,182,,
+Mark Alexander,McKenzie,M. McKenzie,USA,7hr2f89v44y65dyu9k92vprwn,Defender,player,2/25/1999,USA,7hr2f89v44y65dyu9k92vprwn,2,active,yes,5enjhxrx2jrjqtgb9wwq0baax,201401,989876,New York,183,left,84
+Dieumerci,Ndongala,D. Ndongala,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Attacker,player,6/14/1991,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,,active,no,5l3n8ovya7zip4koqugm8bm51,103221,818028,Kinshasa,170,right,61
+Zinho,Gano,Z. Gano,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/13/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,93,active,no,5l6a4uxq1vzo91ugdcjq3jw7p,102658,603586,Antwerpen,193,right,86
+Erik Benjamin,Nygren,B. Nygren,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Attacker,player,7/8/2001,Sweden,1z6l2c33w2kyz9rdefs1d68nb,,active,no,5uqf7a0y0fd1hf2rrmgx11tuy,449952,1116980,Gothenburg,186,left,76
+Carlos Eccehomo,Cuesta Figueroa,C. Cuesta,Colombia,6kby8rq1p01fg5ds38ckkrcs5,Defender,player,3/9/1999,Colombia,6kby8rq1p01fg5ds38ckkrcs5,46,active,yes,68vmg4qgr11vppc48hs8402jt,226188,945447,Quibdó,179,right,78
+Joakim,Mæhle Pedersen,J. Mæhle,Denmark,5adf60vwiw2f2mibyq1k4ex7i,Defender,player,5/20/1997,Denmark,5adf60vwiw2f2mibyq1k4ex7i,31,active,no,6lfje6glfgycun47flgmc9jvt,229220,864442,Østervrå,185,right,79
+Jere Juhani,Uronen,J. Uronen,Finland,2u07e54v5dprsugdvddpq5ync,Defender,player,7/13/1994,Finland,2u07e54v5dprsugdvddpq5ync,21,active,no,6oaqk4pdojnlefa3zubsysmvp,103083,653599,Turku,177,left,69
+Nordin,Jackers,N. Jackers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,9/5/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,yes,6u73l7tuxx0958ij9kvdizjrp,178960,823542,Veldwezelt,189,right,82
+Casper,De Norre,C. De Norre,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/7/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,no,73z9v9oz73hlmnswrzp860yj9,178966,899009,,175,right,75
+Vic,Chambaere,V. Chambaere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/10/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,7tgp8z68rg8xkt1vyqpilysmi,493003,1189213,,,,
+Ebere Paul,Onuachu,P. Onuachu,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,5/28/1994,Nigeria,63pvdwrsiq5b07mzi8igqei9p,18,active,yes,7wh91ajt4v3w9kfdpp5hf5mmt,147611,721997,Owerri,201,right,91
+Tobe,Leysen,T. Leysen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/9/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,40,active,yes,7zmgaactx19n77j9fl08pahyi,492999,1126985,,179,left,83
+Cyriel,Dessers,C. Dessers,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,12/8/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,9,active,yes,86603cyr3osksy73el0ncy7yt,180768,823543,Leuven,185,right,84
+Shawn,Adewoye,S. Adewoye,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/29/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,35,active,no,8przxwwothu3crflys7ahl4dm,460969,1126983,Nottingham,181,right,81
+Luca,Oyen,L. Oyen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/14/2003,England,1fk5l4hkqk12i7zske6mcqju6,24,active,yes,8y6kxc66t4hurxuz4m4cm388a,492976,1189209,Nottingham,172,both,64
+Sébastien,Dewaest,S. Dewaest,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/27/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,6,active,no,9ma4vdnmvoog1e5pvyii3405x,166076,586154,Poperinge,188,right,91
+Dries,Wouters,D. Wouters,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/28/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,4,active,no,9svafwvk8lle1ex1m2y279905,166473,870564,Tongeren,191,left,80
+Stephen Pius,Odey,S. Odey,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,1/15/1998,Nigeria,63pvdwrsiq5b07mzi8igqei9p,15,active,no,9yuyz4ci6wqikd6ckjstbt2i1,424835,910772,Lagos,176,right,78
+Bryan,Heynen,B. Heynen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/6/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,yes,a8k3ubqsi0duc3g4u5jnvcoa1,213857,881111,,182,right,74
+Patrik,Hrošovský,P. Hrošovský,Slovakia,7dybe8679n9bgyrcxi383pq3y,Midfielder,player,4/22/1992,Slovakia,7dybe8679n9bgyrcxi383pq3y,17,active,yes,ama1ibpjcfu206icrfmkgfavp,108841,683373,Bojnice,172,right,68
+Pierre,Dwomoh,P. Dwomoh,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/21/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,80,active,yes,b81lneik0objvk15uf6m4cewa,492983,1189444,,185,right,69
+Daniel,Vuković,D. Vuković,Australia,u5ieemi69z72c3bgczyy68lo,Goalkeeper,player,3/27/1985,Australia,u5ieemi69z72c3bgczyy68lo,1,active,no,bgl8h2ygh9ztbnzt79wv178ph,84648,493549,Sydney,187,right,95
+Bastien,Toma,B. Toma,Switzerland,3bh70jgvc5mn58x0byjkuda17,Midfielder,player,6/24/1999,Switzerland,3bh70jgvc5mn58x0byjkuda17,11,active,yes,bid3fvgjmfnik2pegy9av3tux,430582,975531,Sitten,172,right,69
+Elias,Sierra-Cappelleti,E. Sierra-Cappelleti,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,8/25/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,no,bmbzc4jvazdiuddsbnceyauei,449873,1167603,,170,right,63
+Théo,Bongonda Mbul'Ofeko Batombo,T. Bongonda,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,11/20/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,10,active,yes,bpvxqbiu11k4ivohi3798kxxx,153269,745621,Charleroi,175,left,75
+Rubin,Seigers,R. Seigers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/11/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,no,bxcrdkrcljgx6l4o0uy4rom3t,179526,897263,,188,right,88
+Adriano,Bertaccini,A. Bertaccini,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,8/13/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,bxm1hhoqn14l6kopk32nnyktl,235073,831446,Charleroi,173,right,
+Bryan Michael,Limbombe Ekango,B. Limbombe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/14/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,bzsoq42nf6sgdh9oe64n7rnfu,470850,1167606,Mechelen,172,right,73
+Angelo Smit,Preciado Quiñónez,A. Preciado,Ecuador,6pyj2bytt2osbjk69owzfehcg,Defender,player,2/18/1998,Ecuador,6pyj2bytt2osbjk69owzfehcg,77,active,yes,c8m4ox6n1v89qbbjq73s5ezmx,423667,1050649,Shushufindi,173,right,74
+Kristian,Thorstvedt,K. Thorstvedt,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Midfielder,player,3/13/1999,Norway,7f16iy4w8u8ogyn6pfooqwv5z,42,active,yes,cc04mat3snly9oe4bt7xaeooa,445043,1114824,Stavanger,189,left,87
+Mats,Møller Dæhli,M. Dæhli,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Midfielder,player,3/2/1995,Norway,7f16iy4w8u8ogyn6pfooqwv5z,20,active,no,cdqa1j5yeh8u9ll0ijx28oyj9,112137,801960,Oslo,177,right,72
+Junya,Ito,J. Ito,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,3/9/1993,Japan,lxyibh89lpdc0bfian1nx0xq,7,active,yes,cmrdm4nnd62inlvsnc52vkicp,207794,865975,Yokosuka,176,right,68
+Gerardo Daniel,Arteaga Zamora,G. Arteaga,Mexico,5trdr3jf42i20zj1hnkvcytr6,Defender,player,9/7/1998,Mexico,5trdr3jf42i20zj1hnkvcytr6,5,active,yes,d1rgv9cgncdgr1h61phrxoc89,240065,957309,Zapopan,173,left,61
+Jules Christ Eboue,Kouassi,E. Kouassi,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Midfielder,player,12/13/1997,Côte d'Ivoire,tin6kf561ywonqan0mettr98,38,active,yes,dmr3lblv6081wn9egp1zpfs2x,217116,914763,Abidjan,185,right,70
+Jay-Dee,Geusens,J. Geusens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/5/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,15,active,yes,e8iedufshdq58novt3uevsrqi,492964,1217149,,,,
+Sekou,Diawara,S. Diawara,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,2/8/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,yes,hm6zqg4nqkxc9p0eff9ztnca,492996,1191918,,,,
+Maarten,Vandevoordt,M. Vandevoordt,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,2/26/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,yes,jflu7a5n4f3ezoj20z0kje5m,248866,1116401,Sint-Truiden,188,right,79
+Jovan,Stojanović,J. Stojanović,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Attacker,player,4/21/1992,Serbia,5w4ve503bjdsshwx9ho6jxzx0,11,active,no,14d4d3eeq7s4cscn0lz3vtjv9,112791,585629,Beograd,191,,76
+Christophe,Lepoint,C. Lepoint,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/24/1984,Belgium,4wbzjcclyefma1ourvjsu4q2j,54,active,yes,1acbm9228tfggjx7htxjtcvrp,17122,370702,Uccle,189,right,84
+Gaëtan,Hendrickx,G. Hendrickx,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/30/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,no,1dpz2wyzessv6nm7ljivmd3h1,212648,880771,Braine-l'Alleud,175,right,64
+Ante,Palaversa,A. Palaversa,Croatia,37hlakrwxyuzovaeoo4sezusp,Midfielder,player,4/6/2000,Croatia,37hlakrwxyuzovaeoo4sezusp,8,active,yes,1jbm4rhckr1gmwld08ey819m,240995,968672,Split,187,right,77
+Brice,Verkerken,B. Verkerken,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/21/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,1qjrycko3sl78ub4j528dnqei,500934,1207487,,,,
+Sambou,Sissoko,S. Sissoko,Mali,d0v29nncgikdswlxpdq553zz,Midfielder,player,6/29/2000,Mali,d0v29nncgikdswlxpdq553zz,20,active,yes,1wkcr4473tca3yl1suywrwyne,476500,1168189,,181,right,
+Amadu,Jalloh,A. Jalloh,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/2/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,2skg09lfknfpmgitqw1pkpg5w,521040,1257691,,180,right,
+Marko,Ilić,M. Ilić,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Goalkeeper,player,2/3/1998,Serbia,5w4ve503bjdsshwx9ho6jxzx0,31,active,yes,2unnytu55d7lvws7h3r86yhud,228938,975929,Novi Sad,191,right,81
+Abdul Jeleel,Ajagun,A. Ajagun,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Midfielder,player,2/10/1993,Nigeria,63pvdwrsiq5b07mzi8igqei9p,8,active,no,2zhhnwe130gawq5wcfxesn6j9,171175,604562,Port Harcourt,168,right,65
+Terem Igobor,Moffi,T. Moffi,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,5/25/1999,Nigeria,63pvdwrsiq5b07mzi8igqei9p,20,active,no,33jtnv5kyzyw1it7y9czhn4a2,438398,1208809,,188,left,87
+Imoh,Ezekiel,I. Ezekiel,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,10/24/1993,Nigeria,63pvdwrsiq5b07mzi8igqei9p,39,active,no,463h98298r9oygs8f3emx1zv9,111926,649242,Lagos,178,right,70
+Brendan Daniel,Hines-Ike,B. Hines-Ike,USA,7hr2f89v44y65dyu9k92vprwn,Defender,player,11/30/1994,USA,7hr2f89v44y65dyu9k92vprwn,3,active,no,4rrcs72owauveldlz4o1fwgyx,220448,913198,Denver,185,right,77
+Pape Habib,Guèye,H. Guèye,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,9/20/1999,Senegal,6hhqyhr5cwq2pfprlazyposyk,17,active,yes,6437iwpplyfh71o9b7uxdylii,250698,974137,,188,left,84
+Teddy Étienne,Chevalier,T. Chevalier,France,7gww28djs405rfga69smki84o,Attacker,player,6/28/1987,France,7gww28djs405rfga69smki84o,34,active,yes,6bwdeulsld9d0ylx6o66478wl,47128,510328,Denain,178,right,77
+Kristof,D'Haene,K. D'Haene,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/6/1990,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,6vh5n14h1knmx7yut84q2f2l1,85698,514998,Kortrijk,168,left,63
+Timothy,Derijck,T. Derijck,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/25/1987,Belgium,4wbzjcclyefma1ourvjsu4q2j,76,active,yes,6w1hily3yj7vvidhhgi4fqdat,39198,348280,Liedekerke,185,right,82
+Yani,Van Den Bossche,Y. Van Den Bossche,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/1/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,37,active,yes,7uy5ae5jzu6pdbcirr2rxqh3o,511124,1229633,,,right,
+Trent Lucas,Sainsbury,T. Sainsbury,Australia,u5ieemi69z72c3bgczyy68lo,Defender,player,1/5/1992,Australia,u5ieemi69z72c3bgczyy68lo,5,active,yes,7uy6rxz45508tkxjk1p45smad,102909,569848,Perth,183,right,76
+Faïz,Selemani,F. Selemani,Comoros,40fy8dkxp9lwfufwmbnctzlz6,Attacker,player,11/14/1993,France,7gww28djs405rfga69smki84o,10,active,yes,8b95khn8h8qz3y4u4coajs5at,202967,899892,Marseille,182,right,65
+Yevhen,Oleksandrovych Makarenko,Y. Makarenko,Ukraine,315w6fk6umfzf4qvba3t55u61,Midfielder,player,5/21/1991,Ukraine,315w6fk6umfzf4qvba3t55u61,25,active,no,8orriuewsbzajasuw627i3glx,120168,789983,Kyiv,186,left,82
+Lucas,Maus,L. Maus,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/9/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,no,96bpa2gd6sng4i2j0gn3xdkic,512097,1232710,,,,
+Loïc,Ritière,L. Ritière,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/25/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,41,active,no,98bdsoex20hwb82iwjymzm6ms,511123,1229632,,,,
+Julien Ariel,De Sart,J. De Sart,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,12/23/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,23,active,no,99tf4co0pm09ayca13ma3lql1,169535,649428,Waremme,187,right,72
+Luqman Hakim,Shamsudin,Luqman Hakim Shamsudin,Malaysia,2nkhuc4d9vq5llknmxpa0wbhy,Attacker,player,3/5/2002,Malaysia,2nkhuc4d9vq5llknmxpa0wbhy,9,active,yes,9in1wztygowwkx5jwvt0zv6l0,518347,1251093,Kota Bharu,170,right,
+Petar,Golubović,P. Golubović,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Defender,player,7/13/1994,Serbia,5w4ve503bjdsshwx9ho6jxzx0,2,active,no,9w68g0qmdj02qbzo3yai42f2t,175363,817489,Beograd,185,right,78
+Michiel,Jonckheere,M. Jonckheere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/3/1990,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,acnqs0gs1c2ocy3tu49yc8fkl,166490,346962,Ostend,180,left,66
+Gilles,Dewaele,G. Dewaele,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/13/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,4,active,yes,ai0yljs83kdpaa6r7ri0048np,166074,751077,Knokke,182,right,72
+Lucas,Rougeaux,L. Rougeaux,France,7gww28djs405rfga69smki84o,Defender,player,3/10/1994,France,7gww28djs405rfga69smki84o,6,active,yes,br0mb35zm09lq1vdmicmile51,115363,726056,Grasse,185,right,87
+Adam,Jakubech,A. Jakubech,Slovakia,7dybe8679n9bgyrcxi383pq3y,Goalkeeper,player,1/2/1997,Slovakia,7dybe8679n9bgyrcxi383pq3y,1,active,no,c1fcxha3l058brl1925muv2l1,210932,969383,Presov,188,right,85
+Ilombé,Mboyo,I. Mboyo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,4/22/1987,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,7,active,yes,cq2w5qpzkahq41pc7ux5nm02d,58996,488592,Kinshasa,190,right,87
+Eric,Ocansey,E. Ocansey,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,8/22/1997,Ghana,2q2sw72utw5gu9t5y4knckwba,51,active,yes,dfybdfckp2nl7mp411gkh44ix,229280,921988,Tema,173,left,66
+Muhammed,Badamosi,M. Badamosi,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,Attacker,player,12/27/1997,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,19,active,yes,e2i71o4lswt279gsnw28oplre,481047,1085871,,198,right,
+Maxim,Deman,M. Deman,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,10/23/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,eczyz1c2lgqelhp13xiqb0vhm,483386,1165634,,194,,82
+Aleksandar,Radovanović,A. Radovanović,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Defender,player,11/11/1993,Serbia,5w4ve503bjdsshwx9ho6jxzx0,66,active,yes,ezb815xw3yx3r3ey51zovop91,230801,1122629,Šabac,189,left,83
+Victor Christoffer,Wernersson,V. Wernersson,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Defender,player,7/6/1995,Sweden,1z6l2c33w2kyz9rdefs1d68nb,26,active,no,1olyaqfnnl0sb4vsfxyi7j2z9,189743,831843,Malmö,180,both,69
+Gaëtan,Coucke,G. Coucke,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/3/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,yes,1psqmd0h77b385bljq2emftgp,218222,897270,Tongeren,187,right,83
+Rob,Schoofs,R. Schoofs,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/23/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,25ey2mcvgwz6ls2612os5hzv9,88719,567878,Herk-de-Stad,178,left,69
+Issa,Kaboré,I. Kaboré,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,Defender,player,5/12/2001,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,29,active,no,2p70qo9oxplufwnhlrl2b8v3e,476369,1194294,Bobo-Dioulasso,180,right,
+Dopanga Loockman Trova,Boni,T. Boni,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,Midfielder,player,12/21/1999,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,17,active,no,2q0jf9tpxz7pejfeiziy08b56,442800,1097213,,185,,84
+Marian,Shved,M. Shved,Ukraine,315w6fk6umfzf4qvba3t55u61,Attacker,player,7/16/1997,Ukraine,315w6fk6umfzf4qvba3t55u61,35,active,no,2xixqrmorz1hetvdm4sszxp7t,205605,921630,Mykolaiv,171,left,63
+Senne,Carleer,S. Carleer,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,2/25/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,31,active,no,32b7jrwwirthaqs80pcpnoahg,519332,1252646,,,,
+Steven Arnold,Defour,S. Defour,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/15/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,88,active,no,356hlyxmm0xoknzmoxfu2frv9,39847,347218,Mechelen,173,right,65
+Geoffry,Hairemans,G. Hairemans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/21/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,7,active,yes,3eywxsna9qzi1egis1uj4l6mt,80759,537513,Antwerp,183,left,64
+Abdallah Kerim,Mrabti,K. Mrabti,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Attacker,player,5/20/1994,Sweden,1z6l2c33w2kyz9rdefs1d68nb,19,active,yes,3q5uylbjjiaoj3mn2l7p93jyt,158006,868361,,175,both,75
+Ferdy,Druijf,F. Druijf,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Attacker,player,2/12/1998,Netherlands,6hzi5pltnz67q4la8yli9qfv6,9,active,yes,3xckq9ri2ds7uh0cwihiwahux,204636,952707,,190,right,86
+Sheldon Michael Louis,Bateau,S. Bateau,Trinidad and Tobago,635ed0499golbw7h62vt7g53j,Defender,player,1/29/1991,Trinidad and Tobago,635ed0499golbw7h62vt7g53j,4,active,yes,3z982g6djrv6piwca4gm91ln9,77950,582802,Port of Spain,186,right,85
+Sandy,Walsh,S. Walsh,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Defender,player,3/14/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,5,active,yes,4kuxth5k98x4cgfrfweu1u51,104658,605192,Brussel,185,right,73
+Niklo,Dailly,N. Dailly,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,11/6/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,21,active,yes,4qvf8tffqwt7cxwgpri3kpk6i,509256,1227899,,,,
+Jordi,Vanlerberghe,J. Vanlerberghe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/27/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,56sjqxlsf5iitgww0hogez8ph,137988,716985,,189,right,75
+Igor Alberto,Rinck de Camargo,I. de Camargo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/12/1983,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,10,active,yes,594fy1301qdxdc7bt8otg3v85,14532,347227,Porto Velho,187,right,85
+Gustav Per Fredrik,Engvall,G. Engvall,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Attacker,player,4/29/1996,Sweden,1z6l2c33w2kyz9rdefs1d68nb,20,active,yes,5gzobg231vp6fnjrrh6k49qz9,160790,736006,Kalmar,185,right,85
+Aster Jan,Vranckx,A. Vranckx,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/4/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,40,active,no,72vim7cq99zdjjwivwtr773vu,487675,1176929,Erps-Kwerps,183,both,78
+Bas,Van den Eynden,B. Van den Eynden,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/7/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,37,active,yes,7e0cr2upqlgq4btrm3h99bpey,509255,1229602,,,,
+Thibault,Peyre,T. Peyre,France,7gww28djs405rfga69smki84o,Defender,player,10/3/1992,France,7gww28djs405rfga69smki84o,23,active,yes,92x3r5pxmvkgaxups0gdrvq39,124082,696484,Martigues,184,right,75
+Joachim,Van Damme,J. Van Damme,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/23/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,13,active,yes,98u3aeikqsaij826di974xh3p,120961,601417,,195,right,94
+Nikola,Storm,N. Storm,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,9/30/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,11,active,yes,9aafa664l1husrkrgqv25l42d,176277,741121,Maldegem,178,right,74
+Onur,Kaya,O. Kaya,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/20/1986,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,yes,9ooubx5x2tsmxyncp7wqqxwid,39069,348304,Brussel,167,right,69
+Arno,Valkenaers,A. Valkenaers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/3/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,no,9r99ipz8boaxw3a0twm9b2ajt,471677,1154963,,186,,75
+Maxime Kali,Wenssens,M. Wenssens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/17/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,32,active,yes,b635b2qa94pla60s53ql22356,466520,1128828,,191,right,
+Sofiane,Bouzian Hassan,S. Bouzian,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/13/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,no,bp3azvnjft8gh2di10rax58bu,471678,1154962,,184,,79
+Yannick,Thoelen,Y. Thoelen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/18/1990,Belgium,4wbzjcclyefma1ourvjsu4q2j,15,active,yes,calut2wcnvfps97uj7dartf4l,54006,459599,Tessenderlo,188,right,81
+Siemen,Voet,S. Voet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/3/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,no,czlv3j3qotjfr6z77midggeeh,465753,1156344,,,left,
+Jules,Van Cleemput,J. Van Cleemput,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/11/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,4,active,yes,dbtjmpfrscwqv0xvqk3krqa5l,213649,881114,,183,,73
+Lucas,Bijker,L. Bijker,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Defender,player,3/4/1993,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,3,active,yes,dsl7qkp6ndxky3lq89liw7yz9,88886,567178,São Paulo,174,left,77
+Dylan,Dassy,D. Dassy,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/18/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,eaaxvzqox27ea3u2j9d6gcd90,530799,1271126,,,,
+Lars,Coveliers,L. Coveliers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/20/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,eo1n9h0jpuhiyz7vjzfyv52ei,487677,1175431,,177,right,72
+William,Togui,W. Togui,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Attacker,player,8/7/1996,Côte d'Ivoire,tin6kf561ywonqan0mettr98,,active,no,f47nngca8i5bwmm1ppbzbvbe2,471681,849792,,181,right,81
+Maxime Vincent,D'Arpino,M. D'Arpino,France,7gww28djs405rfga69smki84o,Midfielder,player,6/17/1996,France,7gww28djs405rfga69smki84o,6,active,yes,13gl8a9xwpzphph88xleav07p,213400,752504,Villeurbanne,175,right,62
+Andrew,Hjulsager,A. Hjulsager,Denmark,5adf60vwiw2f2mibyq1k4ex7i,Midfielder,player,1/15/1995,Denmark,5adf60vwiw2f2mibyq1k4ex7i,17,active,no,1d2fpmtdglpqwyhnc657n77it,166973,743228,Amager,175,right,73
+Jordy,Schelfhout,J. Schelfhout,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/19/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,94,active,yes,1leek57meu5ud379ll63mzdre,488366,1175436,,184,left,
+Makhtar,Gueye,M. Gueye,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,12/4/1997,Senegal,6hhqyhr5cwq2pfprlazyposyk,7,active,yes,28mpvdhcf5jycnaj5kxsdu1yi,462425,1131293,,195,right,90
+Anton Willy,Tanghe,A. Tanghe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/28/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,yes,2hj88r72bbwnhqx12tv13jmqx,465713,1156366,Roeselare,194,right,
+Mohamed,Berte,M. Berte,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/11/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,91,active,yes,3are60mt98ibeazgcyjvuy7tg,539197,1285604,,,,
+Théo Ndicka,Matam,T. Matam,France,7gww28djs405rfga69smki84o,Defender,player,4/20/2000,France,7gww28djs405rfga69smki84o,20,active,yes,3m13ipluel0m6cotha7n7vrop,466040,1103866,Avallon,169,left,
+Mamadou Khady,Thiam,M. Thiam,Senegal,6hhqyhr5cwq2pfprlazyposyk,Attacker,player,3/20/1995,Senegal,6hhqyhr5cwq2pfprlazyposyk,19,active,no,56bsesp7qter2xdjo8knrdy39,208747,871798,Aubervilliers,179,right,75
+Nick,Bätzner,N. Bätzner,Germany,36min0qztu8eydwvpv8t1is0m,Midfielder,player,3/15/2000,Germany,36min0qztu8eydwvpv8t1is0m,34,active,yes,58qrdtv5emnvcojqkmnpx5ffu,510924,1107910,,170,right,
+Ari Freyr,Skúlason,A. Skúlason,Iceland,4jjsm5a20nnxgw5cus6b7yxc6,Defender,player,5/14/1987,Iceland,4jjsm5a20nnxgw5cus6b7yxc6,23,active,no,5aoxw7yh8oupho0wx6pcndlg5,48674,493139,Reykjavík,170,both,65
+Robbie,D'Haese,R. D'Haese,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/25/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,yes,5ghjnuqhf7kvbwqlo8jqv0bqi,430857,1061319,,180,right,
+Junior Fashion,Sakala,F. Sakala,Zambia,2dlu3zrfid7nl6ppmb04hjgot,Attacker,player,3/14/1997,Zambia,2dlu3zrfid7nl6ppmb04hjgot,10,active,no,5p8y1fedi7alsnrdwg7lmw99l,422685,973049,Chipata,178,right,72
+Frederik,Jäkel,F. Jäkel,Germany,36min0qztu8eydwvpv8t1is0m,Defender,player,3/7/2001,Germany,36min0qztu8eydwvpv8t1is0m,15,active,yes,5wpoqeo6z9ej9nx92h207ozu2,486516,1060788,Dommitzsch,193,right,
+Manuel,Osifo,M. Osifo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/31/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,92,active,yes,6y2s58f539ax7s9np2jao0tn8,539198,1285605,,,,
+Sindrit,Guri,S. Guri,Albania,17zsm8shejejls2on1ffil3op,Attacker,player,10/23/1993,Albania,17zsm8shejejls2on1ffil3op,9,active,no,7lp4fyirbqyp5cqe13ytjvlcl,114968,1096876,Shkodër,189,right,
+Evangelos,Patoulidis,E. Patoulidis,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/24/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,yes,8g5ms6uacdkgfcbxt4crlr4ve,460711,971238,,176,left,
+Arthur Nicolas,Theate,A. Theate,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/25/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,5,active,yes,8qlz4omhgfnzyb2cgeou7xn56,465189,973617,,,left,
+Cameron Alexander,McGeehan,C. McGeehan,Northern Ireland,5euslv7jutsauoqt3o2lj9bvi,Midfielder,player,4/6/1995,England,1fk5l4hkqk12i7zske6mcqju6,18,active,yes,92ajo8iiqwlmjwndtf7yt6l05,156706,814543,Kingston-upon-Thames,180,right,71
+Marvin,Dewaele,M. Dewaele,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/13/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,no,92avpf3vyquraeijvpn3qjehg,523798,1265344,,181,right,73
+Guillaume,Hubert,G. Hubert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/11/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,99eumu17h5sxriw5vfczvdb6d,103730,606868,Charleroi,198,right,88
+Jack,Hendry,J. Hendry,Scotland,1xf68d0a8lnnq30hnnn8kr6ut,Defender,player,5/7/1995,Scotland,1xf68d0a8lnnq30hnnn8kr6ut,4,active,no,9ajh8tm9rl0i2sa09c9dfu0h5,194203,871279,Glasgow,194,right,86
+Bram,Castro,B. Castro,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,9/30/1982,Belgium,4wbzjcclyefma1ourvjsu4q2j,99,active,no,ah66pqor8g88o2wuk5pta7bo5,39223,348352,Hasselt,191,right,88
+Jorben,Vanhulle,J. Vanhulle,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/9/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,73,active,no,bhg7tnihoxgr6arwdc7ey5lhw,517678,1250102,Brugge,181,left,
+Marko,Kvasina,M. Kvasina,Austria,hcs1bd49qliqqity6o268jyt,Attacker,player,12/20/1996,Austria,hcs1bd49qliqqity6o268jyt,21,active,yes,by7hjiqxbh17o7xdwjjzhi1g5,173237,794887,Wien,195,right,79
+Jelle,Bataille,J. Bataille,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/20/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,25,active,no,cyh16toqa9wxmxepg635ecgve,430854,1061321,,175,right,
+Brecht,Capon,B. Capon,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/22/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,czsmg1hjqbmzhz8x91y3b0yc5,54975,356560,Oostende,179,right,69
+François,Marquet,F. Marquet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/17/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,8,active,no,dxu9fiw4ob6o9083sb7nqc3x1,161485,734228,Theux,173,right,70
+Joseph Fabrice,Ondoa Ebogo,F. Ondoa,Cameroon,4eb9feio6u267dd1jcwaf38mt,Goalkeeper,player,12/24/1995,Cameroon,4eb9feio6u267dd1jcwaf38mt,1,active,no,e6yimxqgm9yn77wiukcyfrzrp,156276,727685,Yaoundé,185,right,87
+Toby Peter,Sibbick,T. Sibbick,England,1fk5l4hkqk12i7zske6mcqju6,Defender,player,5/23/1999,England,1fk5l4hkqk12i7zske6mcqju6,2,active,no,emglo360rdevds650u33d2odl,246148,956934,London,183,right,69
+Kévin,Vandendriessche,K. Vandendriessche,France,7gww28djs405rfga69smki84o,Midfielder,player,8/7/1989,France,7gww28djs405rfga69smki84o,26,active,no,esrwjtmubaz21j01ndpollrrp,92923,733561,Lesquin,183,right,74
+Indy,Boonen,I. Boonen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/4/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,11,active,yes,mzrka1w28qc7vgr5xmcngqg9,218021,1103003,,177,left,
+Kéres Angelau,Masangu,K. Masangu,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/7/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,no,11ys1gz739c2d1erzx21t91ih,428232,1096282,Antwerp,185,right,76
+Ismaila Cheick,Coulibaly,I. Coulibaly,Mali,d0v29nncgikdswlxpdq553zz,Midfielder,player,12/25/2000,Mali,d0v29nncgikdswlxpdq553zz,28,active,yes,1ku51ad7aer41602idu5pkeay,476938,973331,,183,right,
+Felipe Micael,Tenorio Menezes,Felipe Micael,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Attacker,player,7/3/2001,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,99,active,yes,1q8bgmc3z26bc40urvthh206i,502543,1229701,Catanduva,178,left,
+David,Mukuna-Trouet,D. Mukuna-Trouet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/2/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,38,active,yes,20z6wexg4cexccgiyxfk45zbo,518139,1250103,,192,,
+George,Broadbent,G. Broadbent,England,1fk5l4hkqk12i7zske6mcqju6,Midfielder,player,9/30/2000,England,1fk5l4hkqk12i7zske6mcqju6,21,active,no,2ho1w4025bufgc3ecmf5tm7l5,232923,1113312,,188,right,
+Baptiste,Aloé,B. Aloé,France,7gww28djs405rfga69smki84o,Defender,player,6/29/1994,France,7gww28djs405rfga69smki84o,,active,no,3a8n9mird5lpwgsr7vjqm3glx,107259,655469,La Ciotat,184,right,77
+Abdoulie,Sanyang,A. Sanyang,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,Attacker,player,5/8/1999,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,22,active,yes,3pmxeo3dvepq6a1s6dxvjeoh6,463677,1229700,Serekunda,172,left,
+Alexander,Maes,A. Maes,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/26/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,no,4d67b2tzcgf68aqu83j5vimdx,123452,614194,Genk,,,
+Isaac,Matondo Kwanzambi,I. Kwanzambi,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/24/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,37,active,no,509rbo06htw5iwjqwnqc8x59l,506724,1233041,,,,
+Loris,Brogno,L. Brogno,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,9/18/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,92,active,no,5cgscu60m3rryk4ysh2fisx5h,111673,593009,Charleroi,175,left,70
+Senne,Ceulemans,S. Ceulemans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/13/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,36,active,no,5ereou355ykyhk6j7lud22wb8,436684,1252607,,178,,
+Denis,Prychynenko,D. Prychynenko,Ukraine,315w6fk6umfzf4qvba3t55u61,Defender,player,2/17/1992,Germany,36min0qztu8eydwvpv8t1is0m,3,active,no,5ro91qe7w0ll19h89xrwoslp1,94735,589629,Potsdam,189,right,82
+Blessing Chibukie,Eleke,B. Eleke,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,3/5/1996,Nigeria,63pvdwrsiq5b07mzi8igqei9p,7,active,yes,5uc3dgv6xwkc7tr8k9d2ooiqd,205590,1102488,Aba,190,right,88
+Prince Vinny,Ibara Doniama,P. Ibara,Congo,1s2y6o0lwj69dj5ib5pid8f6r,Attacker,player,2/7/1996,Congo,1s2y6o0lwj69dj5ib5pid8f6r,,active,no,680a2xrxovyq1c0rdm6on2rxl,227764,914421,Brazzaville,192,right,
+Antoine,Lejoly,A. Lejoly,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/26/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,72,active,yes,7d9fm50xsiy6jiu1vbclj13vt,219010,898887,Verviers,182,right,70
+Ayrton,Mboko,A. Mboko,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/23/1997,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,79,active,yes,8y6ansa1xexyla8ovwywsprai,471679,1163864,Liège,187,right,
+Mohamed Réda,Halaimia,M. Halaimia,Algeria,1ayprcriqhb8iv10ch70clppu,Defender,player,8/28/1996,Algeria,1ayprcriqhb8iv10ch70clppu,27,active,yes,9qeqdm1iadjb49yyf8w1txpl,497319,894056,Oran,180,right,72
+Euloge Mèmè,Placca Fessou,E. Placca Fessou,Togo,3jiuckrqd0zejkm452st5dyq7,Attacker,player,12/31/1994,Togo,3jiuckrqd0zejkm452st5dyq7,11,active,no,9s51oyd85r730u9hvhjmrsmol,149844,723471,Lomé,187,,
+Pierre,Bourdin,P. Bourdin,France,7gww28djs405rfga69smki84o,Defender,player,1/6/1994,France,7gww28djs405rfga69smki84o,15,active,yes,apt96jhusrjgh20mdbyaeqf2t,129506,789193,Vincennes,184,left,84
+Dario,Van den Buijs,D. Van den Buijs,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,9/12/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,6,active,no,arahlffwma11d06oqmglwjemt,200198,846943,Lier,182,left,74
+Jorn,Vancamp,J. Vancamp,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/28/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,77,active,no,avhv3q84g2ungziy2j32w9785,218224,897279,Antwerpen,186,right,75
+Grégory,Grisez,G. Grisez,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/17/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,89,active,no,ax1lk6a5hxcccvtcdrqdutyad,72680,508121,La Louvière,184,right,76
+Jan,Van den Bergh,J. Van den Bergh,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/2/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,2,active,yes,b1h4yvtkjhvtkcgu3gtgiytx,447886,1108110,,189,left,
+Marius,Noubissi,M. Noubissi,Cameroon,4eb9feio6u267dd1jcwaf38mt,Attacker,player,11/28/1996,Cameroon,4eb9feio6u267dd1jcwaf38mt,9,active,yes,b2h74wqi9263k6b32ikdtk6w9,433147,862046,,180,right,
+Stipe,Radić,S. Radić,Croatia,37hlakrwxyuzovaeoo4sezusp,Defender,player,6/10/2000,Croatia,37hlakrwxyuzovaeoo4sezusp,55,active,yes,bp2ellllifbtxgf0p8qlbm1nt,241111,968671,Split,191,,
+Frédéric,Frans,F. Frans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/3/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,4,active,yes,byt0zt3xifpbgl1pc8uwrx2ad,85632,354626,Wespelaar,183,right,80
+Wouter,Biebauw,W. Biebauw,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,5/21/1984,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,yes,c9tcambzm0esnr4x4sybxgt79,54008,347314,Deerlijk,188,right,84
+Yan,Vorogovskiy,Y. Vorogovskiy,Kazakhstan,6kewn14jj4ncyzghlbu61hna6,Defender,player,8/7/1996,Kazakhstan,6kewn14jj4ncyzghlbu61hna6,24,active,no,cbhvrpdohdvyrwuykm51vmead,210877,1054350,Talgar,182,left,75
+Ryan,Sanusi,R. Sanusi,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/5/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,yes,cfxzvlgvt9jj17qxq41t9sxcl,103684,606682,Borgerhout,181,right,75
+Tom Daniel,Bart Pietermaat,T. Pietermaat,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/6/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,cnzisrsaz5oot3j7qf0jd3xed,91951,536323,,172,right,68
+Zakaria,Bakkali,Z. Bakkali,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,1/26/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,99,active,no,csov8ibh2n0q2w8j72pft9t5h,155489,727254,Liège,168,right,71
+Mike,Vanhamel,M. Vanhamel,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/16/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,31,active,yes,ct58y1zzzrtfciovcil6u0iqd,50327,465460,Elsene,188,right,84
+Musashi,Suzuki,M. Suzuki,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,2/11/1994,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,10,active,yes,cts4m629mfz3knbeyri4021n9,158937,653519,Montego Bay,185,right,75
+Raphael,Holzhauser,R. Holzhauser,Austria,hcs1bd49qliqqity6o268jyt,Midfielder,player,2/16/1993,Austria,hcs1bd49qliqqity6o268jyt,8,active,yes,d1j29sgb7rmc6dxe3koyyr0et,84002,554722,Neustadt,192,both,84
+Joren,Dom,J. Dom,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,11/29/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,5,active,yes,dvomh2gx3wd5x5v1dmlnkdpzp,54077,466925,Antwerpen,177,right,73
+Brian,De Keersmaecker,B. De Keersmaecker,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/6/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,e0mrzdikm67yw88563zgovb6y,482070,1164747,,182,right,
+Darren,Keet,D. Keet,South Africa,1kiwby3xmt97m3ejw76qs4i6k,Goalkeeper,player,8/5/1989,South Africa,1kiwby3xmt97m3ejw76qs4i6k,16,active,no,1glr4c5zsjm2zx2y3k82spzo5,77923,583970,Cape Town,183,,
+Barnabás,Bese,B. Bese,Hungary,1vy5vlux7mj2r7r9ktd71hhpo,Defender,player,5/6/1994,Hungary,1vy5vlux7mj2r7r9ktd71hhpo,18,active,yes,1mlfypcr5dtbi27ilfvcl8v6d,168326,915399,Budapest,188,right,84
+Milan,Tučić,M. Tučić,Slovenia,63vptz9g2ckqnnlxhd1oqn4xq,Attacker,player,8/15/1996,Slovenia,63vptz9g2ckqnnlxhd1oqn4xq,30,active,no,28wgdmao7y8qbj30feniqnj3e,430334,1121008,Ljubljana,186,,
+Olivier,Myny,O. Myny,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,11/10/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,no,2mx9xgoht1ilcopfvxnfj54gl,212536,878587,Zwevegem,178,right,67
+Sascha,Kotysch,S. Kotysch,Germany,36min0qztu8eydwvpv8t1is0m,Defender,player,10/2/1988,Germany,36min0qztu8eydwvpv8t1is0m,23,active,no,2vhdv7k0jh8h1tbutq43ofmqd,40409,408257,Kirchheimbolanden,188,right,78
+Frédéric,Duplus,F. Duplus,France,7gww28djs405rfga69smki84o,Defender,player,4/7/1990,France,7gww28djs405rfga69smki84o,19,active,no,2zjix1lfwb6rxugp741jsfis5,55263,471071,Belfort,178,both,73
+Andrew Philip,King,A. King,Wales,26ilvvgth36hmq6lgq8cy5cb5,Midfielder,player,10/29/1988,England,1fk5l4hkqk12i7zske6mcqju6,8,active,no,33s2i3l13q92rvo28o3j27etx,13152,412196,Barnstaple,194,right,79
+Derrick Katuku,Tshimanga,D. Tshimanga,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/6/1988,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,3,active,no,3krbtvbsbwqscf0tfi5i4nxed,54529,406686,Kinshasa,176,right,68
+Jonah,Osabutey,J. Osabutey,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,10/8/1998,Ghana,2q2sw72utw5gu9t5y4knckwba,45,active,no,3kzpqg69h7mtqpaxvmnk7hm21,210179,1115277,,181,right,72
+Joshua Felix Okpoda,Eppiah,J. Eppiah,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,10/11/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,no,3s3rqfve8xrcezy8252j6mzu1,215416,983561,,179,left,
+Isaac,Asante,I. Asante,Ghana,2q2sw72utw5gu9t5y4knckwba,Midfielder,player,8/29/2002,Ghana,2q2sw72utw5gu9t5y4knckwba,20,active,yes,49wh71efxuxtkmq4vznxzle96,510914,1229754,,,,
+Aboubakar,Keita,A. Keita,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Midfielder,player,11/5/1997,Côte d'Ivoire,tin6kf561ywonqan0mettr98,99,active,no,4dswyr2m0bxs6rkf56y21mz85,173252,794958,Abidjan,188,right,70
+Kamal,Sowah,K. Sowah,Ghana,2q2sw72utw5gu9t5y4knckwba,Midfielder,player,1/9/2000,Ghana,2q2sw72utw5gu9t5y4knckwba,14,active,no,4f8xb5sbyksacxmifi375h7qi,447902,1108118,,179,left,66
+Thomas,Henry,T. Henry,France,7gww28djs405rfga69smki84o,Attacker,player,9/20/1994,France,7gww28djs405rfga69smki84o,9,active,no,4mab6p97p5t3w0fipzp22nxsl,220391,906105,Argenteuil,192,right,86
+Tom,Van Hyfte,T. Van Hyfte,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/28/1986,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,5ocmlpadulmla37npvw4nif9x,69787,508860,Gent,186,left,65
+Yannick,Aguemon,Y. Aguemon,Benin,3o5wco7tkqgfmys9exmt5fo2h,Attacker,player,2/11/1992,Benin,3o5wco7tkqgfmys9exmt5fo2h,7,active,yes,5uj0wz9ucjsjf91j3m2il7ro5,105561,619438,Cotonou,180,right,74
+Tristan Daniel,Borges,T. Borges,Canada,1iaoypzp6syf32cz9l15pzp7e,Attacker,player,8/26/1998,Canada,1iaoypzp6syf32cz9l15pzp7e,,active,no,6d56vy4w9i65ye4c5t5txgkix,225058,865207,Toronto,170,left,68
+Brent,Laes,B. Laes,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/18/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,7g6lbdmw4uevst4dry3shimay,465191,1266106,,,,
+Stallone,Limbombe Ekango,S. Limbombe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/26/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,no,7hpt3f280r4evfh1rjwsmbr9x,172339,1064247,Mechelen,169,right,71
+Jordy,Gillekens,J. Gillekens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/18/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,7mr84dn61d8n7tkjd766iaeax,447904,1108122,,,,
+Toon,Raemaekers,T. Raemaekers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,9/9/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,8lqiyhgp90sxu9bzmaa1o3t62,510918,1229741,,194,,85
+Xavier,Mercier,X. Mercier,France,7gww28djs405rfga69smki84o,Midfielder,player,7/25/1989,France,7gww28djs405rfga69smki84o,10,active,yes,8mwgfyvjn4adxslhk4om685x,102740,605051,Alès,174,right,71
+Kenneth Jan,Schuermans,K. Schuermans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/25/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,4,active,no,8wklb78ij7tvpiunb2l0z74d1,112141,649795,Genk,194,,80
+Kristiyan,Aleksandrov Malinov,K. Malinov,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,Midfielder,player,3/30/1994,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,29,active,yes,91qd93lqgpe700ps0b6a7ntn9,197113,867962,Kavrakirovo,170,right,
+Dylan,Ouédraogo,D. Ouédraogo,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,Defender,player,7/22/1998,France,7gww28djs405rfga69smki84o,15,active,yes,91sex5ir1pp4b2beotoua7mqx,240135,1075303,Marseille,185,,75
+Yohan,Croizet,Y. Croizet,France,7gww28djs405rfga69smki84o,Midfielder,player,2/15/1992,France,7gww28djs405rfga69smki84o,77,active,no,93455tpsmcddxazi8je6f5lud,104369,621237,Sarrebourg,178,left,77
+Celestin,De Schrevel,C. De Schrevel,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,4/2/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,97,active,no,9xhuc26auh42v6lnyrlupvzf8,510912,1268856,,187,left,79
+Musa Suleiman,Al-Taamari,Musa Al-Taamari,Jordan,5067agkwm6luzilwyfwth1dic,Attacker,player,6/10/1997,Jordan,5067agkwm6luzilwyfwth1dic,13,active,yes,a8pgjuz5yrbxyf1t905gj327d,426342,1129652,Amman,178,left,75
+Rafael Enrique,Romo Pérez,R. Romo,Venezuela,1er0616j12s9yghuzvsx76d5v,Goalkeeper,player,2/25/1990,Venezuela,1er0616j12s9yghuzvsx76d5v,90,active,yes,ak80zcoqllp87ubfbrenem3f9,62372,508347,Turén,197,right,80
+Daan,Vekemans,D. Vekemans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,2/22/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,32,active,yes,at18x7iut2qeqe25sbuj5dyh,446040,1112482,,180,right,
+Arthur,Allemeersch,A. Allemeersch,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,7/27/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,39,active,yes,au91rqig6uyyi1zdmlxydk38q,510915,1229738,,185,right,
+Samy,Kehli,S. Kehli,France,7gww28djs405rfga69smki84o,Midfielder,player,1/27/1991,France,7gww28djs405rfga69smki84o,17,active,no,ben8m3ta4ktbo36ixfassz2s5,93331,593034,Saint-Avold,191,right,80
+Daniel,Lønne Iversen,D. Iversen,Denmark,5adf60vwiw2f2mibyq1k4ex7i,Goalkeeper,player,7/19/1997,Denmark,5adf60vwiw2f2mibyq1k4ex7i,21,active,no,bm9qgspytvdwy514kk6ytztg5,207270,865038,,193,right,80
+Jérémy Louis,Perbet,J. Perbet,France,7gww28djs405rfga69smki84o,Attacker,player,12/12/1984,France,7gww28djs405rfga69smki84o,43,active,no,by9i4ioopru5y3igoxr351905,45048,357230,Le Puy-en-Velay,184,right,85
+Mandela,Keita,M. Keita,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/10/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,cjf412x9sg56vos0jkj85k3ys,534913,1279877,,,,
+Pierre-Yves Raffaella Michel Lucien,Ngawa,P. Ngawa,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/9/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,5,active,yes,cni0rxu9fo9lfqqhggmqrdvpx,105063,610326,Liège,187,right,75
+Václav,Jemelka,V. Jemelka,Czech Republic,5md5tpwr2nmqao528prx43jr7,Defender,player,6/23/1995,Czech Republic,5md5tpwr2nmqao528prx43jr7,2,active,no,cv0lj7jfh4jslcj7az4d5h5ux,431334,1063778,Olomouc,186,left,75
+David,Hubert,D. Hubert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/12/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,6,active,no,dej1l77pyu1nxerlf7tj1vnbp,54816,381025,Uccle,184,right,76
+Louis,Patris,L. Patris,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/7/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,dmk8usvqtzv60bwkoxk7kfqxg,512121,1167604,,182,right,74
+Filip,Benković,F. Benković,Croatia,37hlakrwxyuzovaeoo4sezusp,Defender,player,7/13/1997,Croatia,37hlakrwxyuzovaeoo4sezusp,21,active,no,eahcgnvlq1tkswvjuovyzxxw5,213405,794466,Zagreb,194,right,80
+Mathieu,Maertens,M. Maertens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/27/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,yes,f3e9qk9oz4feldhgetdpcd0ph,177890,797690,,184,right,77
+Oregan,Ravet,O. Ravet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/13/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,38,active,yes,f5kjetb4nb0bj9ms9lxl24zfu,510917,1229740,,189,,
+Kawin,Thamsatchanan,K. Thamsatchanan,Thailand,71wqq15l0mvpl4lneayzzh44g,Goalkeeper,player,1/26/1990,Thailand,71wqq15l0mvpl4lneayzzh44g,1,active,yes,vqukojswmlzggblfl9ynyvv9,83818,580671,Bangkok,183,both,75
+Josué Humberto,Gonçalves Leal Sá,Josué Sá,Portugal,1nbm5i9a0403zzvltn17lxinc,Defender,player,6/17/1992,Portugal,1nbm5i9a0403zzvltn17lxinc,2,active,no,110maz3wmyhfk670un6ieloet,151980,703736,Lisboa,187,right,80
+Timon Janis,Wellenreuther,T. Wellenreuther,Germany,36min0qztu8eydwvpv8t1is0m,Goalkeeper,player,12/3/1995,Germany,36min0qztu8eydwvpv8t1is0m,1,active,no,11ceernyer8po8soj8dmygatx,145175,833015,Karlsruhe,186,right,80
+Abdoul Karim,Danté,A. Danté,Mali,d0v29nncgikdswlxpdq553zz,Defender,player,10/29/1998,Mali,d0v29nncgikdswlxpdq553zz,,active,no,12ti5m8j5xfu4s2lf3qx6itpl,218227,897579,,182,,75
+Anouar Ait,El Hadj,A. El Hadj,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/20/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,46,active,yes,1e7snjsrbh93xt5ti1oyuqxka,459675,1178418,,174,right,
+Hannes,Delcroix,H. Delcroix,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/28/1999,Haiti,5mp58o38d0mr5qt8g4o6l7efg,42,active,yes,1qqhtdvpixhe5zt9mq9omsoh5,247245,971224,Grande Hatte,185,left,78
+Ilias,Takidine,I. Takidine,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,2/5/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,no,23snplvy5445j7qepgluw9ppm,492962,1191916,,,right,
+Mohamed,Bouchouari,M. Bouchouari,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/15/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,34,active,no,2gonj4ylypwritcayysoqj3hm,465194,1186603,,170,right,
+Aristote,Nkaka Bazunga,A. Nkaka,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/27/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,2owod3f1fajdpanc7dkymdpl,212428,880825,Ghlin,184,right,79
+Rik Robert,Vercauteren,R. Vercauteren,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,6/8/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,70,active,no,2zo1hevzos5iwq9vzbzpxz3e1,422173,1211761,,184,right,
+Albert-Mboyo,Sambi Lokonga,A. Lokonga,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/22/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,48,active,no,375gnysvjk9bvq02ex1lkmynd,437742,1091715,,173,right,67
+Antoine Benjamin,Colassin,A. Colassin,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/26/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,53,active,no,3hpv677ua2y88yx55iujzqpgq,422182,1167601,Charleroi,188,right,82
+Bart,Verbruggen,B. Verbruggen,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Goalkeeper,player,8/18/2002,Netherlands,6hzi5pltnz67q4la8yli9qfv6,16,active,yes,3wwi5vf2l1qbz7e5zdjoy8yga,489639,1184611,Breda,193,right,
+Hendrik,Van Crombrugge,H. Van Crombrugge,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,4/30/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,3z37ancgteqhbhpygl0brzzdh,103074,605563,Leuven,189,left,86
+Mohammed,Dauda,M. Dauda,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,2/20/1998,Ghana,2q2sw72utw5gu9t5y4knckwba,38,active,yes,4594xw7uwntbabii4ugnvs1d5,444489,969031,,176,right,69
+Luka,Adžić,L. Adžić,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Attacker,player,9/17/1998,Serbia,5w4ve503bjdsshwx9ho6jxzx0,17,active,no,4uq36fy3xzfnstkq1sp7sqqjt,229825,975941,Beograd,184,left,74
+Anthony Henri,Vanden Borre,A. Vanden Borre,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/24/1987,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,18,active,no,590yjdkycr1ymguf3wf69vjdh,18679,347131,Likasi,190,both,78
+Francis,Apelete Amuzu,F. Amuzu,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,8/23/1999,Ghana,2q2sw72utw5gu9t5y4knckwba,40,active,yes,5don85s7097g5df42m429b8ix,437741,1077350,Accra,170,right,65
+Lucas Jozef,Lissens,L. Lissens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/25/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,47,active,yes,5is9bcj143orulo4biogwxzl6,449870,1116392,,,,
+Pieter,Gerkens,P. Gerkens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/17/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,5jywyphhwu9j4bphz0720kb9,130592,605041,Bilzen,180,right,72
+Joshua Jon,Cullen,J. Cullen,Republic of Ireland,63nepb66un7juhglo2g6rezcl,Midfielder,player,4/7/1996,England,1fk5l4hkqk12i7zske6mcqju6,8,active,yes,5wmda9gxa0vtnacgb6nq13gtl,172567,867029,Westcliff-on-Sea,175,right,70
+Mustapha,Bundu,M. Bundu,Sierra Leone,7kilikg56sxc0dsd6168dr57b,Attacker,player,2/28/1997,Sierra Leone,7kilikg56sxc0dsd6168dr57b,19,active,no,6nsvidy8m4m7u7umlo0fyfah,227062,953317,Freetown,188,right,77
+Matthew,Miazga,M. Miazga,USA,7hr2f89v44y65dyu9k92vprwn,Defender,player,7/19/1995,USA,7hr2f89v44y65dyu9k92vprwn,20,active,no,6tqzlat0ogqxxqt0vst8nn5xx,163793,736514,Clifton,193,right,84
+Landry Nany,Dimata,L. Dimata,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,9/1/1997,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,9,active,no,76n4eg1xu5qvf9bkwy4p8jsut,220267,905153,Mbuji-Mayi,185,right,81
+Kristian Fredrik,Malt Arnstad,K. Arnstad,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Midfielder,player,9/7/2003,Norway,7f16iy4w8u8ogyn6pfooqwv5z,61,active,yes,7je01bs3a4q6c2gd02ee6da3u,477558,1241288,Oslo,165,right,
+Abdoulay,Diaby,A. Diaby,Mali,d0v29nncgikdswlxpdq553zz,Attacker,player,5/21/1991,France,7gww28djs405rfga69smki84o,23,active,no,7k4mafx6qmljdslwws6rmznpx,83330,574278,Nanterre,173,left,70
+Jérémy,Doku,J. Doku,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/27/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,49,active,no,85gmjxvy1g5aj1lcizegwuaui,248875,1152577,Antwerp,171,right,66
+Zeno Koen,Debast,Z. Debast,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/24/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,88nmn961vtb3bnt9v9rye1h0q,532091,1274009,,,,
+Majeed,Ashimeru,M. Ashimeru,Ghana,2q2sw72utw5gu9t5y4knckwba,Midfielder,player,10/10/1997,Ghana,2q2sw72utw5gu9t5y4knckwba,18,active,no,8f77xyqg4womglj1o8udq77qh,424158,975228,Accra,182,right,72
+Mario,Stroeykens,M. Stroeykens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/29/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,52,active,yes,8lj9hc8u1351oczzu81mryluc,513533,1238258,,,,
+Killian,Sardella,K. Sardella,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/2/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,54,active,yes,8q8qxzmb9j1vntg5llyqa35uy,248870,1116413,,177,right,
+Isaac Kiese,Thelin,I. Thelin,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Attacker,player,6/24/1992,Sweden,1z6l2c33w2kyz9rdefs1d68nb,,active,no,90eoelhr2oxpg3ejr2whwwu6t,106272,653190,Längbro,189,right,82
+Derrick,Luckassen,D. Luckassen,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Defender,player,7/3/1995,Netherlands,6hzi5pltnz67q4la8yli9qfv6,32,active,no,94kzhufmz3ktpn1a9z1y91at,192090,832633,Amsterdam,186,right,
+Peter,Žulj,P. Žulj,Austria,hcs1bd49qliqqity6o268jyt,Midfielder,player,6/9/1993,Austria,hcs1bd49qliqqity6o268jyt,23,active,no,9899yrkv807i9hvnroutd4l3p,164810,818943,Wels,186,left,80
+Jacob,Bruun Larsen,J. Bruun Larsen,Denmark,5adf60vwiw2f2mibyq1k4ex7i,Attacker,player,9/19/1998,Denmark,5adf60vwiw2f2mibyq1k4ex7i,11,active,no,9dnrpl2c7n769i8nbfnboq2tx,179458,924236,Lyngby,183,right,75
+Bogdan,Vasylyovych Mykhaylichenko,B. Mykhaylichenko,Ukraine,315w6fk6umfzf4qvba3t55u61,Defender,player,3/21/1997,Ukraine,315w6fk6umfzf4qvba3t55u61,14,active,yes,aap0mwj1tnezbgik0rhpvn9w5,209051,1135950,Boryspil,175,left,73
+Michel,Vlap,M. Vlap,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Midfielder,player,6/2/1997,Netherlands,6hzi5pltnz67q4la8yli9qfv6,10,active,no,ad9kukqx4xulbvelacgwgqvah,229596,880279,Sneek,191,right,69
+Elias,Cobbaut,E. Cobbaut,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/24/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,adxgypxs56c9yn9q8ipn1kbmd,222447,908674,Mechelen,188,left,78
+Theo,Leoni,T. Leoni,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/21/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,71,active,yes,anx0hiu9yn8szbjk3994u7njd,438011,988377,,,,
+Ognjen,Vranješ,O. Vranješ,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,Defender,player,10/24/1989,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,3,active,no,azzpdovpkbeqorhrc52czxgid,64657,561086,Banja Luka,182,right,76
+Michael Amir,Murillo Bermudez,M. Murillo,Panama,5nhk7v9jq6dqmfbn4hiihhofv,Defender,player,2/11/1996,Panama,5nhk7v9jq6dqmfbn4hiihhofv,62,active,yes,b3vvxolwxcukqk76hb4scvh79,204401,871739,Panama City,183,right,75
+Yari,Verschaeren,Y. Verschaeren,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/12/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,51,active,yes,bu7cw3305zs2u7uj2ed5t867e,438012,1152534,Sint-Niklaas,172,right,
+Timon,Vanhoutte,T. Vanhoutte,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/29/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,c716rboejsazxhoosf6l0v6dw,511581,1230865,,,,
+Warner,Lloyd Hahn,W. Hahn,Suriname,31vay1njxmbs7vtbfp1wo2dx1,Goalkeeper,player,6/15/1992,Netherlands,6hzi5pltnz67q4la8yli9qfv6,24,active,no,ch1ehgr9guufs2wmz5dbvmvo5,120151,614857,Rotterdam,198,right,88
+James Alexander,Lawrence,J. Lawrence,Wales,26ilvvgth36hmq6lgq8cy5cb5,Defender,player,8/22/1992,England,1fk5l4hkqk12i7zske6mcqju6,3,active,no,co29e48tuch0xigvnj98fwc7p,108404,631016,Henley-on-Thames,188,left,81
+Percy Muzi,Tau,P. Tau,South Africa,1kiwby3xmt97m3ejw76qs4i6k,Attacker,player,5/13/1994,South Africa,1kiwby3xmt97m3ejw76qs4i6k,11,active,no,cpchs83o7jkdwzdclxgm8q0gl,230127,821444,Witbank,175,left,
+Kemar Michael,Lawrence,K. Lawrence,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,Defender,player,9/17/1992,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,92,active,no,ctcf8m5r0uqvzgtr0qkfbnc9h,170827,786868,Kingston,178,left,73
+Marco,Kana,M. Kana,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/8/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,55,active,yes,cu3a4pb4a9g6d0qir3oakd46i,459667,1180729,Kinshasa,178,right,
+Bubacarr,Sanneh,B. Sanneh,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,Defender,player,11/14/1994,Gambia,4ix3ulx7h2a09r16jo9qdbuvp,,active,no,cu3p9al44hgmwxejq12yad9sl,228043,805199,,183,right,75
+Paul Omo,Mukairu,P. Mukairu,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,1/18/2000,Nigeria,63pvdwrsiq5b07mzi8igqei9p,12,active,no,dqybftxqx6q0q5sqk20icmgru,490584,1175413,Abuja,182,right,
+Antonio,Milić,A. Milić,Croatia,37hlakrwxyuzovaeoo4sezusp,Defender,player,3/10/1994,Croatia,37hlakrwxyuzovaeoo4sezusp,44,active,no,eb91rkg66av8owi9wqfp9hyad,102349,738855,Splît,190,left,81
+Lukas,Nmecha,L. Nmecha,Germany,36min0qztu8eydwvpv8t1is0m,Attacker,player,12/14/1998,Germany,36min0qztu8eydwvpv8t1is0m,7,active,no,embn1jhcly07i6pjcvcdiavo5,174594,991619,Hamburg,185,right,80
+Adrien,Trebel,A. Trebel,France,7gww28djs405rfga69smki84o,Midfielder,player,3/3/1991,France,7gww28djs405rfga69smki84o,25,active,yes,ev9ql3x07q7totbxl3gvlidat,92818,604668,Dreux,174,left,72
+Kristal,Abazaj,K. Abazaj,Albania,17zsm8shejejls2on1ffil3op,Attacker,player,7/6/1996,Albania,17zsm8shejejls2on1ffil3op,77,active,no,lsksyg91j5bk2wxpu6zx9bs9,241818,1122383,Elbasan,183,left,75
+Ritchie Ria Alfons,De Laet,R. De Laet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/28/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,2,active,yes,1h9jdj5ag99myeoirxzh92od1,46695,411732,Antwerpen,186,right,77
+Bruny,Nsimba,B. Nsimba,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,4/5/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,2hr7skflmxmpiiauz04h185ey,509262,1228956,,181,right,
+Moustafa Luete,Ava Dongo,L. Dongo,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Defender,player,1/27/1996,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,12,active,yes,35db7xye7yugblo6w8ce5att6,494393,1205017,Kinshasa,190,right,
+Abdoulaye,Seck,A. Seck,Senegal,6hhqyhr5cwq2pfprlazyposyk,Defender,player,6/4/1992,Senegal,6hhqyhr5cwq2pfprlazyposyk,4,active,yes,4gglrx5t4kgdqqc51tgfjgz4l,245741,977427,M'Bour,192,right,95
+Maxime,Le Marchand,M. Le Marchand,France,7gww28djs405rfga69smki84o,Defender,player,10/11/1989,France,7gww28djs405rfga69smki84o,31,active,no,4jal44qeyp9ur58768qre5uqd,61739,499577,Saint-Malo,181,left,68
+Koji,Miyoshi,K. Miyoshi,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,3/26/1997,Japan,lxyibh89lpdc0bfian1nx0xq,19,active,yes,5tsrmx2p5f3mrpwt8gpx4x979,173475,793698,Kawasaki,167,left,64
+Lior,Refaelov,L. Refaelov,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,Midfielder,player,4/26/1986,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,11,active,no,5yw1c3i4j9zyt52vomrfbxyol,38498,547411,Or Akiva,175,right,70
+Jérémy Pierre Sincère,Gelin,J. Gelin,France,7gww28djs405rfga69smki84o,Defender,player,4/24/1997,France,7gww28djs405rfga69smki84o,26,active,no,666513vr9uqy9sj7amvy8hrdh,217992,896498,Quimper,183,right,77
+Dieumerci,Mbokani Bezua,D. Mbokani,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Attacker,player,11/22/1985,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,70,active,no,6qfyn1pjgaxk5b6ske3tmt7f9,39472,406317,Kinshasa,185,right,79
+Nill,De Pauw,N. De Pauw,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Midfielder,player,1/6/1990,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,14,active,yes,71mkxgtthdox21fwmb3hu0a1h,54533,439853,Kinshasa,180,right,76
+Jonathan,Bolingi Mpangi Merikani,J. Bolingi,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Attacker,player,6/30/1994,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,,active,no,7bmfyotb0mbfviulw0ucmeqqd,217489,832694,Kinshasa,188,right,74
+Davor,Matijaš,D. Matijaš,Croatia,37hlakrwxyuzovaeoo4sezusp,Goalkeeper,player,8/23/1999,Croatia,37hlakrwxyuzovaeoo4sezusp,71,active,yes,7qkoogt2mpaqmmwyjgdzqe6zt,458682,974002,Split,188,,
+Jordan Zacharie,Lukaku Menama Mokelenge,J. Lukaku,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/25/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,94,active,no,7rsdaye6seke10e1osa18hp05,109353,613835,Antwerpen,177,left,86
+Brian Emo,Agbor,B. Agbor,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,6/14/2001,Cameroon,4eb9feio6u267dd1jcwaf38mt,62,active,no,8g1g0ssh8m3lvxjuquov5nk0k,515714,1242951,,,,
+Bill,Lathouwers,B. Lathouwers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,9/18/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,21,active,yes,8r3r6z1khjq55pweqzfqezpm2,459202,1127030,,191,,83
+Sander,Coopman,S. Coopman,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/12/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,20,active,yes,8vv90kqjg12snthxi56kj3is5,167542,741122,Ooigem,183,right,66
+Didier,Lamkel Zé,D. Lamkel Zé,Cameroon,4eb9feio6u267dd1jcwaf38mt,Attacker,player,9/17/1996,Cameroon,4eb9feio6u267dd1jcwaf38mt,7,active,yes,8yy638bmdymhzkbrvho3qezft,229395,921379,Bertoua,192,right,78
+Júnior Udeme,Pius,J. Pius,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Defender,player,12/20/1995,Nigeria,63pvdwrsiq5b07mzi8igqei9p,40,active,yes,92tbqo50d66js1i6siz84980l,430822,1058578,Eman,193,right,74
+Dragan,Lausberg,D. Lausberg,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/29/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,64,active,no,94irx2sx5em8usxasighlw9re,465251,1192129,,185,left,
+Zeno,Van Den Bosch,Z. Van Den Bosch,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/6/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,63,active,yes,9gt3izdka3a0nh7r9uazkueqc,531858,1209376,,,,
+Cristian,Benavente Bristol,C. Benavente,Peru,2uib9hdovpcye4re2l3omr4dl,Midfielder,player,5/19/1994,Spain,49ih1pwv3ahshdf8uzrimi54c,19,active,no,9ify2ewoplr4t7bnsy5qzyaj9,119404,700822,Alcala de Henares,173,left,68
+Felipe Nicolás,Avenatti Dovillabichus,F. Avenatti,Uruguay,286fwlvd6dzntv6ewv3cyvb0p,Attacker,player,4/26/1993,Uruguay,286fwlvd6dzntv6ewv3cyvb0p,25,active,no,9n5wjnjloy0c2euwhsu9u1y39,152572,737672,Montevideo,196,left,86
+Frank,Thierry Boya,F. Boya,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,7/1/1996,Cameroon,4eb9feio6u267dd1jcwaf38mt,15,active,yes,9rwn5wckqcb5inw1dhhmpj1t5,243483,968773,Douala,190,right,78
+Benson,Manuel Hedilazio,B. Manuel,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/28/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,no,azllk0pyzes3zxzj4z1yzd1p1,183751,825561,Lokeren,178,left,68
+Alireza,Safar Beiranvand,A. Beiranvand,Iran,e53g9hr2d3kasm34uumbg8r4,Goalkeeper,player,9/21/1992,Iran,e53g9hr2d3kasm34uumbg8r4,1,active,no,bf1mp1b8eiofiv77euditumz9,201444,569544,Khorramabad,196,right,85
+Alexis François,De Sart,A. De Sart,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,11/12/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,25,active,yes,bm7md4xmtj59f3au70hf25kgl,198541,873736,Waremme,180,right,
+Martin,Hongla Yma,M. Hongla Yma,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,3/16/1998,Cameroon,4eb9feio6u267dd1jcwaf38mt,18,active,no,bsi12817nc1ul082qn48d4rft,241127,957173,Yaoundé,181,right,77
+Simen,Kristiansen Juklerød,S. Juklerød,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Defender,player,5/18/1994,Norway,7f16iy4w8u8ogyn6pfooqwv5z,6,active,no,bz2k6xcfh9658rbaex82134yd,224094,914679,Bærum,186,right,80
+Louis,Verstraete,L. Verstraete,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/4/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,no,c3ncu35o52jlqpqimfm8w4nop,245036,953326,,186,right,
+Chevaughn,Thiam,C. Thiam,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/22/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,41,active,no,cewawyazkx116mlbsuppwamtw,518321,1250814,,182,,73
+Robbe,Quirynen,R. Quirynen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/3/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,cjpcrd2e3exb4k1izyfot4y22,480513,1162538,,182,right,
+Faris Dominguere Jenny,Haroun,F. Haroun,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/22/1985,Belgium,4wbzjcclyefma1ourvjsu4q2j,38,active,yes,cmgixlole5rprw34uf80r5jp,42471,347107,Brussel,188,right,73
+Buduka Dylan,Batubinsika,D. Batubinsika,France,7gww28djs405rfga69smki84o,Defender,player,2/15/1996,France,7gww28djs405rfga69smki84o,21,active,no,cu7kz508a3wm8d5fypmrzxnmd,129505,1059908,Cergy Pontoise,184,right,84
+Jae-Ik,Lee,Lee Jae-Ik,Korea Republic,4vzpxtqkiwx0puygnmayr74di,Defender,player,5/21/1999,Korea Republic,4vzpxtqkiwx0puygnmayr74di,3,active,no,defr7nrxpvzhqd1yty43r2v3d,446445,1118831,,185,left,78
+Ivo Tiago,dos Santos Rodrigues,Ivo Rodrigues,Portugal,1nbm5i9a0403zzvltn17lxinc,Attacker,player,3/30/1995,Portugal,1nbm5i9a0403zzvltn17lxinc,8,active,no,dh4byuuh5mlyp147iq8cyunkl,204220,787873,Porto,180,right,75
+Jules-Anthony,Vilsaint,J. Vilsaint,Canada,1iaoypzp6syf32cz9l15pzp7e,Attacker,player,1/6/2003,Canada,1iaoypzp6syf32cz9l15pzp7e,,active,no,dsb8azg9lfy7wsri3k7nkfhg4,544796,1319647,,,,
+Aurélio Gabriel,Ulineia Buta,Aurélio Buta,Portugal,1nbm5i9a0403zzvltn17lxinc,Defender,player,2/10/1997,Angola,3k53bkrjx5zsxchc6e3mcd834,30,active,yes,e91s5lp3fvfaav8w8xi7wdx3p,171356,909254,,171,right,66
+Matheus,Borges Domingues,Matheus,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Defender,player,1/22/1992,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,,active,no,en0bpkesjohayb9uasd20gkph,180116,1064630,Americana,192,left,87
+Birger Danny,Verstraete,B. Verstraete,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/16/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,5,active,no,ezg4lhvy2z4pkyvfrmi17y11x,108155,628863,Oostende,175,right,65
+Ivan,Pavlić,I. Pavlić,Netherlands,6hzi5pltnz67q4la8yli9qfv6,Midfielder,player,11/10/2001,Netherlands,6hzi5pltnz67q4la8yli9qfv6,48,active,no,j95dlnrqf9n5x1zvt2gumvbo,531857,1273665,,,,
+Nana Opoku,Ampomah,N. Ampomah,Ghana,2q2sw72utw5gu9t5y4knckwba,Attacker,player,1/2/1996,Ghana,2q2sw72utw5gu9t5y4knckwba,23,active,yes,mno6n0h2ckafrv84gqcl31t5,230095,922864,Tema,176,right,68
+Ruben,Geeraerts,R. Geeraerts,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,7/8/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,49,active,no,ozjxrgo5mft93kc7e9ohpwmi,494749,1207309,,,,
+Jean,Butez,J. Butez,France,7gww28djs405rfga69smki84o,Goalkeeper,player,6/8/1995,France,7gww28djs405rfga69smki84o,46,active,yes,r0hm6ahwcvdu57bgfi5zkslx,201559,846131,Lille,188,right,70
+Jonathon Patrick,Flanagan,J. Flanagan,England,1fk5l4hkqk12i7zske6mcqju6,Defender,player,1/1/1993,England,1fk5l4hkqk12i7zske6mcqju6,20,active,no,19x7f4ka6pf0zygdh8zjlfwt1,91979,580921,Liverpool,181,right,79
+Nicolas,Penneteau,N. Penneteau,France,7gww28djs405rfga69smki84o,Goalkeeper,player,2/28/1981,France,7gww28djs405rfga69smki84o,1,active,no,1ccqekgbdyx9g90vaodi7qw9h,6467,347554,Marseille,185,left,78
+Adama,Niane,A. Niane,Mali,d0v29nncgikdswlxpdq553zz,Attacker,player,6/16/1993,Mali,d0v29nncgikdswlxpdq553zz,9,active,no,1k8ksuhl51xx85e7rgdkqxlg5,149035,739201,Bamako,183,right,71
+Cedric,Kipre,C. Kipre,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,12/9/1996,France,7gww28djs405rfga69smki84o,33,active,no,2b74xsn3rji7ch896z31h4t0p,183015,893713,Paris,193,right,
+Amine,Benchaib,A. Benchaib,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Midfielder,player,6/18/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,34,active,yes,2jdqgegksd1hreeqf4phdnsru,431108,1061314,Ghent,181,right,
+Jackson,Tchatchoua,J. Tchatchoua,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/22/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,no,39bcswfqnpa07b4afevezejo4,523705,1264753,,,,
+Joachim,Imbrechts,J. Imbrechts,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,10/9/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,no,3erazo7mu37w7uszk0z7k1uui,441629,1063782,Marcq-en-Barœul,196,right,82
+Massimo,Bruno,M. Bruno,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/17/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,77,active,no,3pr51w08wkrl03rpafmsouj85,91664,593008,Boussu,178,right,74
+Valentin,Baume,V. Baume,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/25/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,48sqs96cg2zsc5eefexba1ec5,201661,852376,Charleroi,185,,73
+Joris,Kayembe Ditu,J. Kayembe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/8/1994,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,yes,4pbx40gvdmacim2n0k2qt41cl,184449,826162,Brussel,182,left,73
+Dorian,Dessoleil,D. Dessoleil,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/7/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,yes,54y1k9ysgdtdvv9ss72ruxiad,95733,684475,Charleroi,188,right,66
+Jean Thierry Lazare,Amani,L. Amani,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Midfielder,player,3/7/1998,Côte d'Ivoire,tin6kf561ywonqan0mettr98,20,active,no,5j13tgvpwi7m3y6rjd8q08tt5,231955,921135,Diégonéfla,172,,
+Guillaume Olivier,Gillet,G. Gillet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/9/1984,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,5xx5u9s3zv5oqjt0y9f0va4lx,42586,347080,Liège,186,right,81
+Yunus,Bahadır,Y. Bahadır,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/7/2002,Belarus,2vn7xzv9g752y1h5ufjzr27i8,42,active,yes,6kj443s336s511skxi5g3x6ju,465249,1191913,Liège,170,right,
+Cristophe,Diandy,C. Diandy,Senegal,6hhqyhr5cwq2pfprlazyposyk,Midfielder,player,11/25/1990,Senegal,6hhqyhr5cwq2pfprlazyposyk,13,active,no,6lr5jiijvl6j083ry7nj7emt,77266,510395,Dakar,186,left,77
+Ken,Nkuba Tshiend,K. Nkuba,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/21/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,6n1rvd0axpp159h9wkkd7lwfe,469120,1147542,,173,,70
+Stergos,Marinos,S. Marinos,Greece,6lpgd60z890no2v46zdecrcss,Defender,player,9/17/1987,Greece,6lpgd60z890no2v46zdecrcss,17,active,no,6snjjytv7712bnj893ovhfkyd,66831,510122,Kos,178,right,71
+David Boris Philippe,Henen,D. Henen,Togo,3jiuckrqd0zejkm452st5dyq7,Midfielder,player,4/19/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,7,active,no,6t7ezta9mftdtk20pgxa30r85,179615,784960,Libramont-Chevigny,185,right,73
+Levi,Malungu,L. Malungu,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/12/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,99,active,no,7ctw5n27hwbomtnltmd5qryms,523103,1262835,,,,
+Lucas,Ribeiro Costa,Lucas Ribeiro,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Midfielder,player,10/9/1998,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,,active,no,7wlwd9yo0z03djo89wilufmne,458472,1127247,Santa Helena,181,left,
+Ali,Gholizadeh,A. Gholizadeh,Iran,e53g9hr2d3kasm34uumbg8r4,Midfielder,player,3/10/1996,Iran,e53g9hr2d3kasm34uumbg8r4,8,active,yes,7xw0h0pegzhoix5hb4hipj2l1,173294,795048,Namin,176,left,72
+Parfait,Mandanda,P. Mandanda,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Goalkeeper,player,11/10/1989,France,7gww28djs405rfga69smki84o,,active,no,83f11lxb9vkodn5wnfmnzxqs5,121045,632195,Nevers,183,right,78
+Kaveh,Rezaei,K. Rezaei,Iran,e53g9hr2d3kasm34uumbg8r4,Attacker,player,4/5/1992,Iran,e53g9hr2d3kasm34uumbg8r4,10,active,no,894epfug7bius5olw3b4mqrpx,223320,569594,Eslamabad-e Gharb,185,right,74
+Marco,Ilaimaharitra,M. Ilaimaharitra,Madagascar,4pidpq12frm06h0wij6mzhhdz,Midfielder,player,7/26/1995,France,7gww28djs405rfga69smki84o,26,active,yes,8zz5lnxo7twq8ntb7e0qfvbv9,173906,795867,Mulhouse,177,right,77
+Théo,Gécé,T. Gécé,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/14/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,94m52so1qmqjtmgxtbzgqmsyc,532502,1275159,,,,
+Mamadou,Fall,M. Fall,Senegal,6hhqyhr5cwq2pfprlazyposyk,Midfielder,player,12/31/1991,Senegal,6hhqyhr5cwq2pfprlazyposyk,27,active,yes,9jpxgl28blgb6snm8yablg6ad,231201,921028,,184,right,70
+Steeven,Willems,S. Willems,France,7gww28djs405rfga69smki84o,Defender,player,8/31/1990,France,7gww28djs405rfga69smki84o,23,active,yes,9k43lnbu6jj5qc71utzuh6dw5,153351,724859,Seclin,180,left,75
+Łukasz,Teodorczyk,Ł. Teodorczyk,Poland,27baqb7359ywdvsxxklx1kn11,Attacker,player,6/3/1991,Poland,27baqb7359ywdvsxxklx1kn11,91,active,no,9obgkrm9rinepm9gvctcie5ed,88768,600141,Żuromin,185,right,76
+Gjoko,Zajkov,G. Zajkov,North Macedonia,1lesyxylc5eza0a4z87t9azcc,Defender,player,2/10/1995,North Macedonia,1lesyxylc5eza0a4z87t9azcc,6,active,yes,9okfvgekslb9rsnybu72sfjkl,126048,831106,Skopje,186,right,78
+Maxime,Busi,M. Busi,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/14/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,42,active,no,afymbx9eo87zau8mo99pakbu,459897,1128811,Liège,182,right,75
+Younes,Delfi,Y. Delfi,Iran,e53g9hr2d3kasm34uumbg8r4,Midfielder,player,10/2/2000,Iran,e53g9hr2d3kasm34uumbg8r4,70,active,no,b712qhofdzej1ochl3r7u8ag9,248026,954582,Shush,184,right,
+Shamar Amaro,Nicholson,S. Nicholson,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,Attacker,player,3/16/1997,Jamaica,gimxu1vjwoa2xrecyd9gtyoc,16,active,yes,bye93n1zk8m2rjf3k89k41eqd,247163,971013,Kingston,192,right,74
+Rémy,Descamps,R. Descamps,France,7gww28djs405rfga69smki84o,Goalkeeper,player,6/25/1996,France,7gww28djs405rfga69smki84o,40,active,no,ctygavkrblcxra880nwej0bf9,213199,909174,Marcq-en-Barœul.,194,left,74
+Reda,Akbib,R. Akbib,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/29/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,yes,d6eokl16oo91buvbuvlwuv3oq,500221,1206938,,,,
+Anthony,Descotte,A. Descotte,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,8/3/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,15,active,yes,d7ml58kwwpetvnw46qja9ru5m,499036,1189452,Descotte,179,,75
+Ryota,Morioka,R. Morioka,Japan,lxyibh89lpdc0bfian1nx0xq,Midfielder,player,4/12/1991,Japan,lxyibh89lpdc0bfian1nx0xq,44,active,yes,e2nb1takpw6q7f6txp8xbfkk5,196112,540336,Jōyō,180,right,70
+Modou,Diagne,M. Diagne,Senegal,6hhqyhr5cwq2pfprlazyposyk,Defender,player,1/3/1994,Senegal,6hhqyhr5cwq2pfprlazyposyk,5,active,no,edbr80xdpo7e7o5cshemh9t5h,170034,832651,,188,right,74
+Saido,Berahino,S. Berahino,Burundi,5d7e5052i0sb4wwloukhpafuu,Attacker,player,8/4/1993,Burundi,5d7e5052i0sb4wwloukhpafuu,38,active,no,elkryb3hodglr6wu0rh4uoslx,91972,580910,Bujumbura,180,right,82
+Franck Cédric,Tsadjout,F. Tsadjout,Italy,25f2cmb2r8mk5rj92tzer6kvv,Attacker,player,7/28/1999,Italy,25f2cmb2r8mk5rj92tzer6kvv,18,active,no,enopqyya6qq64lvliw7lw0s4q,446039,1104960,Perugia,190,right,75
+Ivan,Goranov,I. Goranov,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,Defender,player,6/10/1992,Bulgaria,5a1vsxg8tbnsk65iefq1q8tlt,2,active,no,tjkamnxlrxbb4ts71pckaz85,103381,564953,Velingrad,178,left,70
+Darly,Nlandu,D. Nlandu,France,7gww28djs405rfga69smki84o,Midfielder,player,7/14/2000,France,7gww28djs405rfga69smki84o,39,active,no,1b8xyu9m906cwz5bykypdzn55,492842,1229800,,,,
+Marko,Bakić,M. Bakić,Montenegro,1411jebgwo2ja1erogsq81lg9,Midfielder,player,11/1/1993,Montenegro,1411jebgwo2ja1erogsq81lg9,10,active,yes,2123hac2wkn4k37d8a5dk79p1,96886,708740,Budva,186,right,78
+Nick,Gillekens,N. Gillekens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/5/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,34,active,yes,2aemkadh3bhtgm5db8r89pvit,185738,745626,Leuven,186,right,
+Deni,Hočko,D. Hočko,Montenegro,1411jebgwo2ja1erogsq81lg9,Midfielder,player,4/22/1994,Montenegro,1411jebgwo2ja1erogsq81lg9,6,active,no,2da0kujwwgv9ts7unqmfhui8l,126633,1090839,Cetinje,175,right,
+Alessandro,Ciranni,A. Ciranni,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/28/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,13,active,no,2s28r7f625hrj5fioyxn6apd5,219064,836000,Genk,172,both,66
+Dylan,Seys,D. Seys,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,9/26/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,36mf8o2hiqglvy84gjb975qll,200204,879458,Kortrijk,168,both,73
+Bruno Alexandre,Vieira Almeida,Bruno Xadas,Portugal,1nbm5i9a0403zzvltn17lxinc,Midfielder,player,12/2/1997,Portugal,1nbm5i9a0403zzvltn17lxinc,23,active,no,3bysj69bufnbqx70q6ufzat49,229679,977246,Oliveira de Azeméis,179,left,72
+Babacar,Dione,B. Dione,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/22/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,17,active,yes,3h7lqanl80a6lqsgoyzn3k7ah,423866,1064272,,167,left,
+Alexandre,Ippolito,A. Ippolito,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,1/5/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,no,3zcqxn9rxvajkihp949ezxr3e,481813,1164029,,170,right,
+Saad,Agouzoul,S. Agouzoul,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Defender,player,8/10/1997,Morocco,2xdcc39z1k79pnjbtn9x31wdh,5,active,no,4f85sbgrdxjtb02m8y5hideui,487352,971287,Marrakech,191,left,75
+Lillo Georges,Rosolino Guarneri,L. Guarneri,Italy,25f2cmb2r8mk5rj92tzer6kvv,Goalkeeper,player,5/5/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,88,active,no,4vp97c7lbcr6vxc8gjgjz0wa2,496273,1199111,Liège,188,left,
+Kouadio-Yves,Dabila,K. Dabila,Côte d'Ivoire,tin6kf561ywonqan0mettr98,Defender,player,1/1/1997,Côte d'Ivoire,tin6kf561ywonqan0mettr98,2,active,no,5curtmlg9fmu1eki7eirf8wdl,422230,1049691,,184,right,69
+Osvaldo Pedro,Capemba,Osvaldo Capemba,Angola,3k53bkrjx5zsxchc6e3mcd834,Attacker,player,1/10/2002,Angola,3k53bkrjx5zsxchc6e3mcd834,15,active,no,5st753i9xx8uonrygce7mad0q,482298,1195853,,171,left,
+Nemanja,Antonov,N. Antonov,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Defender,player,5/6/1995,Serbia,5w4ve503bjdsshwx9ho6jxzx0,3,active,no,6ht89hwb1cmt16qhmvb5kvumt,208982,871002,Pančevo,182,left,75
+Mathéo,Vroman,M. Vroman,France,7gww28djs405rfga69smki84o,Attacker,player,11/19/2001,France,7gww28djs405rfga69smki84o,19,active,yes,73tqttpn3u2glp1ibjiptd9ii,456833,1163732,,180,left,
+Enes,Sağlık,E. Sağlık,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/8/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,no,76j77cxpfm3ux82zlfx48vl5h,85617,552876,Verviers,170,left,68
+Nuno Miguel,da Costa Jóia,Nuno da Costa,Cape Verde Islands,7235kgq23bu1v4qwk491u58h0,Attacker,player,2/10/1991,Cape Verde Islands,7235kgq23bu1v4qwk491u58h0,20,active,no,7pv3n0vj8243p1di16regotsl,177840,893140,Praia,182,right,70
+Dimitri,Mohamed,D. Mohamed,France,7gww28djs405rfga69smki84o,Midfielder,player,6/11/1989,France,7gww28djs405rfga69smki84o,11,active,yes,8b7y8mupzwnvmujvw6aeub55h,102627,603149,Bully-les-Mines,182,right,70
+Harlem-Eddy,Gnohéré,H. Gnohéré,France,7gww28djs405rfga69smki84o,Attacker,player,2/21/1988,France,7gww28djs405rfga69smki84o,31,active,yes,8brfugy2ewtcwbx3c2vjr0fdh,121048,659608,Paris,183,left,94
+William,Simba,W. Simba,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/26/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,40,active,yes,8ddbru6zxx8scpr66dkzsfsic,510922,1230543,,,,
+Hamdi,Harbaoui,H. Harbaoui,Tunisia,2um1icx6ftp1auliaxyw0ou6y,Attacker,player,1/5/1985,Tunisia,2um1icx6ftp1auliaxyw0ou6y,9,active,no,8soy89qkia26bbvchspgk3il1,101237,436945,Bizerte,186,right,79
+Matías Agustín,Silvestre,M. Silvestre,Argentina,2vovxa97k7v7ofa85dah2xktb,Defender,player,9/25/1984,Argentina,2vovxa97k7v7ofa85dah2xktb,26,active,yes,9fezrz9tgz5nka31uqc0slx,49299,370952,Mercedes,187,right,78
+Zakaria,Atteri,Z. Atteri,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/15/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,9h387d958yi17abof2f8yorca,505100,1212656,,,,
+Serge,Tabekou Ouambé,S. Tabekou,Cameroon,4eb9feio6u267dd1jcwaf38mt,Attacker,player,10/15/1996,Cameroon,4eb9feio6u267dd1jcwaf38mt,70,active,no,9se5flbyyetm8svqiq57ru2uh,208951,869786,Yaoundé,180,right,74
+El Hadji Arfang,Gueye,A. Gueye,Senegal,6hhqyhr5cwq2pfprlazyposyk,Defender,player,8/20/1999,France,7gww28djs405rfga69smki84o,4,active,yes,anno5nb68k8ebcrr1b0acrwq2,510937,1229799,,185,,
+Vaso,Vasić,V. Vasić,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Goalkeeper,player,4/26/1990,Switzerland,3bh70jgvc5mn58x0byjkuda17,90,active,no,au8ef0nmk15ixax657jmijf9,186794,831297,,186,right,88
+Fabrice,Olinga Essono,F. Olinga,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,5/12/1996,Cameroon,4eb9feio6u267dd1jcwaf38mt,7,active,no,aycfoc0hvmhbprdlpumjz9ln9,126030,699302,Douala,176,right,66
+Jean Emile,Junior Onana Onana,J. Onana,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,1/8/2000,Cameroon,4eb9feio6u267dd1jcwaf38mt,8,active,no,b4lc7czw7al6g7a7qzcqzya22,504215,1211860,Yaoundé,189,right,
+Agim,Zeka,A. Zeka,Albania,17zsm8shejejls2on1ffil3op,Attacker,player,9/6/1998,Germany,36min0qztu8eydwvpv8t1is0m,45,active,no,beijvtaq1xlxzsk6c0bgx5wid,242073,970963,Ludwigsburg,183,left,73
+Cedric,Omoigui,C. Omoigui,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Attacker,player,11/11/1994,Nigeria,63pvdwrsiq5b07mzi8igqei9p,20,active,no,bqw347v1p08958uao87dtchjp,167171,1182083,Benin City,181,left,74
+Hervé Kouakou,Koffi,H. Koffi,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,Goalkeeper,player,10/16/1996,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,16,active,no,btyk45f7gmz3ck2dafpp22yg9,228345,919339,Bobo-Dioulasso,186,right,81
+Charles-Andreas,Brym,C. Brym,Canada,1iaoypzp6syf32cz9l15pzp7e,Attacker,player,8/8/1998,France,7gww28djs405rfga69smki84o,25,active,no,c3j7ddqg0yzporam6gieibgiy,489088,1182336,,179,left,68
+Virgiliu,Postolachi,V.  Postolachi,Moldova,389mdnq78a55g2gr040a3mmtj,Attacker,player,3/17/2000,Moldova,389mdnq78a55g2gr040a3mmtj,,active,no,crj0ztmqn9zfp519yp7pdng4q,437724,999503,Edineț,163,right,
+Benjamin,Van Durmen,B. Van Durmen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,3/20/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,no,d01f9rklfo8h22ujbomsypa09,209682,871343,,185,left,
+Béni,Badibanga Diata,B. Badibanga,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,2/19/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,yes,dmahdc9bw6dscs7avd4dgf65l,213536,881102,,176,left,71
+Imad,Faraj,I. Faraj,France,7gww28djs405rfga69smki84o,Attacker,player,2/11/1999,France,7gww28djs405rfga69smki84o,14,active,no,e13ji27z75hc3akzpbzwykvzd,208567,983733,Croix,177,right,64
+Eric Junior,Bocat,E. Bocat,France,7gww28djs405rfga69smki84o,Defender,player,7/16/1999,France,7gww28djs405rfga69smki84o,22,active,yes,eakj3xa0pa88pajbvasbwqwdm,502457,1229559,,,,
+Mërgim,Vojvoda,M. Vojvoda,Kosovo,86u6edbqifdjsn49mbp2anw7p,Defender,player,2/1/1995,Kosovo,86u6edbqifdjsn49mbp2anw7p,27,active,no,16kv5p8we3pwqpt5ktwrb7mj9,212667,883903,Skënderaj,187,both,78
+Gojko,Cimirot,G. Cimirot,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,Midfielder,player,12/19/1992,Bosnia and Herzegovina,4fue8u54361o79fbiu9qwxjer,8,active,yes,187wxh3jjn8hqbu7fyw7wullh,103522,844914,Trebinje,178,right,75
+Matteo,Godfroid,M. Godfroid,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,2/25/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,35,active,yes,1ho0v7pbp9dy9yt91fydp7xii,510527,1238205,,190,,77
+Selim,Amallah,S. Amallah,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Midfielder,player,11/15/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,yes,1pg0b32xb9230zit0ndyd79ih,213669,880826,Hautrage,186,right,70
+Eddy,Sylvestre Negadi,E. Sylvestre,France,7gww28djs405rfga69smki84o,Midfielder,player,8/29/1999,France,7gww28djs405rfga69smki84o,12,active,no,1vondk2cd4ksmvhl4vaum0d7t,469204,1148614,Aubagne,173,left,69
+Eden,Shamir,E. Shamir,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,Midfielder,player,6/25/1995,Israel,4bnqn6mt5vyslpxfuqdrcmpgp,15,active,no,2gpt4ph0jpaaj49fnnmpdc1qt,179067,1186556,Kiryat Motzkin,185,right,77
+João Klauss,de Mello,Klauss,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Attacker,player,3/1/1997,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,14,active,yes,2nby269m85yxc6vduq3weknah,447366,1130357,Criciúma,190,right,84
+Jérémy,Landu,J. Landu,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/2/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,2vx8l5dwag4k629wxobcnowoa,465250,1192135,Liège,175,right,
+Noë,Dussenne,N. Dussenne,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/7/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,6,active,yes,48f3zlksc3r230qb78c5emnyt,102911,600998,Mons,191,right,85
+John,Mayanga Nekadio,J. Nekadio,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Defender,player,1/6/2002,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,13,active,no,4fgrf40ajhehju4kav49vobca,503005,1210053,Kinshasa,194,right,93
+Louis,Fortin,L. Fortin,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/12/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,36,active,no,4m2ku4thm7b7gugl67g73u4q2,509273,1229558,,188,,88
+Mitchy-Yorham,Ntelo Mbala,M. Ntelo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/4/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,31,active,no,4rgzu5l5hfw24efi6l28fkk8a,509275,1227887,,183,left,77
+Joachim,Carcela-Gonzalez,J. Carcela-Gonzalez,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,12/16/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,no,4u9h9bvep343pyfxy6ekljwx6,477371,1166282,Oostende,181,right,68
+Nicolas,Gavory,N. Gavory,France,7gww28djs405rfga69smki84o,Defender,player,2/16/1995,France,7gww28djs405rfga69smki84o,24,active,yes,5769ggr7udnebgwl8q0zgcij9,133022,748506,Beauvais,182,left,76
+Alexandro,Calut,A. Calut,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/22/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,38,active,yes,58t55r6jzo6bco6uf80pbkk8a,538405,1189456,,,,
+Collins Ngoran Suiru,Fai,C. Fai,Cameroon,4eb9feio6u267dd1jcwaf38mt,Defender,player,8/13/1992,Cameroon,4eb9feio6u267dd1jcwaf38mt,21,active,yes,5ffogjpb96mfoihuw7pu5pl91,165252,908672,Bamenda,165,right,72
+Laurent,Jans,L. Jans,Luxembourg,f2r46apchse9eg3n9c9pupfs,Defender,player,8/5/1992,Luxembourg,f2r46apchse9eg3n9c9pupfs,27,active,no,5m7g9gg8drcqu44iavj7gwvrp,100207,612851,Lëtzebuerg,178,right,73
+Mehdi,Carcela-González,M. Carcela-González,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Midfielder,player,7/1/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,10,active,yes,5rixexoi41ren5w3e98x1c5x,55010,476959,Liège,175,left,68
+Uche Henry,Agbo,U. Agbo,Nigeria,63pvdwrsiq5b07mzi8igqei9p,Midfielder,player,12/4/1995,Nigeria,63pvdwrsiq5b07mzi8igqei9p,,active,no,6rsvijhgdwuxpsu5dzlhv91w5,200961,737796,Kano City,185,right,76
+Merveille Bopé,Bokadi,M. Bokadi,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Midfielder,player,5/21/1996,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,20,active,yes,76y4awqbdef5yxiovt27i57th,217591,832690,Kinshasa,186,right,79
+Maxime Kristof,Lestienne,M. Lestienne,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/17/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,7yt5uan4kvrarxyazmf2lmfh1,59054,488899,Mouscron,176,left,61
+Hugo,Siquet,H. Siquet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/9/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,41,active,yes,84l7r4ud9ipuf9vc3ib5b4l0q,487967,1192132,,175,right,
+Zinho,Vanheusden,Z. Vanheusden,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/29/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,3,active,no,86vxgtv8m65pypbngqan36y21,423112,1051077,Hasselt,187,right,80
+Abdoul Fessal,Tapsoba,A. Tapsoba,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,Attacker,player,8/23/2001,Burkina Faso,2ggql4uo9h0p3c67wkm68ibol,23,active,yes,8z9b1qk5hyi2t8qhr3avjelbe,473993,1155988,Bobo-Dioulasso,177,right,70
+Jean-François,Gillet,J. Gillet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,5/31/1979,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,no,941v8piox1ab724j1d5tl7sgl,4561,472821,Liège,181,right,85
+Jackson,Muleka Kyanvubu,J. Muleka,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Attacker,player,10/4/1999,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,17,active,yes,a3s4i95z3u1m1vqdrhuhlabmy,445873,1105562,Lubumbashi,180,right,75
+Nathan,Ngoy,N. Ngoy,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/10/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,43,active,yes,a5jrqzijth7e3uxl4phi83sdm,538078,1283800,,,,
+Samuel Christopher,Bastien,S. Bastien,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/26/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,yes,afww998w4zov3quy71r4jn3kl,189776,832343,Meux,172,right,63
+Denis Mihai,Drăguş,D. Drăguş,Romania,17oj2qrzqlkhdjvazum10sx2i,Attacker,player,7/6/1999,Romania,17oj2qrzqlkhdjvazum10sx2i,12,active,no,ajcblksnh113es9hzt7l5k8h5,219348,1110390,Bucureşti,180,right,74
+Fostave,Mabani,F. Mabani,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/10/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,akmxkt3dlb35t2gbtl26hgnx0,519532,1253929,Kinshasa,166,left,
+Laurent Claude,Henkinet,L. Henkinet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,9/14/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,bci3k14ed9oqcchpmtq37rnx1,85691,556332,Rocourt,189,right,80
+Damjan,Pavlovic,D. Pavlovic,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,7/9/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,33,active,yes,bd52544djk7t61roc813rewdm,509272,1192137,,179,right,76
+Allan Michaël,Delferriere,A. Delferriere,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/3/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,42,active,no,bpx0309w9vher1skft1vccpw4,538077,1283802,,,,
+Arnaud,Bodart,A. Bodart,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/11/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,bxcwnf87pf8ijzbxy70ewcfe1,422215,975798,,184,right,75
+Moussa,Sissako,M. Sissako,Mali,d0v29nncgikdswlxpdq553zz,Defender,player,11/10/2000,France,7gww28djs405rfga69smki84o,5,active,yes,car0gajfp7l7yuf7g9mfi9uui,437722,999498,Clichy,189,both,82
+William,Balikwisha,W. Balikwisha,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/12/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,11,active,yes,cllq8xizuqut48xxqc3btz97u,459420,1127317,Brussels,174,right,68
+Konstantinos,Laifis,K. Laifis,Cyprus,3om8cj5nhmq1rzzkykubm5icj,Defender,player,5/19/1993,Cyprus,3om8cj5nhmq1rzzkykubm5icj,34,active,yes,corn6i066rh7c7veva0sm3oid,150801,857882,Paralimni,186,left,77
+Mamadou Obbi,Oularé,O. Oularé,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,1/8/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,9,active,no,d470k4286zjy5mjvrs5if6hg5,179620,846945,Waregem,196,right,94
+Michel-Ange,Balikwisha,M. Balikwisha,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,5/10/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,32,active,no,dcjf15sf1dbb6w17foz25uuei,509274,1192138,,178,right,69
+Duje,Čop,D. Čop,Croatia,37hlakrwxyuzovaeoo4sezusp,Attacker,player,2/1/1990,Croatia,37hlakrwxyuzovaeoo4sezusp,7,active,no,ddnkboo7e8sjz6w45wht05z2t,52686,496091,Vinkovci,184,right,72
+Matthieu Luka,Epolo,M. Epolo,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/15/2005,Belgium,4wbzjcclyefma1ourvjsu4q2j,44,active,yes,ekzj3gx09w4rua1rnoargytjo,538992,1285386,,,right,
+Nicolas Thierry,Raskin,N. Raskin,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/23/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,26,active,yes,rmruexgp6l6ar57aq8xffg4q,422181,1060873,Liège,179,right,73
+Ewoud,Pletinckx,E. Pletinckx,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/10/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,yes,1abf0y93zbw1sw183nblqoicp,464108,1137191,,190,right,85
+Youssuf,Sylla,Y. Sylla,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,12/19/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,80,active,yes,3gdj5h3f356wsl5n4vbgt16vo,524450,1268254,,,,
+Mikael,Soisalo,M. Soisalo,Finland,2u07e54v5dprsugdvddpq5ync,Attacker,player,4/24/1998,Finland,2u07e54v5dprsugdvddpq5ync,71,active,no,3qyxx72pqiti2bnvg5729ims5,193187,964836,Helsinki,181,right,
+Erdin,Demir,E. Demir,Sweden,1z6l2c33w2kyz9rdefs1d68nb,Defender,player,3/27/1990,Sweden,1z6l2c33w2kyz9rdefs1d68nb,,active,no,4muroxllyvmr5sc471db0axn9,95992,598384,Malmö,178,left,72
+Wout,Debuyser,W. Debuyser,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,6/29/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,57,active,yes,4rd074ih7brltyckdrhx1they,470846,1263843,,,,
+Olivier,Deschacht,O. Deschacht,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/16/1981,Belgium,4wbzjcclyefma1ourvjsu4q2j,3,active,no,596dj2aaxa8bf42io0idmyk7p,11458,347121,Gent,185,left,79
+Sammy Andre,Bossut,S. Bossut,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,8/11/1985,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,yes,59doy2i09c6fgoh7w9m3l5tcl,40471,346988,Tielt,187,left,74
+William Ludovic Brandon,Bianda,W. Bianda,France,7gww28djs405rfga69smki84o,Defender,player,4/30/2000,France,7gww28djs405rfga69smki84o,2,active,no,5codmq7nj98dsjhhp6rzy9eqx,429202,1069380,Suresnes,185,left,82
+Jean-Luc Mamadou,Diarra Dompé,J. Dompé,France,7gww28djs405rfga69smki84o,Attacker,player,8/12/1995,France,7gww28djs405rfga69smki84o,17,active,yes,5g5ml1wwa9dfhsh55hv7br45x,193423,852226,Arpajon,170,right,65
+Daniel Tawiah,Opare,D. Opare,Ghana,2q2sw72utw5gu9t5y4knckwba,Defender,player,10/18/1990,Ghana,2q2sw72utw5gu9t5y4knckwba,4,active,no,5oa6glaxweluggb6odyxb4uz9,49480,551863,Accra,175,right,74
+Abdallah,Ali Mohamed,A. Ali Mohamed,Comoros,40fy8dkxp9lwfufwmbnctzlz6,Defender,player,4/11/1999,Comoros,40fy8dkxp9lwfufwmbnctzlz6,31,active,no,5z26vxw7r8nn3pn0wnvsqhuy1,467625,1076575,Moroni,178,right,
+Bassem,Srarfi,B. Srarfi,Tunisia,2um1icx6ftp1auliaxyw0ou6y,Midfielder,player,6/25/1997,Tunisia,2um1icx6ftp1auliaxyw0ou6y,11,active,yes,65ebe3hvmi5j4d3bjgne1lzop,245496,903685,Tunis,176,left,71
+Abdoulaye,Sissako,A. Sissako,France,7gww28djs405rfga69smki84o,Midfielder,player,5/26/1998,France,7gww28djs405rfga69smki84o,6,active,yes,77wkqbxkqix367lc0ccnym86h,232253,943372,Clichy,186,right,80
+Louis,Bostyn,L. Bostyn,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,10/4/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,25,active,yes,7ojr3svfuiak6zm6pjrc18mhh,191766,833120,Roeselare,195,right,86
+Mathieu,De Smet,M. De Smet,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,4/27/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,yes,8ef37er0af52gc6pdip8cyvze,466348,1141012,,,left,
+Martijn,Beernaert,M. Beernaert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,10/3/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,yes,8nsov4fdabyzk5vp38u0r1afo,524449,1268255,,,,
+Nikolaos,Kainourgios,N. Kainourgios,Greece,6lpgd60z890no2v46zdecrcss,Defender,player,9/8/1998,Greece,6lpgd60z890no2v46zdecrcss,43,active,no,8ygfdzs5cs5wxrlfbsts7ra0a,488338,1174100,Athens,187,right,
+Gianni,Bruno,G. Bruno,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,8/19/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,no,9mmwn9yt1olhyr54j45e28xcl,82065,541317,Rocourt,180,right,74
+Tomáš,Chorý,T. Chorý,Czech Republic,5md5tpwr2nmqao528prx43jr7,Attacker,player,1/26/1995,Czech Republic,5md5tpwr2nmqao528prx43jr7,15,active,no,9vdhoij110u7e94lh8uflo5w5,185389,824860,Olomouc,200,right,90
+Urho,Nissilä,U. Nissilä,Finland,2u07e54v5dprsugdvddpq5ync,Midfielder,player,4/4/1996,Finland,2u07e54v5dprsugdvddpq5ync,,active,no,aazw5ummp38ikc8f0jwojyktl,206365,962679,Kuopio,172,both,
+Eike,Bansen,E. Bansen,Germany,36min0qztu8eydwvpv8t1is0m,Goalkeeper,player,2/21/1998,Germany,36min0qztu8eydwvpv8t1is0m,44,active,no,an01qinam5kh2dxeyixkut0b9,428783,971474,Dortmund,195,right,91
+Omar Nicolás,Govea García,O. Govea,Mexico,5trdr3jf42i20zj1hnkvcytr6,Midfielder,player,1/18/1996,Mexico,5trdr3jf42i20zj1hnkvcytr6,10,active,yes,asgdx8h7m480fa15oa4x3quol,167376,742495,San Luis Potosí,176,right,68
+Jelle,Vossen,J. Vossen,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,3/22/1989,Belgium,4wbzjcclyefma1ourvjsu4q2j,9,active,yes,az21s916gcylcjy5riyia9239,54865,347145,Bilzen,183,right,70
+Jannes,Van Hecke,J. Van Hecke,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/15/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,67,active,no,b6hva6wki38za3hipscirr4h6,484630,1167512,,175,both,
+Damien,Marcq,D. Marcq,France,7gww28djs405rfga69smki84o,Midfielder,player,12/8/1988,France,7gww28djs405rfga69smki84o,5,active,no,c4brcsqfli5mds4vhma627yl1,44207,439982,Boulogne,183,right,72
+Ibrahima Khaliloulah,Seck,I. Seck,Senegal,6hhqyhr5cwq2pfprlazyposyk,Midfielder,player,8/10/1989,Senegal,6hhqyhr5cwq2pfprlazyposyk,21,active,yes,cjb2ihimtyz19jrcdbto26llh,120758,681204,Bargny,192,left,82
+Panagiotis,Armenakas,P. Armenakas,Australia,u5ieemi69z72c3bgczyy68lo,Midfielder,player,8/5/1998,USA,7hr2f89v44y65dyu9k92vprwn,23,active,no,cxnq0rc4u1efzt82nw3xgk355,200798,831100,Newport Beach,178,right,67
+Laurens Henry Cristine,De Bock,L. De Bock,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,11/7/1992,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,d00jdf9g3xeslhhs1430174r9,58746,508340,Dendermonde,179,left,74
+Luka,Zarandia,L. Zarandia,Georgia,55mqz7j6585f2jhgfhn62lomr,Midfielder,player,2/17/1996,Georgia,55mqz7j6585f2jhgfhn62lomr,7,active,yes,dwhdal86czd88hpj2j6sojaol,192764,835544,Tbilisi,178,right,74
+Idrissa,Sylla,I. Sylla,Guinea,4i9sg55wigitrfx7290f59ceo,Attacker,player,12/3/1990,Guinea,4i9sg55wigitrfx7290f59ceo,70,active,no,emtbq7z9bbsiaf55r7sq0c9ud,66896,525220,Conakry,187,right,75
+Cameron,Humphreys-Grant,C. Humphreys-Grant,England,1fk5l4hkqk12i7zske6mcqju6,Defender,player,8/22/1998,England,1fk5l4hkqk12i7zske6mcqju6,33,active,yes,f0kanxr2g1q9y7naqxzsoiuvp,113037,897923,Manchester,185,right,76
+Cheikh Ahadou Tidiane,Thiam,C. Thiam,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,9/27/2003,Belgium,4wbzjcclyefma1ourvjsu4q2j,71,active,yes,trfphpn8we6pjhp5dm8dp2j8,523626,1263844,,,,
+Tatsuya,Ito,T. Ito,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,6/26/1997,Japan,lxyibh89lpdc0bfian1nx0xq,23,active,yes,17xdde31e4colvx3b86wh06ax,437384,1078733,Tokyo,163,left,59
+Mathieu,Troonbeeckx,M. Troonbeeckx,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/16/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,no,1hvzqu1h3l64cg3jw9a7jwueh,488342,1173125,,,right,
+Kenny,Steppe,K. Steppe,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,11/14/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,1,active,yes,1oxeobeqv6l3nug2jo0xjkslx,54739,346923,Antwerpen,185,right,67
+Santiago,Colombatto,S. Colombatto,Argentina,2vovxa97k7v7ofa85dah2xktb,Midfielder,player,1/17/1997,Argentina,2vovxa97k7v7ofa85dah2xktb,5,active,no,1u9sn1cu0pq16mina2q6d6dwp,218298,894249,Ucacha,180,left,71
+Jarne,Steuckers,J. Steuckers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,2/4/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,61,active,yes,2gwigr63tgo2jw460msz2qgwk,524486,1268433,Sint-Truiden,,left,
+Ibrahima Sory,Sankhon,I. Sankhon,Guinea,4i9sg55wigitrfx7290f59ceo,Midfielder,player,1/1/1996,Guinea,4i9sg55wigitrfx7290f59ceo,8,active,no,2qs78gdgvpcn8t24t3qtqisx5,241717,978444,Forécariah,177,right,72
+Wim,Vanmarsenille,W. Vanmarsenille,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,7/31/2002,Belgium,4wbzjcclyefma1ourvjsu4q2j,35,active,yes,3ga5ua47ga1hfp3dh83b0ygwk,510930,1229601,,,,
+Mathias,Delorge-Knieper,M. Delorge-Knieper,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/31/2004,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,3zc219xqywme43v3jdwmv44d0,530302,1269436,,,left,
+Yuma,Suzuki,Y. Suzuki,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,4/26/1996,Japan,lxyibh89lpdc0bfian1nx0xq,9,active,yes,51xel26o3uzvjdbcywcunmu3t,213788,827666,Chiba,182,right,75
+Georgios,Vagiannidis,G. Vagiannidis,Greece,6lpgd60z890no2v46zdecrcss,Defender,player,9/12/2001,Greece,6lpgd60z890no2v46zdecrcss,77,active,no,59e0uusbhyz9wo8c3rtqlcve,492198,1187908,Gerakas,182,right,68
+Jorge Filipe,Avelino Teixeira,Jorge Teixeira,Portugal,1nbm5i9a0403zzvltn17lxinc,Defender,player,8/27/1986,Portugal,1nbm5i9a0403zzvltn17lxinc,26,active,yes,5a2sf4o445ei5pqiinvmjmpcl,64340,513628,Lisboa,188,right,86
+Ko,Matsubara,K. Matsubara,Japan,lxyibh89lpdc0bfian1nx0xq,Defender,player,8/30/1996,Japan,lxyibh89lpdc0bfian1nx0xq,2,active,yes,5nmoszufgblrvz7ws0po5aort,208813,867470,Hamamatsu,182,left,76
+Daniel Yuji,Yabuki Schmidt,D. Schmidt,Japan,lxyibh89lpdc0bfian1nx0xq,Goalkeeper,player,2/3/1992,USA,7hr2f89v44y65dyu9k92vprwn,21,active,yes,5q4wztjkk6nuwapm7qgey9w45,205653,559888,Illinois,197,right,88
+Maximiliano,Caufriez,M. Caufriez,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,2/16/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,23,active,no,6euu7oztc1jkxcgef0g75cq95,212530,878576,,189,right,81
+Samuel,Asamoah,S. Asamoah,Ghana,2q2sw72utw5gu9t5y4knckwba,Midfielder,player,3/23/1994,Ghana,2q2sw72utw5gu9t5y4knckwba,12,active,no,6xkjdanc26qrq1rzx38mwafh1,213626,825940,Accra,166,right,
+Mory,Konaté,M. Konaté,Guinea,4i9sg55wigitrfx7290f59ceo,Midfielder,player,11/15/1993,Guinea,4i9sg55wigitrfx7290f59ceo,24,active,yes,7d57au4z5cuxc5k6tu6qgp94a,431208,1070145,Conakry,191,both,84
+Nelson Felix,Balongo Lissondja Vha,N. Balongo,Congo DR,6xq2smnxqvc5bh7vzza9ljiy9,Attacker,player,4/15/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,30,active,yes,7mykmltubtag5pb2ze6s9jsyy,475375,1156628,Tongeren,187,right,
+Stan,Van Dessel,S. Van Dessel,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,7/24/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,19,active,yes,7n75ohdnbi436je81n5f8f9m2,488343,1177800,Diest,162,both,
+Christopher James,Durkin,C. Durkin,USA,7hr2f89v44y65dyu9k92vprwn,Midfielder,player,2/8/2000,USA,7hr2f89v44y65dyu9k92vprwn,32,active,yes,7uv8k6pqob0xqw7zchsfxk4ix,211988,876674,Hampton,183,right,75
+Pol,García Tena,Pol García,Spain,49ih1pwv3ahshdf8uzrimi54c,Defender,player,2/18/1995,Spain,49ih1pwv3ahshdf8uzrimi54c,4,active,no,7uwz7gjobrhf0g0rv91h8dkgl,141567,724017,Terrassa,185,left,71
+Facundo,Colidio,F. Colidio,Argentina,2vovxa97k7v7ofa85dah2xktb,Attacker,player,1/4/2000,Argentina,2vovxa97k7v7ofa85dah2xktb,18,active,no,8m3ugl7bv9lvo33kny9ltp71l,445091,1110519,Rafaela,182,right,68
+Keito,Nakamura,K. Nakamura,Japan,lxyibh89lpdc0bfian1nx0xq,Attacker,player,7/28/2000,Japan,lxyibh89lpdc0bfian1nx0xq,15,active,no,8wq90yejo2ktnfuzrkju45all,219274,954659,Chiba,180,right,75
+Oleksandr,Filippov,O. Filippov,Ukraine,315w6fk6umfzf4qvba3t55u61,Attacker,player,10/23/1992,Ukraine,315w6fk6umfzf4qvba3t55u61,11,active,yes,8y5gc7ykif9fxwpafd7l3mac5,126124,1155429,Avdiivka,182,right,75
+Jhonny Lucas,Flora Barboza,Jhonny Lucas,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,Midfielder,player,2/21/2000,Brazil,2vufyvpoxd9lfl9f6vpp7tz6y,33,active,no,9cfgrqhc8d6b7pf75ckxiupgq,433002,1114379,Curitiba,170,right,65
+Wolke,Johannes Janssens,W. Janssens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,1/11/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,22,active,yes,9qafk5ke1yzqggkcmf1zqevp,231199,921544,Peer,185,,
+Christian,Brüls,C. Brüls,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,9/30/1988,Belgium,4wbzjcclyefma1ourvjsu4q2j,44,active,yes,a375qgbjxnpucpz3hprf2fkr9,55250,464913,Malmedy,179,both,74
+Jonathan,Buatu Mananga,Jonathan Buatu,Angola,3k53bkrjx5zsxchc6e3mcd834,Defender,player,9/27/1993,Belgium,4wbzjcclyefma1ourvjsu4q2j,39,active,yes,aa43uokg23dh0ls3pgzu4b74l,83126,544575,Liège,187,left,87
+Siebren,Lathouwers,S. Lathouwers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,8/11/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,31,active,no,aa5d7astmz7isnptux1l56jqi,460970,1126984,Hasselt,183,right,
+Liberato Gianpaolo,Cacace,L. Cacace,New Zealand,wcq2y28a27syx5do1k2i2nj8,Defender,player,9/27/2000,New Zealand,wcq2y28a27syx5do1k2i2nj8,13,active,yes,an5eip4p2zmw49hh9eqksigo9,438130,1081134,Wellington,170,left,
+Steve Danny Marc,De Ridder,S. De Ridder,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/25/1987,Belgium,4wbzjcclyefma1ourvjsu4q2j,16,active,yes,blxyd9jua1a50entscz1kn5qt,53058,347079,Gent,179,right,73
+Dimitri Dominique,Lavalée,D. Lavalée,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,1/13/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,cne8uwbnrwbwqjpj3pme1kbmx,242162,959071,Soumagne,187,left,76
+Samy,Mmaee Nwambeben,S. Mmaee,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Defender,player,9/8/1996,Belgium,4wbzjcclyefma1ourvjsu4q2j,20,active,no,cq0cto13xxloz8cqit2j24c7p,192658,836001,Halle,185,right,82
+Hamza,Massoudi,H. Massoudi,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/24/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,70,active,no,ctpyzo9d1fbsn1qmxvu0tj97u,488341,1177799,Brussels,,right,
+Daiki,Hashioka,D. Hashioka,Japan,lxyibh89lpdc0bfian1nx0xq,Defender,player,5/17/1999,Japan,lxyibh89lpdc0bfian1nx0xq,4,active,yes,e5oet393vired282yco4i7gfd,209293,946009,Saitama,182,right,73
+Duckens Moses,Nazon,D. Nazon,Haiti,5mp58o38d0mr5qt8g4o6l7efg,Attacker,player,4/7/1994,France,7gww28djs405rfga69smki84o,90,active,no,e7w5aujupw3lwhw69vnphqor9,195603,739129,Châtenay-Malabry,181,right,79
+Seung-Woo,Lee,Lee Seung-Woo,Korea Republic,4vzpxtqkiwx0puygnmayr74di,Midfielder,player,1/6/1998,Korea Republic,4vzpxtqkiwx0puygnmayr74di,10,active,no,f4fwdqvrdwx1fq70hm6s7db6x,183370,896826,Suwon,174,right,60
+Daan,Heymans,D. Heymans,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,6/15/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,18,active,no,14xb29tv90y8uataijmh03rah,230386,922862,,193,,
+Lucas,Pirard,L. Pirard,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,3/10/1995,Belgium,4wbzjcclyefma1ourvjsu4q2j,,active,no,1a9u2g4hynrz2e93sz1evhpzp,179252,790768,,191,right,
+Jeremy,Cijntje,J. Cijntje,Curaçao,5im58ram567ao2fbnz39sm8vk,Attacker,player,1/8/1998,Netherlands,6hzi5pltnz67q4la8yli9qfv6,19,active,no,20rywkv6ffsebmxgous91z6jt,243300,962156,Dordrecht,183,right,70
+Tom,Reyners,T. Reyners,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,4/20/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,77,active,yes,3h06pclx1wborpmnwg52rway2,460972,1126982,,,,
+Daam Wonnebald,Foulon,D. Foulon,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/23/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,28,active,no,3lraqym3pvhs9rvrpvpxuj1l,437743,1077451,Mechelen,180,left,
+Sadek Jordan,Chebel Faucher,J. Faucher,France,7gww28djs405rfga69smki84o,Attacker,player,11/6/1991,France,7gww28djs405rfga69smki84o,9,active,yes,42lrysnpjh64znhdnpajc38b9,92351,583364,Créteil,177,both,72
+Paul,Fadiala Keita,P. Keita,Senegal,6hhqyhr5cwq2pfprlazyposyk,Midfielder,player,6/23/1992,Senegal,6hhqyhr5cwq2pfprlazyposyk,,active,no,48kl2lkdt923rj2uaik8x4l3p,88792,619449,Dakar,194,,85
+Andrija,Vukčević,A. Vukčević,Montenegro,1411jebgwo2ja1erogsq81lg9,Defender,player,10/11/1996,Montenegro,1411jebgwo2ja1erogsq81lg9,22,active,no,4h9ah2f2n815dewjlljrl2qqd,172665,921608,Podgorica,180,left,77
+Stefan,Milošević,S. Milošević,Montenegro,1411jebgwo2ja1erogsq81lg9,Attacker,player,6/23/1996,Montenegro,1411jebgwo2ja1erogsq81lg9,99,active,no,4kkg3ttg5fa8sabsmbzn0ldqt,184860,1157284,Nikšić,190,,
+Dries,Wuytens,D. Wuytens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/18/1991,Belgium,4wbzjcclyefma1ourvjsu4q2j,15,active,yes,58ps6jz25uvo7ggusmpyr2wnp,96567,564018,Eksel,183,right,80
+Denzel,Jubitana,D. Jubitana,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,5/6/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,14,active,no,59hntz90bosu0npeg1b46g1d5,422054,1049351,,173,,
+Brendan,Schoonbaert,B. Schoonbaert,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,5/9/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,3,active,yes,67p135fxjkuprkc4sbiyfdhih,235066,1168129,Gisenyi,,,
+Djihad,Bizimana,D. Bizimana,Rwanda,12obgipj8u3vm1grf3jkrvqte,Midfielder,player,12/12/1996,Rwanda,12obgipj8u3vm1grf3jkrvqte,8,active,no,6qxlz78irdltftjf4c72uo0yx,219606,998373,,180,right,
+Matthias,Verreth,M. Verreth,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,2/20/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,29,active,no,75o7fx1uwk6pavxbnqqx28y51,178970,897278,Morkhoven,181,,81
+Alessandro,Albanese,A. Albanese,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,1/12/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,12,active,yes,78n7z9tmen93v4l0nj1vnlujt,235086,944923,Liège,174,right,
+Milan,De Mey,M. De Mey,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,1/3/2001,Belgium,4wbzjcclyefma1ourvjsu4q2j,88,active,yes,7fhhugatfrnm7b56nxqqb067e,450419,1115911,,180,right,
+Serge Sidoine Tchaha,Leuko,S. Leuko,Cameroon,4eb9feio6u267dd1jcwaf38mt,Defender,player,8/4/1993,Cameroon,4eb9feio6u267dd1jcwaf38mt,23,active,no,7hiysf3lvsovhblba6fy9vbp,213461,604411,Douala,173,right,74
+Vladimir,Van de Wiel-Novinchanova,V. Van de Wiel-Novinchanova,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,4/12/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,2,active,no,80l35qau6qbcvl90kk3naydwp,510927,996792,,,,
+Danel,Sinani,D. Sinani,Luxembourg,f2r46apchse9eg3n9c9pupfs,Attacker,player,4/5/1997,Luxembourg,f2r46apchse9eg3n9c9pupfs,10,active,no,8k5rritl3k05hubghapadgx61,217245,1073982,Belgrad,185,,
+Georges Constant,Mandjeck,G. Mandjeck,Cameroon,4eb9feio6u267dd1jcwaf38mt,Midfielder,player,12/9/1988,Cameroon,4eb9feio6u267dd1jcwaf38mt,4,active,no,8tanbgl4ttzr9dwqhturwbq39,43455,397600,Douala,185,right,75
+Jenthe,Mertens,J. Mertens,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,10/18/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,27,active,yes,8uixvlde2zvdihf4hadtgdiei,447906,1108121,,181,right,75
+Leonardo,Bertone,L. Bertone,Switzerland,3bh70jgvc5mn58x0byjkuda17,Midfielder,player,3/14/1994,Switzerland,3bh70jgvc5mn58x0byjkuda17,6,active,yes,9ffrfxl90gv947oi9z2p2vy6t,116700,656855,,179,right,72
+Din,Sula,D. Sula,Albania,17zsm8shejejls2on1ffil3op,Attacker,player,3/2/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,98,active,no,9r1akib8a38ftnjy9zt22evhl,213686,871325,Brussel,185,,
+Luís Miguel,Vieira Silva,Miguel Vieira,Portugal,1nbm5i9a0403zzvltn17lxinc,Defender,player,10/8/1990,Portugal,1nbm5i9a0403zzvltn17lxinc,37,active,no,9t0rq1rfkuk0id9drsqxbwlp1,179311,878952,Amarante,190,right,87
+Jur,Schryvers,J. Schryvers,Belgium,4wbzjcclyefma1ourvjsu4q2j,Defender,player,3/11/1997,Belgium,4wbzjcclyefma1ourvjsu4q2j,52,active,yes,9ug4mbz2q55ufu1jv3z2mxhhx,431158,885066,,180,,
+Yuki,Kobayashi,Y. Kobayashi,Japan,lxyibh89lpdc0bfian1nx0xq,Midfielder,player,4/24/1992,Japan,lxyibh89lpdc0bfian1nx0xq,,active,no,9wan49fvimh705r3jjfrlhuc5,158283,541237,Tokyo,182,left,72
+Andreas,Wiegel,A. Wiegel,Germany,36min0qztu8eydwvpv8t1is0m,Defender,player,7/21/1991,Germany,36min0qztu8eydwvpv8t1is0m,7,active,no,am8d8igp5ecz2p63v05obvb2t,100856,603592,Paderborn,179,right,70
+Alexis,Gamboa,A. Gamboa,Costa Rica,48emauy3fucokp86skcs5alh8,Defender,player,3/20/1999,Costa Rica,48emauy3fucokp86skcs5alh8,19,active,no,aq748pp3jyntucwe1wk06rgiy,439436,1124547,Pococí,189,left,78
+Aboubakary,Koita,A. Koita,Belgium,4wbzjcclyefma1ourvjsu4q2j,Attacker,player,9/20/1998,Belgium,4wbzjcclyefma1ourvjsu4q2j,17,active,no,bk9fq3chnhmw3u36qz5vf1vjd,243827,1058999,Antwerpen,175,right,
+Melvin,Sitti,M. Sitti,France,7gww28djs405rfga69smki84o,Midfielder,player,2/14/2000,France,7gww28djs405rfga69smki84o,28,active,no,c2y6hqqfl8j9c1m0zd1qdk9ka,488548,1178797,Paris,182,right,67
+Brent,Gabriël,B. Gabriël,Belgium,4wbzjcclyefma1ourvjsu4q2j,Goalkeeper,player,1/27/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,44,active,yes,c84u47w1mc6glo4ol6qq22bjd,459185,1124358,Sint-Niklaas,190,,
+Joseph Isiah,Efford,J. Efford,USA,7hr2f89v44y65dyu9k92vprwn,Attacker,player,8/29/1996,USA,7hr2f89v44y65dyu9k92vprwn,11,active,yes,cb01n06n2ihlil5hf6q7u04tm,439760,1229603,,176,right,
+Karlo,Lulić,K. Lulić,Croatia,37hlakrwxyuzovaeoo4sezusp,Midfielder,player,5/10/1996,Croatia,37hlakrwxyuzovaeoo4sezusp,,active,no,cgcwrulsr19sn3b2c5af71exh,166615,794903,,,,
+Aleksandar,Vukotić,A. Vukotić,Serbia,5w4ve503bjdsshwx9ho6jxzx0,Defender,player,7/22/1995,Serbia,5w4ve503bjdsshwx9ho6jxzx0,26,active,yes,dhbt80hxmsucww2l2zs5efzrp,235747,1123157,Kraljevo,201,,
+Sivert,Heltne Nilsen,S. Nilsen,Norway,7f16iy4w8u8ogyn6pfooqwv5z,Midfielder,player,10/2/1991,Norway,7f16iy4w8u8ogyn6pfooqwv5z,16,active,no,dz4wqn00gel71p7qs7qqycb9,126317,985674,Bergen,184,right,78
+Felix,Bastians,F. Bastians,Germany,36min0qztu8eydwvpv8t1is0m,Defender,player,5/9/1988,Germany,36min0qztu8eydwvpv8t1is0m,5,active,yes,e14okz3wjn99shaltx38e7rh1,27717,464452,Bochum,188,left,83
+Amine,Khammas,A. Khammas,Morocco,2xdcc39z1k79pnjbtn9x31wdh,Defender,player,4/6/1999,Belgium,4wbzjcclyefma1ourvjsu4q2j,24,active,no,eapg7btb8xva6dn55s1cqepgq,431127,978021,Rumst,172,both,
+Nikola,Pejčić,N. Pejčić,Belgium,4wbzjcclyefma1ourvjsu4q2j,Midfielder,player,10/30/2000,Belgium,4wbzjcclyefma1ourvjsu4q2j,20,active,yes,eoiiy7lupa7j8nmqp23e9g3dg,511122,1229615,,190,,
+Michael,Frey,M. Frey,Switzerland,3bh70jgvc5mn58x0byjkuda17,Attacker,player,7/19/1994,Switzerland,3bh70jgvc5mn58x0byjkuda17,99,active,no,ex7y8oe78ewwmibz41qbmwhxx,116226,656153,Münsingen,189,right,86
