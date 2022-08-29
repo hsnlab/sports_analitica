@@ -2,31 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
+      <change afterPath="$PROJECT_DIR$/createNF.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml_test_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml_test_1.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml_test_1_node.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1_node.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml_test_1_node_dynamic.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/datasync_balu/createNF.py" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/results/.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/results/.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-0.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-1.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-2.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-3.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-4.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-5.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-5.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_checkpoints/-test_1-6.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saved_models/-test_1.pth" beforeDir="false" afterPath="$PROJECT_DIR$/saved_models/-test_1.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,11 +46,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datasync_balu" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datasync_balu/createNF.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/createNF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +72,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_prediction.py" />
-      <option name="PARAMETERS" value="--data test_1 --use_memory --memory_dim 9 --aggregator mean" />
+      <option name="PARAMETERS" value="--data data --use_memory --memory_dim 9 --aggregator mean" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -103,7 +93,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/preprocess_data.py" />
-      <option name="PARAMETERS" value="--data test_1" />
+      <option name="PARAMETERS" value="--data data" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -112,9 +102,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.preprocess_data" />
-      <item itemvalue="Python.link_prediction" />
       <item itemvalue="Python.createNF" />
+      <item itemvalue="Python.link_prediction" />
+      <item itemvalue="Python.preprocess_data" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -198,11 +188,14 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-
           <url>file://$PROJECT_DIR$/net/tgn.py</url>
           <line>307</line>
           <option name="timeStamp" value="27" />
-
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/createNF.py</url>
+          <line>1037</line>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
