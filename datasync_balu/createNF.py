@@ -590,12 +590,99 @@ def sync_and_features(tracking_df, event_df,is25fps=True):
             #calc_angle_and_distance_to_goal(ball X, ball Y, False)
 
     newids = []
+    tl_x =[]
+    tl_y =[]
+    tl_speed =[]
+    tl_dir_x =[]
+    tl_dir_y =[]
+    tl_ang_tg =[]
+    tl_dist_tg =[]
+    tl_is_bc =[]
+    tl_dist_bc = []
+    gl_x =[]
+    gl_y =[]
+    gl_speed =[]
+    gl_dir_x =[]
+    gl_dir_y =[]
+    gl_ang_tg =[]
+    gl_dist_tg =[]
+    gl_is_bc =[]
+    gl_dist_bc = []
     for ev_idx, event in synced_events.iterrows():
+        #calc touchline and goalline features
+        tl_fts =  calc_touchline_features(event)
+        tl_x.append(tl_fts[0])
+        tl_y.append(tl_fts[1])
+        tl_speed.append(tl_fts[2])
+        tl_dir_x.append(tl_fts[3])
+        tl_dir_y.append(tl_fts[4])
+        tl_ang_tg.append(tl_fts[5])
+        tl_dist_tg.append(tl_fts[6])
+        tl_is_bc.append(tl_fts[7])
+        tl_dist_bc.append(tl_fts[8])
+
+        gl_fts = calc_goalline_features(event)
+        gl_x.append(gl_fts[0])
+        gl_y.append(gl_fts[1])
+        gl_speed.append(gl_fts[2])
+        gl_dir_x.append(gl_fts[3])
+        gl_dir_y.append(gl_fts[4])
+        gl_ang_tg.append(gl_fts[5])
+        gl_dist_tg.append(gl_fts[6])
+        gl_is_bc.append(gl_fts[7])
+        gl_dist_bc.append(gl_fts[8])
+
         for num in range(1, 23):
             if event[f'player_{num}_objectId'] == event['playerTrackingId']:
                 newids.append(num)
     synced_events['p1_id'] = newids
+
+    synced_events['tl_x'] = tl_x
+    synced_events['tl_y'] = tl_y
+    synced_events['tl_speed'] = tl_speed
+    synced_events['tl_direction_x'] = tl_dir_x
+    synced_events['tl_direction_y'] = tl_dir_y
+    synced_events['tl_angle_to_goal'] = tl_ang_tg
+    synced_events['tl_dist_to_goal'] = tl_dist_tg
+    synced_events['tl_is_bc'] = tl_is_bc
+    synced_events['tl_dist_to_bc'] = tl_dist_bc
+
+    synced_events['gl_x'] = gl_x
+    synced_events['gl_y'] = gl_y
+    synced_events['gl_speed'] = gl_speed
+    synced_events['gl_direction_x'] = gl_dir_x
+    synced_events['gl_direction_y'] = gl_dir_y
+    synced_events['gl_angle_to_goal'] = gl_ang_tg
+    synced_events['gl_dist_to_goal'] = gl_dist_tg
+    synced_events['gl_is_bc'] = gl_is_bc
+    synced_events['gl_dist_to_bc'] = gl_dist_bc
     return synced_events
+
+def calc_touchline_features(event):
+    speed=dir_x=dir_y=is_bc=x=y=0
+    if event['typeId'] == 12:
+        x = event['Pass_end_x']
+        y = event['Pass_end_y']
+    elif event['typeId'] == 5:
+        x = event['x']
+        y = event['y']
+    ang_to_goal,dist_to_goal = calc_angle_and_distance_to_goal(x,y,False)
+    ball_carrier = event['playerTrackingId']
+    bc_x, bc_y = get_player_pos(ball_carrier, event)
+    dist_to_bc = distance_pos(bc_x,bc_y,x,y)
+
+    return [x,y,speed,dir_x,dir_y,ang_to_goal,dist_to_goal,is_bc,dist_to_bc]
+
+def calc_goalline_features(event):
+    speed=dir_x=dir_y=is_bc=ang_to_goal=dist_to_goal=0
+    x = GOAL_X
+    y = GOAL_Y
+    ball_carrier = event['playerTrackingId']
+    bc_x, bc_y = get_player_pos(ball_carrier, event)
+    dist_to_bc = distance_pos(bc_x,bc_y,x,y)
+
+    return [x,y,speed,dir_x,dir_y,ang_to_goal,dist_to_goal,is_bc,dist_to_bc]
+
 
 def get_closest_op(p1_num,frame):
     p1_x,p1_y = frame[f'player_{p1_num}_x'],frame[f'player_{p1_num}_y']
@@ -628,7 +715,14 @@ def get_pass_reciever(frame):
 def create_edge_features(synced_event_df):
     interactions = []
     labelCol1 = []
-    labelCol2 = []
+    OP_OP = []
+    OP_DP = []
+    OP_B = []
+    OP_G = []
+    DP_B = []
+    DP_T = []
+    B_T = []
+    B_G = []
     #closest_player = ['tbd'] * len(synced_event_df.index)
     p1_ids = []
     p2_ids = []
@@ -642,75 +736,115 @@ def create_edge_features(synced_event_df):
         if((event['typeId'] == 1) | (event['typeId'] == 2)):
             interactions.append('pass')
             p2_id,p2_dist = get_pass_reciever(event)
-            labelCol1.append('OP')
-            labelCol2.append('OP')
+            labelCol1.append('OP_OP')
+            OP_OP.append(1)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(0)
         elif((event['typeId'] == 13) | (event['typeId'] == 14) | (event['typeId'] == 15)):
             interactions.append('shot')
             p2_id = 25
             p2_dist = event[f'player_{p1_num}_dist_to_goal']
-            labelCol1.append('OP')
-            labelCol2.append('G')
+            labelCol1.append('OP_G')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(1)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(0)
         elif(event['typeId'] == 3):
             interactions.append('dribble')    
             p2_id = 23
             p2_dist = 0
-            labelCol1.append('OP')
-            labelCol2.append('B')
+            labelCol1.append('OP_B')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(1)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(0)
         elif(event['typeId'] == 8):
             interactions.append('interception')
             p2_id = 23
             p2_dist = 0
-            labelCol1.append('DP')
-            labelCol2.append('B')
+            labelCol1.append('DP_B')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(1)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(0)
         elif((event['typeId'] == 7) | (event['typeId'] == 74)):
             interactions.append('tackle')
             p2_id,p2_dist = get_closest_op(p1_num,event)
-            labelCol1.append('OP')
-            labelCol2.append('DP')
+            labelCol1.append('OP_DP')
+            OP_OP.append(0)
+            OP_DP.append(1)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(0)
         elif(event['typeId'] == 12):
             interactions.append('clearence')
             p2_id = 24
             p2_dist = distance_pos(event[f'player_{p1_num}_x'],event[f'player_{p1_num}_y'],\
                                    event['Pass_end_x'],event['Pass_end_y'])
-            labelCol1.append('T')
-            labelCol2.append('DP')
+            labelCol1.append('DP_T')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(1)
+            B_T.append(0)
+            B_G.append(0)
         elif(event['typeId'] == 5):
             interactions.append('ball out')
             p2_id = 24
             player_x, player_y = get_player_pos(event['playerTrackingId'],event)
             p2_dist = distance_pos(player_x,player_y,event['x'],event['y'])
             p1_num = 23
-            labelCol1.append('T')
-            labelCol2.append('B')
+            labelCol1.append('B_T')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(1)
+            B_G.append(0)
         elif(event['typeId'] == 16):
             interactions.append('goal')
             p2_id = 25
             p2_dist = event[f'player_{p1_num}_dist_to_goal']
             p1_num = 23
-            labelCol1.append('G')
-            labelCol2.append('B')
-        '''elif((event['typeId'] == 10) | (event['typeId'] == 11) ):
-            interactions.append('save')
-            teammates.append(0)'''
-        '''
-        pX, pY = event['Pass_end_x'],event['Pass_end_y']
-        min_dist = 10000
-        #closest_player = 0
-        
-        for num in range(1,23):
-            if event['event_team'] == event[f'player_{num}_teamId']:
-                plX, plY = event[f'player_{num}_x'],event[f'player_{num}_y']
-                dist = distance_pos(pX,pY,plX,plY)
-                if dist < min_dist:
-                    min_dist = dist
-                    #closest_player = num
-                    rec_tr_id = num #int(event[f'player_{num}_objectId'])
-                    rec_send_dist = dist'''
+            labelCol1.append('B_G')
+            OP_OP.append(0)
+            OP_DP.append(0)
+            OP_B.append(0)
+            OP_G.append(0)
+            DP_B.append(0)
+            DP_T.append(0)
+            B_T.append(0)
+            B_G.append(1)
+
         p2_ids.append(p2_id)
         p2_dists.append(p2_dist)
         p1_ids.append(p1_num)
 
-    return interactions,p1_ids,p2_ids,p2_dists, labelCol1, labelCol2
+    return interactions,p1_ids,p2_ids,p2_dists,OP_OP,OP_DP,OP_B,OP_G,DP_B,DP_T,B_T,B_G
 
 
 def create_structure(synced_event_df):
@@ -731,8 +865,14 @@ def create_structure(synced_event_df):
         structured_event.append(action)
         # edge features
         #structured_event.append(event['teammates'])
-        structured_event.append(event['labelCol1'])
-        structured_event.append(event['labelCol2'])
+        structured_event.append(event['OP_OP'])
+        structured_event.append(event['OP_DP'])
+        structured_event.append(event['OP_B'])
+        structured_event.append(event['OP_G'])
+        structured_event.append(event['DP_B'])
+        structured_event.append(event['DP_T'])
+        structured_event.append(event['B_T'])
+        structured_event.append(event['B_G'])
         structured_event.append(event['playerDistance'])
         # node features
         for num in range(1,23):
@@ -756,6 +896,27 @@ def create_structure(synced_event_df):
         structured_event.append(event['ball_dist_to_goal'])
         structured_event.append(event['ball_is_bc'])
         structured_event.append(event['ball_dist_to_bc'])
+        #touchline features
+        structured_event.append(event['tl_x'])
+        structured_event.append(event['tl_y'])
+        structured_event.append(event['tl_speed'])
+        structured_event.append(event['tl_direction_x'])
+        structured_event.append(event['tl_direction_y'])
+        structured_event.append(event['tl_angle_to_goal'])
+        structured_event.append(event['tl_dist_to_goal'])
+        structured_event.append(event['tl_is_bc'])
+        structured_event.append(event['tl_dist_to_bc'])
+        #goalline features
+        structured_event.append(event['gl_x'])
+        structured_event.append(event['gl_y'])
+        structured_event.append(event['gl_speed'])
+        structured_event.append(event['gl_direction_x'])
+        structured_event.append(event['gl_direction_y'])
+        structured_event.append(event['gl_angle_to_goal'])
+        structured_event.append(event['gl_dist_to_goal'])
+        structured_event.append(event['gl_is_bc'])
+        structured_event.append(event['gl_dist_to_bc'])
+
         structured_data.append(structured_event)
     return pd.DataFrame(structured_data)
 
@@ -779,13 +940,19 @@ def create_dataset(path,metadata_fn,init_match_i, final_match_i, ds_fn):
         synced_events = sync_and_features(tracking,event,is25fps)
         
         # calulating edge features
-        interactions,p1_ids,rec_tracking_ids,rec_send_dists, labelCol1, labelCol2 = create_edge_features(synced_events)
+        interactions,p1_ids,rec_tracking_ids,rec_send_dists,OP_OP,OP_DP,OP_B,OP_G,DP_B,DP_T,B_T,B_G = create_edge_features(synced_events)
         synced_events['typeId'] = interactions
         synced_events['p1_id'] = p1_ids
         synced_events['recipientId'] = rec_tracking_ids
         synced_events['playerDistance'] = rec_send_dists
-        synced_events['labelCol1'] = labelCol1
-        synced_events['labelCol2'] = labelCol2
+        synced_events['OP_OP'] = OP_OP
+        synced_events['OP_DP'] = OP_DP
+        synced_events['OP_B'] = OP_B
+        synced_events['OP_G'] = OP_G
+        synced_events['DP_B'] = DP_B
+        synced_events['DP_T'] = DP_T
+        synced_events['B_T'] = B_T
+        synced_events['B_G'] = B_G
 
 
         #synced_events.loc[((synced_events['typeId'] == 'pass') & synced_events['outcome'] == 0), 'recipientId'] = 0

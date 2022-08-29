@@ -36,8 +36,8 @@ def preprocess(data_name):
             p2 = int(e[1])
             ts = float(e[2])
             label = str(e[3])
-            e_feat = np.array([float(x) for x in e[4:6]])
-            n_feat = np.array([float(x) for x in e[6:]])
+            e_feat = np.array([float(x) for x in e[4:13]])
+            n_feat = np.array([float(x) for x in e[13:]])
             '''a_n_feat = []
             n_start_id = 6
             n_node_features = 9
@@ -137,15 +137,15 @@ def run(data_name, bipartite=True):
   OUT_NODE_FEAT_DYNAMIC = './data/ml_{}_node_dynamic.npy'.format(data_name)
 
   df, e_feat, n_feat = preprocess(PATH)  # get the interaction feature vectors and a dataframe which contains index, u, i, ts, label
-  #new_df = reindex_nodes(df)
+  new_df = reindex_nodes(df)
   
   empty = np.zeros(e_feat.shape[1])[np.newaxis, :]  # with shape [1, feat_dim]
   e_feat = np.vstack([empty, e_feat])  # with shape [interactions, feat_dim]
 
-  max_idx = max(df.u.max(), df.i.max())  # number of nodes
-  rand_feat = np.zeros((max_idx + 1, 9))  # initialize node features with fixed 172 dimension size for datasets without dynamic node features
+  max_idx = max(new_df.u.max(), new_df.i.max())  # number of nodes
+  rand_feat = np.zeros((max_idx + 1, 9))  # initialize node features with fixed 9 dimension size for datasets without dynamic node features
 
-  df.to_csv(OUT_DF)  # temporal bipartite interaction graph
+  new_df.to_csv(OUT_DF)  # temporal bipartite interaction graph
   np.save(OUT_FEAT, e_feat)  # interaction (i.e. Temporal edge) features
   np.save(OUT_NODE_FEAT, rand_feat)  # initial node features
   np.save(OUT_NODE_FEAT_DYNAMIC, n_feat)  # dynamic node features
