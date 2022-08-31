@@ -1,4 +1,3 @@
-from importlib.resources import path
 import json
 import pandas as pd
 import numpy as np
@@ -78,12 +77,14 @@ def flatten_and_features(path, match_id, metadata_fn):
     with open(path + filename_event) as f:
         d = json.load(f)
 
+
     df1 = jsonNormalize(d['liveData']['event'])
     interesting_periods = [1, 2, 3, 4, 5]
     interesting_event_ids = [1, 2, 3, 5, 7, 8, 12, 13, 14, 15, 16, 74]
     df2 = df1[df1['typeId'].apply(lambda x: x == 32)]
     df1 = df1[df1['periodId'].apply(lambda x: x in interesting_periods)]
     df1 = df1[df1['typeId'].apply(lambda x: x in interesting_event_ids)]
+    df1 = df1[pd.notna(df1['playerName'])]
 
     id_mapping = pd.read_csv(path + filename_metadata)
     id_mapping = id_mapping[['matchName', 'stats_id']]
@@ -687,8 +688,12 @@ def sync_and_features(tracking_df, event_df, is25fps=True):
         gl_dist_bc.append(gl_fts[8])
 
         for num in range(1, 23):
+            foundone=False
             if event[f'player_{num}_objectId'] == event['playerTrackingId']:
                 newids.append(num)
+                break
+            elif num == 22 and not foundone:
+                print(event)
     synced_events['p1_id'] = newids
 
     synced_events['tl_x'] = tl_x
@@ -793,7 +798,7 @@ def create_edge_features(synced_event_df):
         p2_id = 0
         p2_dist = 0
         if ((event['typeId'] == 1) | (event['typeId'] == 2)):  # pass
-            interactions.append('0')
+            interactions.append('pass')
             p2_id, p2_dist = get_pass_reciever(event)
             labelCol1.append('OP_OP')
             OP_OP.append(1)
@@ -1029,6 +1034,7 @@ def create_dataset(rawpath, savepath, metadata_fn, init_match_i, final_match_i, 
         # data.append(synced_events.values.tolist())
         print("with GPU:", timer() - start)
     # np.save(path+ds_fn,data)
+
     with open(savepath + ds_fn, 'w', newline="") as f:
         writer = csv.writer(f)
         writer.writerows(data)
