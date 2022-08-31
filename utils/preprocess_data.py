@@ -125,6 +125,7 @@ def reindex_nodes(df):
     new_df = df.copy()
     new_df.u -= 1 #new_df.apply(lambda x: nodes_list.index(x.u), axis=1)
     new_df.i -= 1 #new_df.apply(lambda x: nodes_list.index(x.i), axis=1)
+    new_df.ts = new_df.index
 
     return new_df
 

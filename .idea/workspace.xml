@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
-      <change afterPath="$PROJECT_DIR$/createNF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sports_analitica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sports_analitica.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasync_balu/createNF.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/createNF.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7ky4x0axer75pyu4yskq0ynai-25fps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7uzmxki4gu3a9237h8qqzlgmi-25fps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-8pm2qt7pp2m2qgnzwrrg8no8a-25fps.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +40,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mibam/Documents/GitHub/sports_analitica/datasync_balu/createNF.py&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mibam/Documents/GitHub/sports_analitica&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -46,10 +54,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/createNF.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -71,6 +80,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/link_prediction.py" />
       <option name="PARAMETERS" value="--data data --use_memory --memory_dim 9 --aggregator mean" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -88,10 +98,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/preprocess_data.py" />
       <option name="PARAMETERS" value="--data data" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -108,6 +119,13 @@
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\mibam\AppData\Roaming\Subversion</configuration>
+    <option name="sshConnectionType" value="PASSWORD" />
+    <option name="sshExecutablePath" value="ssh 152.66.244.166" />
+    <option name="sshUserName" value="balu" />
+    <option name="sshPort" value="33336" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="" />
@@ -115,6 +133,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659531739830</updated>
+      <workItem from="1661777648301" duration="4024000" />
+      <workItem from="1661788079127" duration="19050000" />
     </task>
     <task id="LOCAL-00001" summary="added a third dimension to the node features. shape should be [#interactions, #nodes, #node_feat_dim]&#10;&#10;reindexed the player ids, to not get the indexing error from earlier">
       <created>1659532139880</created>
@@ -147,6 +167,9 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
       <list>
@@ -178,26 +201,36 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/modules/memory_updater.py</url>
-          <line>84</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/utils/preprocess_data.py</url>
-          <line>147</line>
+          <line>148</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/net/tgn.py</url>
-          <line>307</line>
-          <option name="timeStamp" value="27" />
+          <url>file://$PROJECT_DIR$/createNF.py</url>
+          <line>696</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/createNF.py</url>
-          <line>1037</line>
-          <option name="timeStamp" value="28" />
+          <url>file://$PROJECT_DIR$/modules/memory_updater.py</url>
+          <line>93</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/net/tgn.py</url>
+          <line>266</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sports_analitica$link_prediction.coverage" NAME="link_prediction Coverage Results" MODIFIED="1661944126530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sports_analitica$createNF.coverage" NAME="createNF Coverage Results" MODIFIED="1661888374400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sports_analitica$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1661944086578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

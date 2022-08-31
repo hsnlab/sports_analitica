@@ -312,7 +312,7 @@ class TGN(torch.nn.Module):
       source_memory = self.memory.get_memory(source_nodes) if not self.use_source_embedding_in_message else source_node_embedding
 
       time_encoding = self.time_encoder(timestamps.unsqueeze(dim=1)).view(len(source_nodes),-1)
-      zeros = torch.zeros(len(source_nodes),9)
+      zeros = torch.zeros(len(source_nodes),9, device=self.device)
       nodes_messages = torch.cat([source_memory,#destination_memory,
                                   source_node_features,zeros,time_encoding],
                                  dim = 1)
