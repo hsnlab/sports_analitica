@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sports_analitica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sports_analitica.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/createNF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7ky4x0axer75pyu4yskq0ynai-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7uzmxki4gu3a9237h8qqzlgmi-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-8pm2qt7pp2m2qgnzwrrg8no8a-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659531739830</updated>
       <workItem from="1661777648301" duration="4024000" />
-      <workItem from="1661788079127" duration="19050000" />
+      <workItem from="1661788079127" duration="19468000" />
     </task>
     <task id="LOCAL-00001" summary="added a third dimension to the node features. shape should be [#interactions, #nodes, #node_feat_dim]&#10;&#10;reindexed the player ids, to not get the indexing error from earlier">
       <created>1659532139880</created>
