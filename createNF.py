@@ -302,8 +302,8 @@ def flatten_and_features(path, match_id, metadata_fn):
         Vby[raw_speed > MAXSPEED] = np.nan
     Vbx = Vbx.rolling(MOVING_WINDOW, min_periods=0, center=False).mean()
     Vby = Vby.rolling(MOVING_WINDOW, min_periods=0, center=False).mean()
-    tracking['ball_direction_x'] = Vx
-    tracking['ball_direction_y'] = Vy
+    tracking['ball_direction_x'] = Vbx
+    tracking['ball_direction_y'] = Vby
     tracking['ball_speed'] = np.sqrt((Vx ** 2) + (Vy ** 2))
 
     tracking.loc[:, ['ball_direction_x', 'ball_direction_y', 'ball_speed']] = tracking.loc[:,
