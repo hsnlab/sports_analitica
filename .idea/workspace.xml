@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b69459d-71de-48bd-acd8-4256a4d79f2e" name="Changes" comment="small typo correction">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sports_analitica.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sports_analitica.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createNF.py" beforeDir="false" afterPath="$PROJECT_DIR$/createNF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/tgn.py" beforeDir="false" afterPath="$PROJECT_DIR$/net/tgn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7ky4x0axer75pyu4yskq0ynai-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-7uzmxki4gu3a9237h8qqzlgmi-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_data/tracking-data-8pm2qt7pp2m2qgnzwrrg8no8a-25fps.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/preprocess_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/preprocess_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +126,19 @@
       <option name="presentableId" value="Default" />
       <updated>1659531739830</updated>
       <workItem from="1661777648301" duration="4024000" />
-      <workItem from="1661788079127" duration="19050000" />
+      <workItem from="1661788079127" duration="19468000" />
+      <workItem from="1662375738799" duration="2230000" />
+      <workItem from="1662544638183" duration="715000" />
+      <workItem from="1662545371903" duration="60000" />
+      <workItem from="1662707828193" duration="1903000" />
+      <workItem from="1662983721100" duration="11707000" />
+      <workItem from="1663684632063" duration="1891000" />
+      <workItem from="1663751696578" duration="2714000" />
+      <workItem from="1663915607668" duration="13813000" />
+      <workItem from="1664194182455" duration="2820000" />
+      <workItem from="1664777871282" duration="1676000" />
+      <workItem from="1665391717325" duration="2274000" />
+      <workItem from="1668083654498" duration="3322000" />
     </task>
     <task id="LOCAL-00001" summary="added a third dimension to the node features. shape should be [#interactions, #nodes, #node_feat_dim]&#10;&#10;reindexed the player ids, to not get the indexing error from earlier">
       <created>1659532139880</created>
@@ -207,7 +211,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/createNF.py</url>
-          <line>696</line>
+          <line>705</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -229,8 +233,8 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sports_analitica$link_prediction.coverage" NAME="link_prediction Coverage Results" MODIFIED="1661944126530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sports_analitica$createNF.coverage" NAME="createNF Coverage Results" MODIFIED="1661888374400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/sports_analitica$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1661944086578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sports_analitica$link_prediction.coverage" NAME="link_prediction Coverage Results" MODIFIED="1664117608745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sports_analitica$preprocess_data.coverage" NAME="preprocess_data Coverage Results" MODIFIED="1662425086691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/sports_analitica$createNF.coverage" NAME="createNF Coverage Results" MODIFIED="1662735214959" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

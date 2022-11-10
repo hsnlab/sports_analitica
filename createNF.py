@@ -72,6 +72,15 @@ def flatten_and_features(path, match_id, metadata_fn):
         temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
         tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
     except:
+        pass
+    try:
+        filename = f'tracking-data-{match_id}-10fps.txt'
+        tracking = pd.read_csv(path + filename, sep=";|,|:", names=tracking_cols, header=None, engine='python')
+        tracking = tracking.drop(labels=['to_del_1', 'to_del_2'], axis=1)
+
+        temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
+        tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
+    except:
         return pd.DataFrame(), pd.DataFrame()
 
     with open(path + filename_event) as f:
@@ -293,8 +302,8 @@ def flatten_and_features(path, match_id, metadata_fn):
         Vby[raw_speed > MAXSPEED] = np.nan
     Vbx = Vbx.rolling(MOVING_WINDOW, min_periods=0, center=False).mean()
     Vby = Vby.rolling(MOVING_WINDOW, min_periods=0, center=False).mean()
-    tracking['ball_direction_x'] = Vx
-    tracking['ball_direction_y'] = Vy
+    tracking['ball_direction_x'] = Vbx
+    tracking['ball_direction_y'] = Vby
     tracking['ball_speed'] = np.sqrt((Vx ** 2) + (Vy ** 2))
 
     tracking.loc[:, ['ball_direction_x', 'ball_direction_y', 'ball_speed']] = tracking.loc[:,
@@ -1048,7 +1057,7 @@ def get_available_matches(path):
     has_tracking = []
     has_event = []
     for f in os.listdir(path):
-        if f.startswith('tracking-data') and f.endswith('25fps.txt'):
+        if (f.startswith('tracking-data') and (f.endswith('25fps.txt') or f.endswith('10fps.txt'))):
             has_tracking.append(f.split('-')[2])
         elif f.startswith('events-ma13'):
             has_event.append(f.split('-')[2][:-5])
