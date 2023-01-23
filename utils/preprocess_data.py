@@ -21,7 +21,7 @@ def preprocess(data_name):
     e_feat: Edge features (interaction (teammate or opponent?), length of edge (distance between two nodes))
     n_feat: Node Features (x,y, etc...)
     """
-    p1_list, p2_list, ts_list, label_list = [], [], [], []
+    p1_list, p2_list, td_list, ts_list, label_list = [], [], [], [], []
     e_feat_l = []
     n_feat_l = []
     idx_list = []
@@ -34,10 +34,11 @@ def preprocess(data_name):
             e = line.strip().split(',')
             p1 = int(e[0])
             p2 = int(e[1])
-            ts = float(e[2])
-            label = str(e[3])
-            e_feat = np.array([float(x) for x in e[4:13]])
-            n_feat = np.array([float(x) for x in e[13:]])
+            td = int(e[2])
+            ts = float(e[3])
+            label = str(e[4])
+            e_feat = np.array([float(x) for x in e[5:14]])
+            n_feat = np.array([float(x) for x in e[14:]])
             '''a_n_feat = []
             n_start_id = 6
             n_node_features = 9
@@ -47,6 +48,7 @@ def preprocess(data_name):
                 a_n_feat.append(n_feat)'''
             p1_list.append(p1)
             p2_list.append(p2)
+            td_list.append(td)
             ts_list.append(ts)
             label_list.append(label)
             idx_list.append(idx)
@@ -55,6 +57,7 @@ def preprocess(data_name):
         
     return pd.DataFrame({'u': p1_list,
                          'i': p2_list,
+                         'td': td_list,
                          'ts': ts_list,
                          'label': label_list,
                          'idx': idx_list}), np.array(e_feat_l), np.array(n_feat_l)

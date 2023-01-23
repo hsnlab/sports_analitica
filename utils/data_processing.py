@@ -60,7 +60,7 @@ def get_data(dataset_name, different_new_nodes_between_val_and_test=False):
     
     full_data = Data(sources, destinations, timestamps, edge_idxs, labels)
     
-    random.seed(2020)
+    random.seed(2023)
     
     node_set = set(sources) | set(destinations)  # a set of all nodes (no duplications)
     n_total_unique_nodes = len(node_set)         # notice: set() will remove duplications
