@@ -72,16 +72,15 @@ def flatten_and_features(path, match_id, metadata_fn):
         temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
         tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
     except:
-        pass
-    try:
-        filename = f'tracking-data-{match_id}-10fps.txt'
-        tracking = pd.read_csv(path + filename, sep=";|,|:", names=tracking_cols, header=None, engine='python')
-        tracking = tracking.drop(labels=['to_del_1', 'to_del_2'], axis=1)
+        try:
+            filename = f'tracking-data-{match_id}-10fps.txt'
+            tracking = pd.read_csv(path + filename, sep=";|,|:", names=tracking_cols, header=None, engine='python')
+            tracking = tracking.drop(labels=['to_del_1', 'to_del_2'], axis=1)
 
-        temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
-        tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
-    except:
-        return pd.DataFrame(), pd.DataFrame()
+            temp = tracking[tracking['half_indicator'] == 1]['time_of_current_half'].max()
+            tracking['timeMilliSec'] = tracking['time_of_current_half'] + temp * (tracking['half_indicator'] - 1)
+        except:
+            return pd.DataFrame(), pd.DataFrame()
 
     with open(path + filename_event) as f:
         d = json.load(f)
@@ -110,9 +109,8 @@ def flatten_and_features(path, match_id, metadata_fn):
     temp = df1.iloc[0]['timeStamp'].replace('Z', '-01')
     temp2 = df1[(df1['periodId'] == 2)]['timeStamp'].values[0].replace('Z', '-01')
     OFFSET_1 = tracking.iloc[0]['timestamp'] - parser.parse(temp).timestamp() * 1000
-    OFFSET_2 = \
-    tracking[(tracking['half_indicator'] == 2) & (tracking['time_of_current_half'] == 0)]['timestamp'].values[
-        0] - parser.parse(temp2).timestamp() * 1000
+    OFFSET_2 = tracking.loc[(tracking['half_indicator'] == 2),['timestamp']].values[0] - parser.parse(temp2).timestamp() * 1000
+    # tracking[(tracking['half_indicator'] == 2) & (tracking['time_of_current_half'] == 0)]['timestamp'].values[
 
     firsthalf = df1.loc[df1['periodId'] == 1]['timeStamp'].values.tolist()
     secondhalf = df1.loc[df1['periodId'] == 2]['timeStamp'].values.tolist()
@@ -787,6 +785,9 @@ def get_pass_reciever(frame):
 
 def create_edge_features(synced_event_df):
     interactions = []
+    timedelta = list( ((synced_event_df['timestamp'].shift(1) - synced_event_df['timestamp'])*-1).fillna(0)) #calculates the time between two interactions
+    #           (doesn't take halves into consideration ->
+    #           there will be big gap between the first action of the second half and last action of first half)
     labelCol1 = []
     OP_OP = []
     OP_DP = []
@@ -917,7 +918,7 @@ def create_edge_features(synced_event_df):
         p2_dists.append(p2_dist)
         p1_ids.append(p1_num)
 
-    return interactions, p1_ids, p2_ids, p2_dists, OP_OP, OP_DP, OP_B, OP_G, DP_B, DP_T, B_T, B_G
+    return interactions,timedelta, p1_ids, p2_ids, p2_dists, OP_OP, OP_DP, OP_B, OP_G, DP_B, DP_T, B_T, B_G
 
 
 def create_structure(synced_event_df):
@@ -930,6 +931,9 @@ def create_structure(synced_event_df):
         # player2
         r_tr_id = int(event['recipientId'])
         structured_event.append(r_tr_id)
+        # timedelta - time since last action in millisecs
+        timedelta = int(event['timedelta'])
+        structured_event.append(timedelta)
         # timestamp
         timestamp = event['timestamp']
         structured_event.append(timestamp)
@@ -1012,11 +1016,14 @@ def create_dataset(rawpath, savepath, metadata_fn, init_match_i, final_match_i, 
             print('switched to 10 fps.')
         # finalizing node features
         synced_events = sync_and_features(tracking, event, is25fps)
-
+        if synced_events.empty:
+            print('problem: could not sync tracking and event data')
+            continue
         # calulating edge features
-        interactions, p1_ids, rec_tracking_ids, rec_send_dists, OP_OP, OP_DP, OP_B, OP_G, DP_B, DP_T, B_T, B_G = create_edge_features(
+        interactions,timedelta, p1_ids, rec_tracking_ids, rec_send_dists, OP_OP, OP_DP, OP_B, OP_G, DP_B, DP_T, B_T, B_G = create_edge_features(
             synced_events)
         synced_events['typeId'] = interactions
+        synced_events['timedelta'] = timedelta
         synced_events['p1_id'] = p1_ids
         synced_events['recipientId'] = rec_tracking_ids
         synced_events['playerDistance'] = rec_send_dists
@@ -1036,7 +1043,7 @@ def create_dataset(rawpath, savepath, metadata_fn, init_match_i, final_match_i, 
         synced_events = synced_events.fillna(method='ffill')
         synced_events = synced_events.fillna(0)
         if synced_events.empty:
-            print('problem: could not sync tracking and event data')
+            print('problem: could not create structure')
             continue
         for elem in synced_events.values.tolist():
             data.append(elem)
@@ -1061,8 +1068,17 @@ def get_available_matches(path):
             has_tracking.append(f.split('-')[2])
         elif f.startswith('events-ma13'):
             has_event.append(f.split('-')[2][:-5])
-    return (sorted(list(set(has_event).intersection(has_tracking))))
-
+    available = (sorted(list(set(has_event).intersection(has_tracking))))
+    dic_t = {}
+    for m_id in available:
+        with open(f'./raw_data/events-ma13-{m_id}.json') as f:
+            d = json.load(f)
+        df1 = jsonNormalize(d['liveData']['event'])
+        temp = df1.iloc[0]['timeStamp'].replace('Z', '-01')
+        dic_t[parser.parse(temp).timestamp() * 1000] = m_id
+    dic_t1 = sorted(dic_t)
+    available = [dic_t[key] for key in dic_t1]
+    return available
 
 match_ovw = pd.read_csv(rawpath + '2021-10-21-stats-perform-data-availability (3).csv')
 match_ovw = match_ovw.drop(columns=['competition_id', 'tournament_id', 'match_date', 'match_time', 'match_description',

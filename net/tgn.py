@@ -229,7 +229,7 @@ class TGN(torch.nn.Module):
     """
     n_samples = len(source_nodes)
     source_node_embedding, destination_node_embedding, negative_node_embedding = self.compute_temporal_embeddings(
-      source_nodes, destination_nodes, negative_nodes, edge_times, edge_idxs, n_neighbors)
+          source_nodes, destination_nodes, negative_nodes, edge_times, edge_idxs, n_neighbors)
 
     score = self.affinity_score(torch.cat([source_node_embedding, source_node_embedding], dim=0),
                                 torch.cat([destination_node_embedding,
@@ -306,8 +306,8 @@ class TGN(torch.nn.Module):
                                                  source_nodes_torch * 9 + 6, source_nodes_torch * 9 + 7,
                                                  source_nodes_torch * 9 + 8])
       source_node_features = torch.gather(self.node_raw_features_dynamic[node_idx_torch], 1, source_nodes_stacked)
-      #node_features = self.node_raw_features[node_idxs]      # get dynamic features here?
-
+      node_features_all = self.node_raw_features_dynamic[node_idx_torch]      # get dynamic features here?
+      #get all node features separately and cat later??
 
       source_memory = self.memory.get_memory(source_nodes) if not self.use_source_embedding_in_message else source_node_embedding
 
