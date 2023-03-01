@@ -1,5 +1,5 @@
 # Soccer Network
-Soccer Network is special type of temporal graph network, receiving tracking data in form of a graph and predicting the most probable offensive or defensive actions. 
+Soccer Network is special type of temporal graph network, receiving tracking data in form of a temporal graph and predicting the most probable offensive or defensive actions. 
 
 ![Screenshot](SoccerNet.PNG)
 
