@@ -1,7 +1,7 @@
 # Soccer Network
 Soccer Network is special type of temporal graph network, receiving tracking data in form of a graph and predicting the most probable offensive or defensive actions. 
 
-![alt text](https://github.com/[soccer4444]/[sports_analitica]/blob/[branch]/SoccerNet.png?raw=true)
+![Screenshot](SoccerNet.PNG)
 
 ## Data syncronization method:
 
