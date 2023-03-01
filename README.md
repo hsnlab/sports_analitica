@@ -21,7 +21,7 @@ Soccer Network is special type of temporal graph network, receiving tracking dat
 ## Running the script
 
 ### Creating data structure
-First we need to create the raw data structure that the scripts imported from the TGN repository can use. ./datasync_balu/createNF.py does just that, however the *path* variable in line 736 needs to be changed in the script for it to run well.
+First we need to create the raw data structure that the scripts imported from the TGN repository can use. ./datasync_balu/createNodeFeature.py does just that, however the *path* variable in line 736 needs to be changed in the script for it to run well.
 The value should be:
 ```
 
@@ -34,21 +34,28 @@ Another change that could be made is to the name of the output csv. It can be do
 The sricpt runs with the following command:
 ```
 
-python datasync_balu/createNF.py
+python datasync_balu/createNodeFeature.py
 ```
 
-### TGN preproccessing
+### Soccer Network preproccessing
 Before running the preproccessing script, the output file of createNF.py needs to be moved/copied to `./data`
 ```
 
 python utils/preprocess_data.py --data <name of the output file of createNF.py>
 ```
 
-### TGN training
+### Soccer Network training
 
 ```
 
 python link_prediction.py --data <name of the output file of createNF.py> --use_memory --memory_dim <number of node features> --aggregator mean
 ```
-For now, the number of node features are 9.
+We construct the following features for each node in the
+data: (𝑥, 𝑦) locations, players and ball velocity, distances and angles
+of each node to goal, distance to the ball carrier, and a flag that
+indicates whether the player is the ball carrier. Our constructed
+edge features are: a flag defining the relationship between the two
+nodes (teammates 2, or opponents 1), the distance between the two
+interacting nodes.
+
 
