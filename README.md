@@ -1,7 +1,7 @@
 # Soccer Network
 Soccer Network is special type of temporal graph network, receiving tracking data in form of a graph and predicting the most probable offensive or defensive actions. 
 
-
+![alt text](http://url/to/SoccerNet.png)
 ## Data syncronization method:
 
     For the data syncronization we first needed to flatten out the raw datafiles. The event data proved to be tricky, since there are different numbers of qualifiers for different types of events. To tackle this, we used the flatten_json library, that sort of dummifies the json file and flattens it out completely.
